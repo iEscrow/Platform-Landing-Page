@@ -1,4 +1,10 @@
 {
+  "Navbar": {
+    "roadmap": "Roadmap",
+    "marketplace": "Marketplace",
+    "login": "Login",
+    "register": "Register"
+  },
   "Home": {
     "title": "Home Page",
     "hello": "Hello World!"
