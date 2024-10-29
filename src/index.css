@@ -19,9 +19,12 @@
 }
 
 [data-theme='light'] {
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --primary-color: #007bff;
+  --primary-color: #174454;
+  --secondary-color: #076f94;
+
+  --dark-text-color: #212121;
+  --light-text-color: #000000;
+  --text-decoration-color: #117e97;
 }
 
 @font-face {
