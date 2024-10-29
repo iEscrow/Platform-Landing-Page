@@ -8,7 +8,7 @@ const StyledBanner = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(${(props) =>
@@ -19,23 +19,18 @@ const StyledBanner = styled.section`
     text-align: center;
     color: var(--light-text-color);
   }
-  h1 span {
-    color: var(--text-decoration-color);
-  }
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  div span {
+  span {
     color: var(--dark-text-color);
     text-transform: uppercase;
+  }
+  h1 span {
+    color: var(--text-decoration-color);
   }
   p {
     color: var(--dark-text-color);
     max-width: 678px;
     text-align: center;
+    margin: 20px 0;
   }
 `;
 
