@@ -6,7 +6,8 @@
     "register": "Registrarse"
   },
   "Home": {
-    "title": "Página de Inicio",
-    "hello": "Hola Mundo!"
+    "motto": "Tu seguridad, nuestra prioridad.",
+    "title": "El primer intercambio híbrido CEX/DEX de <0>criptomonedas P2P con escrow</0>",
+    "description": "Intercambia criptomonedas con personas de todo el mundo, conocidas o desconocidas, de forma rápida, fácil y con la máxima seguridad a través de nuestro escrow descentralizado."
   }
 }

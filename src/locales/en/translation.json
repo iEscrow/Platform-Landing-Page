@@ -6,7 +6,8 @@
     "register": "Register"
   },
   "Home": {
-    "title": "Home Page",
-    "hello": "Hello World!"
+    "motto": "Your security, our priority.",
+    "title": "The first Hybrid CEX/DEX <0>P2P Crypto Escrow Exchange</0>",
+    "description": "Exchange cryptocurrency with people all over the world, known or unkown, fastly, easily and with the utmost security through our decentralized escrow."
   }
 }

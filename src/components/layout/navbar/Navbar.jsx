@@ -1,7 +1,9 @@
+import styles from './Navbar.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { ThemeContext } from '../../../context/ThemeContext';
+import { ThemeContext } from '@context/ThemeContext';
 import { useTranslation } from 'react-i18next';
+import logo from '@assets/images/logo_dark.svg';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -11,12 +13,19 @@ export default function Navbar() {
     i18n.changeLanguage(lang);
   };
   return (
-    <header>
+    <header className={styles.header}>
       <nav>
-        <Link to="/">Logo</Link>
-        <ul>
+        <Link to="/">
+          <img className={styles.logo} src={logo} alt="iEscrow logo" />
+        </Link>
+        <ul className={styles.menu}>
           <li>
-            <NavLink to="/">{t('Navbar.roadmap')}</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeNav : '')}
+              to="/"
+            >
+              {t('Navbar.roadmap')}
+            </NavLink>
           </li>
           <li>
             <NavLink to="/marketplace">{t('Navbar.marketplace')}</NavLink>
@@ -28,8 +37,13 @@ export default function Navbar() {
             <NavLink to="/signup">{t('Navbar.register')}</NavLink>
           </li>
           <li>
+            <Link className={styles.button} to="#">
+              Create Escrow
+            </Link>
+          </li>
+          <li>
             <button onClick={toggleTheme}>
-              Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+              {theme === 'light' ? 'Dark' : 'Light'}
             </button>
           </li>
           <li>

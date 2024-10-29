@@ -1,0 +1,21 @@
+.button {
+  border-radius: 56px;
+  color: var(--light-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 265px;
+  transition: 0.45s;
+}
+.button.primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.button.secondary {
+  background-color: var(--transparent-white);
+  border: 1px solid var(--white);
+}
