@@ -1,0 +1,40 @@
+.homeBanner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+.homeBanner h1 {
+  max-width: 720px;
+  text-align: center;
+  color: var(--light-text-color);
+}
+.homeBanner span {
+  color: var(--dark-text-color);
+  text-transform: uppercase;
+}
+.homeBanner h1 span {
+  color: var(--text-decoration-color);
+}
+.homeBanner p {
+  color: var(--dark-text-color);
+  max-width: 678px;
+  text-align: center;
+  margin: 20px 0;
+}
+.homeBanner.dark {
+  background-image: url('../../../../assets//images/banner_dark.png');
+}
+.homeBanner.light {
+  background-image: url('../../../../assets//images/banner_light_prueba.png');
+}
+.buttonsCont {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
