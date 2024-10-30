@@ -29,19 +29,19 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  src: url('./assets/fonts/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
@@ -67,4 +67,13 @@ h1 {
   font-size: 3rem;
   line-height: 3.5rem;
   font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1280px) {
+}
+@media screen and (min-width: 1440px) {
 }

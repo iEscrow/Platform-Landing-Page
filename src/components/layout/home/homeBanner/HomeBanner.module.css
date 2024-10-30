@@ -28,7 +28,7 @@
   margin: 20px 0;
 }
 .homeBanner.dark {
-  background-image: url('../../../../assets//images/banner_dark.png');
+  background-image: url('../../../../assets/images/banner_dark_mobile.png');
 }
 .homeBanner.light {
   background-image: url('../../../../assets//images/banner_light_prueba.png');
@@ -36,5 +36,21 @@
 .buttonsCont {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .buttonsCont {
+    flex-direction: row;
+  }
+  .homeBanner.dark {
+    background-image: url('../../../../assets//images/banner_dark.png');
+  }
+  .homeBanner.light {
+    background-image: url('../../../../assets//images/banner_light_prueba.png');
+  }
 }
