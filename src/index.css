@@ -3,6 +3,7 @@
   --secondary-color: #1b80a4;
   --white: #ffffff;
   --black: #171717;
+  --background-color: #171717;
 
   --transparent-black: #171717ce;
   --transparent-white: rgba(255, 255, 255, 0.1);
@@ -15,6 +16,7 @@
 [data-theme='dark'] {
   --primary-color: #1b80a4;
   --secondary-color: #1b80a4;
+  --background-color: #171717;
 
   --dark-text-color: #c2bfbf;
   --light-text-color: #ffffff;
@@ -24,6 +26,7 @@
 [data-theme='light'] {
   --primary-color: #174454;
   --secondary-color: #076f94;
+  --background-color: #ffffff;
 
   --dark-text-color: #212121;
   --light-text-color: #000000;
