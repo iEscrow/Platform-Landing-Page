@@ -2,6 +2,9 @@
   --primary-color: #1b80a4;
   --secondary-color: #1b80a4;
   --white: #ffffff;
+  --black: #171717;
+
+  --transparent-black: #171717ce;
   --transparent-white: rgba(255, 255, 255, 0.1);
 
   --dark-text-color: #c2bfbf;

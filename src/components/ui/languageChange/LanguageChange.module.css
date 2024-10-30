@@ -1,0 +1,16 @@
+.languageChange {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text-color);
+}
+.languageChange button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--light-text-color);
+}
+.languageChange button.active {
+  color: var(--text-decoration-color);
+}

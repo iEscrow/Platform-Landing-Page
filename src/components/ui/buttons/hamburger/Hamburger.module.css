@@ -1,0 +1,28 @@
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.45s ease-in-out;
+}
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-text-color);
+  transition: 0.45s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}

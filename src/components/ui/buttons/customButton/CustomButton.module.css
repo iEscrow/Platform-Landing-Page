@@ -8,8 +8,9 @@
   align-items: center;
   justify-content: center;
   height: 48px;
-  width: 265px;
+  min-width: 265px;
   transition: 0.45s;
+  font-weight: 600;
 }
 .button.primary {
   background-color: var(--primary-color);
