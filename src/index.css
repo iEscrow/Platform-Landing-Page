@@ -58,20 +58,39 @@ body {
 p,
 a,
 button {
-  /* TODO => Change to 16px for mobile first */
-  font-size: 1.125rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.8rem;
   font-weight: 400;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 1.75rem;
   line-height: 3.5rem;
   font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
+  p,
+  a,
+  button {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
+  p,
+  a,
+  button {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+  }
 }
 @media screen and (min-width: 1280px) {
 }

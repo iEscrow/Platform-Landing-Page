@@ -14,8 +14,8 @@ export default function HomeBanner() {
 
   return (
     <section className={`${styles.homeBanner} ${styles[theme]}`}>
-      <img src={logoDark} alt="iEscrow logo" />
-      <span>{t('Home.motto')}</span>
+      <img className={styles.logo} src={logoDark} alt="iEscrow logo" />
+      <span className={styles.motto}>{t('Home.motto')}</span>
       <h1>
         <Trans i18nKey="Home.title">
           <span></span>
