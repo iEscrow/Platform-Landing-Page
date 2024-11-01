@@ -3,11 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
-.infoCard h2,
-.infoCard h3,
-.infoCard h4,
-.infoCard h5,
-.infoCard h6 {
+.infoCard span {
   text-align: center;
   color: var(--text-decoration-color);
 }
@@ -16,11 +12,7 @@
   color: var(--light-text-color);
 }
 
-.infoCard.lg h2,
-.infoCard.lg h3,
-.infoCard.lg h4,
-.infoCard.lg h5,
-.infoCard.lg h6 {
+.infoCard.lg span {
   font-size: 3rem;
   text-transform: uppercase;
   max-width: 400px;

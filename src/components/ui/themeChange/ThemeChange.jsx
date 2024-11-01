@@ -3,6 +3,11 @@ import { ThemeContext } from '@context/ThemeContext';
 import { useContext } from 'react';
 import darkModeIcon from '@assets/icons/dark_mode.png';
 import lightModeIcon from '@assets/icons/light_mode.png';
+
+/**
+ * Reusable button for theme switching
+ * @returns {JSX.Element}
+ */
 export default function ThemeChange() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 

@@ -2,21 +2,18 @@ import React from 'react';
 import styles from './InfoCard.module.css';
 import PropTypes from 'prop-types';
 
-export default function InfoCard({
-  icon,
-  title,
-  text,
-  heading = 3,
-  lg = false,
-}) {
-  const Heading = `h${heading}`;
-
+/**
+ * Reusable card for displaying info icon, title and text
+ * @param {{icon: string, title: string, text: string, lg: boolean}}
+ * @returns {JSX.Element}
+ */
+export default function InfoCard({ icon, title, text, lg = false }) {
   return (
-    <article className={`${styles.infoCard} ${styles[lg ? 'lg' : 'sm']}`}>
+    <div className={`${styles.infoCard} ${styles[lg ? 'lg' : 'sm']}`}>
       <img src={icon} alt={`${title} icon`} />
-      {React.createElement(Heading, null, title)}
+      <span>{title}</span>
       <p>{text}</p>
-    </article>
+    </div>
   );
 }
 
@@ -24,6 +21,5 @@ InfoCard.propTypes = {
   icon: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
-  heading: PropTypes.number,
   lg: PropTypes.bool,
 };

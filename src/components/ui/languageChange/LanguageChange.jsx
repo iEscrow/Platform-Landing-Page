@@ -1,6 +1,10 @@
 import styles from './LanguageChange.module.css';
 import { useTranslation } from 'react-i18next';
 
+/**
+ * Reusable button for language switching
+ * @returns {JSX.Element}
+ */
 export default function LanguageChange() {
   const { i18n } = useTranslation();
   const changeLanguage = (lang) => {

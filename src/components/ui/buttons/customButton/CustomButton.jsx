@@ -8,6 +8,11 @@ CustomButton.propTypes = {
   to: PropTypes.string,
 };
 
+/**
+ * Reusable main custom button
+ * @param {{children: React.ReactNode, variant?: 'primary' | 'secondary', to?: string}}
+ * @returns {JSX.Element}
+ */
 export default function CustomButton({ children, variant = 'primary', to }) {
   return (
     <Link className={`${styles.button} ${styles[variant]}`} to={to}>

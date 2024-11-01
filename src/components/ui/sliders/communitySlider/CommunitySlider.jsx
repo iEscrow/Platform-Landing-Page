@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import quoteDark from '@assets/icons/quote_dark.png';
 import { useEffect, useState, useRef } from 'react';
 
+/**
+ * Reusable carousel for the 'Our Community' section.
+ * @param {list}
+ * @returns {JSX.Element}
+ */
 export default function CommunitySlider({ list = [] }) {
   const [active, setActive] = useState(0);
   const [previous, setPrevious] = useState(list.length - 1);
