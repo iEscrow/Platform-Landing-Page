@@ -6,12 +6,31 @@
     "register": "Registrarse"
   },
   "Home": {
-    "motto": "Tu seguridad, nuestra prioridad.",
-    "title": "El primer intercambio híbrido CEX/DEX de <0>criptomonedas P2P con escrow</0>",
-    "description": "Intercambia criptomonedas con personas de todo el mundo, conocidas o desconocidas, de forma rápida, fácil y con la máxima seguridad a través de nuestro escrow descentralizado.",
+    "Banner": {
+      "motto": "Tu seguridad, nuestra prioridad.",
+      "title": "El primer intercambio híbrido CEX/DEX de <0>criptomonedas P2P con escrow</0>",
+      "description": "Intercambia criptomonedas con personas de todo el mundo, conocidas o desconocidas, de forma rápida, fácil y con la máxima seguridad a través de nuestro escrow descentralizado.",
+      "watchVideo": "Mirar video",
+      "createEscrow": "Crear escrow"
+    },
     "TradeOnTheGo": {
-      "title": "Trade on the go. <0>Anywhere, anytime</0>",
-      "description": "Scan to download App <0>iOS and Android</0>"
+      "title": "Opera sobre la marcha. <0>Donde sea, cuando sea.</0>",
+      "description": "Escanea para descargar la app <0>iOS y Android</0>"
+    },
+    "Community": {
+      "title": "Nuestra comunidad",
+      "person1": {
+        "name": "Franco Colapinto",
+        "description": "ES Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      },
+      "person2": {
+        "name": "Cosme Fulanito",
+        "description": "ES Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      },
+      "person3": {
+        "name": "Nose meocurrenada",
+        "description": "ES Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      }
     }
   }
 }

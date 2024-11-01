@@ -6,12 +6,31 @@
     "register": "Register"
   },
   "Home": {
-    "motto": "Your security, our priority.",
-    "title": "The first Hybrid CEX/DEX <0>P2P Crypto Escrow Exchange</0>",
-    "description": "Exchange cryptocurrency with people all over the world, known or unkown, fastly, easily and with the utmost security through our decentralized escrow.",
+    "Banner": {
+      "motto": "Your security, our priority.",
+      "title": "The first Hybrid CEX/DEX <0>P2P Crypto Escrow Exchange</0>",
+      "description": "Exchange cryptocurrency with people all over the world, known or unkown, fastly, easily and with the utmost security through our decentralized escrow.",
+      "watchVideo": "Watch video",
+      "createEscrow": "Create Escrow"
+    },
     "TradeOnTheGo": {
-      "title": "Trade on the go. <0>Anywhere, anytime</0>",
+      "title": "Trade on the go. <0>Anywhere, anytime.</0>",
       "description": "Scan to download App <0>iOS and Android</0>"
+    },
+    "Community": {
+      "title": "Our Community",
+      "person1": {
+        "name": "Franco Colapinto",
+        "description": "EN Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      },
+      "person2": {
+        "name": "Cosme Fulanito",
+        "description": "EN Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      },
+      "person3": {
+        "name": "Nose meocurrenada",
+        "description": "EN Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat nisl quis maximus finibus. Vestibulum eget sem eros. Donec mi dui, molestie ut luctus in, pellentesque feugiat nisl quis maximus finibus"
+      }
     }
   }
 }

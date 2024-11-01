@@ -15,21 +15,21 @@ export default function HomeBanner() {
   return (
     <section className={`${styles.homeBanner} ${styles[theme]}`}>
       <img className={styles.logo} src={logoDark} alt="iEscrow logo" />
-      <span className={styles.motto}>{t('Home.motto')}</span>
+      <span className={styles.motto}>{t('Home.Banner.motto')}</span>
       <h1>
-        <Trans i18nKey="Home.title">
+        <Trans i18nKey="Home.Banner.title">
           <span></span>
         </Trans>
       </h1>
-      <p>{t('Home.description')}</p>
+      <p>{t('Home.Banner.description')}</p>
       <div className={styles.buttonsCont}>
         <CustomButton to="#" variant="secondary">
           <img src={videoIcon} alt="video icon" />
-          watch video
+          {t('Home.Banner.watchVideo')}
         </CustomButton>
         <CustomButton to="#" variant="primary">
           <img src={halfArrowIcon} alt="half arrow icon" />
-          create escrow
+          {t('Home.Banner.createEscrow')}
         </CustomButton>
       </div>
     </section>

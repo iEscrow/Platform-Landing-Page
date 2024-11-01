@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  user-select: none;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+/* Slider */
+.slider {
+  position: relative;
+  height: 400px;
+  cursor: grab;
+}
+
+/* Slider Item */
+.item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition:
+    opacity 1s,
+    transform 1s;
+}
+.item.previous {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+.item.next {
+  opacity: 0;
+  transform: translateX(20%);
+}
+.item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.item span {
+  color: var(--text-decoration-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.description {
+  color: var(--dark-text-color);
+  max-width: 720px;
+  line-height: 2rem;
+}
+.quoteLeft {
+  margin-right: 0.5rem;
+}
+.quoteRight {
+  margin-left: 0.5rem;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-text-color);
+}
+.dot.active {
+  height: 10px;
+  width: 10px;
+  background-color: var(--light-text-color);
+}
+
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+}

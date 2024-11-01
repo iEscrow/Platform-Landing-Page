@@ -1,4 +1,10 @@
-import { HomeBanner, InfoBlock, KeyBenefits, TradeOnTheGo } from '@layout';
+import {
+  HomeBanner,
+  InfoBlock,
+  KeyBenefits,
+  TradeOnTheGo,
+  Community,
+} from '@layout';
 
 export default function Home() {
   return (
@@ -9,6 +15,7 @@ export default function Home() {
         <InfoBlock />
         <TradeOnTheGo />
       </div>
+      <Community />
     </main>
   );
 }
