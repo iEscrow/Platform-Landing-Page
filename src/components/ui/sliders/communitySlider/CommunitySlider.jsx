@@ -48,7 +48,7 @@ export default function CommunitySlider({ list = [] }) {
   // Interval
   useEffect(() => {
     const interval = setInterval(() => {
-      handleChange((active + 1) % list.length); // Cambia a la siguiente imagen
+      handleChange((active + 1) % list.length);
     }, 8000);
     return () => clearInterval(interval);
   }, [active, list.length]);
@@ -61,7 +61,9 @@ export default function CommunitySlider({ list = [] }) {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
+      {/* Slider */}
       <div className={styles.slider}>
+        {/* Cards */}
         {list.map((item, index) => (
           <div
             key={item.id}
@@ -88,6 +90,7 @@ export default function CommunitySlider({ list = [] }) {
           </div>
         ))}
       </div>
+      {/* Dots */}
       <div className={styles.dots}>
         {list.map((item, index) => (
           <button

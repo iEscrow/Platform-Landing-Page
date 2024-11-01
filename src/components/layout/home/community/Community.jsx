@@ -2,6 +2,10 @@ import { useTranslation } from 'react-i18next';
 import styles from './Community.module.css';
 import { CommunitySlider } from '@ui';
 
+/**
+ * Our Community layout section that contains the title and slider
+ * @returns {JSX.Element}
+ */
 export default function Community() {
   const { t } = useTranslation();
   const list = [

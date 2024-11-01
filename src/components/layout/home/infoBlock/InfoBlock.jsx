@@ -2,6 +2,13 @@ import styles from './InfoBlock.module.css';
 import { InfoCard } from '@ui';
 import testIcon from '@assets/icons/testIcon.png';
 
+/**
+ * Home info section
+ *
+ * Renders a grid of info cards
+ *
+ * @returns {JSX.Element}
+ */
 export default function InfoBlock() {
   return (
     <section className={styles.infoBlock}>

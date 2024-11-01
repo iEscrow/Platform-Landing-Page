@@ -8,6 +8,11 @@ import { CustomButton } from '@ui';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 
+/**
+ * Home main banner component
+ *
+ * @returns {JSX.Element}
+ */
 export default function HomeBanner() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);

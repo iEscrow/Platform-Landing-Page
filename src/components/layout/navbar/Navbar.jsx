@@ -6,6 +6,10 @@ import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
 import { Hamburger, LanguageChange, ThemeChange } from '@ui';
 
+/**
+ * Main navbar responsive component
+ * @returns {JSX.Element}
+ */
 export default function Navbar() {
   const { t } = useTranslation();
   const scrolled = useScrolled();
