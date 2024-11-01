@@ -17,7 +17,6 @@ export default function Navbar() {
   const handleClose = () => {
     setToggle(false);
   };
-  console.log(toggle);
 
   return (
     <header

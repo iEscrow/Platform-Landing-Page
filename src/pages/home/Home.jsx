@@ -1,10 +1,14 @@
-import { HomeBanner, InfoBlock } from '@layout';
+import { HomeBanner, InfoBlock, KeyBenefits, TradeOnTheGo } from '@layout';
 
 export default function Home() {
   return (
     <main>
       <HomeBanner />
-      <InfoBlock />
+      <div className="wrapper">
+        {/* <KeyBenefits /> */}
+        <InfoBlock />
+        <TradeOnTheGo />
+      </div>
     </main>
   );
 }

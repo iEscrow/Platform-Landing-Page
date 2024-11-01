@@ -8,6 +8,10 @@
   "Home": {
     "motto": "Tu seguridad, nuestra prioridad.",
     "title": "El primer intercambio híbrido CEX/DEX de <0>criptomonedas P2P con escrow</0>",
-    "description": "Intercambia criptomonedas con personas de todo el mundo, conocidas o desconocidas, de forma rápida, fácil y con la máxima seguridad a través de nuestro escrow descentralizado."
+    "description": "Intercambia criptomonedas con personas de todo el mundo, conocidas o desconocidas, de forma rápida, fácil y con la máxima seguridad a través de nuestro escrow descentralizado.",
+    "TradeOnTheGo": {
+      "title": "Trade on the go. <0>Anywhere, anytime</0>",
+      "description": "Scan to download App <0>iOS and Android</0>"
+    }
   }
 }

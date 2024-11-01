@@ -8,6 +8,10 @@
   "Home": {
     "motto": "Your security, our priority.",
     "title": "The first Hybrid CEX/DEX <0>P2P Crypto Escrow Exchange</0>",
-    "description": "Exchange cryptocurrency with people all over the world, known or unkown, fastly, easily and with the utmost security through our decentralized escrow."
+    "description": "Exchange cryptocurrency with people all over the world, known or unkown, fastly, easily and with the utmost security through our decentralized escrow.",
+    "TradeOnTheGo": {
+      "title": "Trade on the go. <0>Anywhere, anytime</0>",
+      "description": "Scan to download App <0>iOS and Android</0>"
+    }
   }
 }

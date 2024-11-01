@@ -1,0 +1,28 @@
+.keyBenefits {
+  margin: 6rem 0;
+}
+.keyBenefits h2 {
+  text-align: center;
+  color: var(--light-text-color);
+}
+
+.benefitsCard {
+  position: relative;
+  background-color: blue;
+  width: 100%;
+  max-width: 1092px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4rem;
+}
+.benefitsCard::before {
+  position: absolute;
+  right: -54px;
+  width: 1200px;
+  height: 500px;
+  background-color: red;
+  content: '';
+  z-index: -1;
+}
