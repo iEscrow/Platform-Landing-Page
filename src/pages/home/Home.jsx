@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <HomeBanner />
       <div className="wrapper">
-        {/* <KeyBenefits /> */}
+        <KeyBenefits />
         <InfoBlock />
         <TradeOnTheGo />
       </div>

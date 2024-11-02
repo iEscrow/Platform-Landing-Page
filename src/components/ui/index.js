@@ -6,3 +6,4 @@ export { default as InfoCard } from './cards/infoCard/InfoCard';
 export { default as CommunitySlider } from './sliders/communitySlider/CommunitySlider';
 export { default as FooterAccordion } from './accordions/footerAccordion/FooterAccordion';
 export { default as SocialIcon } from './socialIcon/SocialIcon';
+export { default as IconText } from './iconText/IconText';

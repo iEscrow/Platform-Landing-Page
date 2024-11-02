@@ -12,6 +12,18 @@
   --dark-text-color: #c2bfbf;
   --light-text-color: #ffffff;
   --text-decoration-color: #30c2e2;
+
+  --key-benefits-bg: linear-gradient(
+    180deg,
+    #1b80a4 0%,
+    #144d62 64.65%,
+    #0a303e 100%
+  );
+  --key-benefits-false-bg: linear-gradient(
+    180deg,
+    rgba(27, 128, 164, 0.5) 0%,
+    rgba(10, 48, 62, 0.5) 100%
+  );
 }
 
 [data-theme='dark'] {
