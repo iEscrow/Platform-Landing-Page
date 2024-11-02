@@ -4,7 +4,7 @@ import quoteDark from '@assets/icons/quote_dark.png';
 import { useEffect, useState, useRef } from 'react';
 
 /**
- * Reusable carousel for the 'Our Community' section.
+ * Reusable carousel for the Our Community section.
  * @param {list}
  * @returns {JSX.Element}
  */
@@ -25,14 +25,19 @@ export default function CommunitySlider({ list = [] }) {
   const goToPrevious = () => {
     handleChange((active - 1 + list.length) % list.length);
   };
+
+  // Mouse and touch event handlers
   const handleMouseDown = (e) => {
     startX.current = e.clientX;
     setIsDragging(true);
   };
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    const diffX = e.clientX - startX.current;
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
+    setIsDragging(true);
+  };
 
+  const handleMove = (clientX) => {
+    const diffX = clientX - startX.current;
     if (diffX > 50) {
       goToPrevious();
       setIsDragging(false);
@@ -41,7 +46,17 @@ export default function CommunitySlider({ list = [] }) {
       setIsDragging(false);
     }
   };
-  const handleMouseUp = () => {
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    handleMove(e.clientX);
+  };
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    handleMove(e.touches[0].clientX);
+  };
+
+  const handleEnd = () => {
     setIsDragging(false);
   };
 
@@ -58,8 +73,11 @@ export default function CommunitySlider({ list = [] }) {
       className={styles.container}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleEnd}
     >
       {/* Slider */}
       <div className={styles.slider}>

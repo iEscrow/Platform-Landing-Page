@@ -25,16 +25,16 @@
   gap: 1rem;
   opacity: 0;
   transition:
-    opacity 1s,
+    opacity 0.5s,
     transform 1s;
 }
 .item.previous {
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateX(-100%);
 }
 .item.next {
   opacity: 0;
-  transform: translateX(20%);
+  transform: translateX(100%);
 }
 .item.active {
   opacity: 1;
@@ -80,8 +80,22 @@
 }
 
 /* Media Queries */
+@media screen and (min-width: 768px) {
+  .item.previous {
+    transform: translateX(-65%);
+  }
+  .item.next {
+    transform: translateX(65%);
+  }
+}
 @media screen and (min-width: 1024px) {
   .container {
     padding: 0;
+  }
+  .item.previous {
+    transform: translateX(-30%);
+  }
+  .item.next {
+    transform: translateX(30%);
   }
 }

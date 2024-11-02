@@ -9,7 +9,7 @@
   text-transform: uppercase;
   width: 100%;
   text-align: left;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@
   color: var(--light-text-color);
   overflow: hidden;
   max-height: 0;
-  padding: 0 2rem;
+  padding: 0 3rem;
   transition: max-height 0.45s ease-in;
 }
 .accordion_menu a {
