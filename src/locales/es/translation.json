@@ -38,6 +38,13 @@
       "watchVideo": "Mirar video",
       "createEscrow": "Crear escrow"
     },
+    "Marketplace": {
+      "title": "Discover Your Perfect Match: <0>Explore Our Marketplace</0>",
+      "description1": "If <0>you already have the other party to make a transaction,</0>your most efficient option would be to <0>make a private escrow.</0>",
+      "description2": "However, if you want to make a transaction but you´re yet <0>looking for a counterparty,</0> then you can <0>use the marketplace to immediately make the exchange you need.</0>",
+      "description3": "We have developed an intuitive marketplace...",
+      "visit": "Visit Marketplace"
+    },
     "TradeOnTheGo": {
       "title": "Opera sobre la marcha. <0>Donde sea, cuando sea.</0>",
       "description": "Escanea para descargar la app <0>iOS y Android</0>"

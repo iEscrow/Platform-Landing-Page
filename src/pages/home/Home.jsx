@@ -2,6 +2,7 @@ import {
   HomeBanner,
   InfoBlock,
   KeyBenefits,
+  Marketplace,
   TradeOnTheGo,
   Community,
 } from '@layout';
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="wrapper">
         <KeyBenefits />
         <InfoBlock />
+        <Marketplace />
         <TradeOnTheGo />
       </div>
       <Community />
