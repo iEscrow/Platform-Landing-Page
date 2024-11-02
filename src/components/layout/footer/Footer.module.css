@@ -1,0 +1,9 @@
+.footer {
+  padding: 1rem;
+  background-color: var(--footer-bg);
+}
+.footer p {
+  text-align: center;
+  color: var(--dark-text-color);
+  padding-top: 1rem;
+}

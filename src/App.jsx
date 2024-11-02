@@ -1,4 +1,4 @@
-import { Navbar } from '@layout';
+import { Navbar, Footer } from '@layout';
 import AppRoutes from './routes/AppRoutes';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Navbar />
       <AppRoutes />
+      <Footer />
     </div>
   );
 }

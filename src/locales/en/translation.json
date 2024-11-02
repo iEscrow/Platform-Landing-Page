@@ -5,6 +5,31 @@
     "login": "Login",
     "register": "Register"
   },
+  "Footer": {
+    "About": {
+      "title": "Sobre Nosotros",
+      "about": "acerca",
+      "terms": "terminos",
+      "privacy": "privacidad"
+    },
+    "Services": {
+      "title": "Servicios",
+      "download": "Descargar",
+      "terms": "Marketplace",
+      "escrow": "Escrow",
+      "refer": "Programa de referidos",
+      "list": "Solicitud de listado"
+    },
+    "Support": {
+      "title": "Soporte",
+      "help": "Centro de ayuda",
+      "security": "Seguridad"
+    },
+    "Contact": {
+      "title": "Comunidad"
+    },
+    "copyright": "© {{year}} iEscrow.crypto Derechos Reservados"
+  },
   "Home": {
     "Banner": {
       "motto": "Your security, our priority.",
