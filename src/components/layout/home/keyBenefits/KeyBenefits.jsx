@@ -2,6 +2,7 @@ import styles from './KeyBenefits.module.css';
 import phoneMobile from '@assets/images/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keybenefits_desktop.png';
 import { IconText } from '@ui';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Key benefits section that contains the title and the card}
@@ -9,6 +10,8 @@ import { IconText } from '@ui';
  * @returns {JSX.Element}
  */
 export default function KeyBenefits() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.keyBenefits}>
       <h2>We have a hybrid CEX/DEX approach</h2>

@@ -91,7 +91,6 @@ export default function CommunitySlider({ list = [] }) {
               ${index === active + 1 || (active === list.length - 1 && index === 0) ? styles.next : ''}
               `}
           >
-            <span>{item.name}</span>
             <p className={styles.description}>
               <img
                 className={styles.quoteLeft}
@@ -105,6 +104,7 @@ export default function CommunitySlider({ list = [] }) {
                 alt="quote icon"
               />
             </p>
+            <span>{item.name}</span>
           </div>
         ))}
       </div>

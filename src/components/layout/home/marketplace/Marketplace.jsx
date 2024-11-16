@@ -2,9 +2,11 @@ import styles from './Marketplace.module.css';
 import marketplaceDesktopDark from '@assets/images/marketplace_desktop_dark.png';
 import { CustomButton } from '@ui';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function Marketplace() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.marketplace}>
       <h2>

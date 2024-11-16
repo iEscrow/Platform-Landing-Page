@@ -1,7 +1,7 @@
 import styles from './TradeOnTheGo.module.css';
 import phone from '@assets/images/trade_on_the_go_desktop_dark.png';
 import qr from '@assets/images/qr.png';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image
@@ -9,6 +9,8 @@ import { Trans } from 'react-i18next';
  * @returns {JSX.Element}
  */
 export default function TradeOnTheGo() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.tradeOnTheGo}>
       <img src={phone} alt="phone" />
