@@ -1,7 +1,7 @@
 import styles from './KeyBenefits.module.css';
 import phoneMobile from '@assets/images/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keybenefits_desktop.png';
-import { IconText } from '@ui';
+import { IconText } from '@components';
 import { useTranslation } from 'react-i18next';
 
 /**

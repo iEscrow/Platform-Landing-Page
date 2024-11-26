@@ -1,6 +1,6 @@
 import styles from './Marketplace.module.css';
 import marketplaceDesktopDark from '@assets/images/marketplace_desktop_dark.png';
-import { CustomButton } from '@ui';
+import { CustomButton } from '@components';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Community.module.css';
-import { CommunitySlider } from '@ui';
+import { CommunitySlider } from '@components';
 
 /**
  * Our Community layout section that contains the title and slider

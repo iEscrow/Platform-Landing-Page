@@ -1,5 +1,5 @@
 import styles from './InfoBlock.module.css';
-import { InfoCard } from '@ui';
+import { InfoCard } from '@components';
 import testIcon from '@assets/icons/testIcon.png';
 
 /**

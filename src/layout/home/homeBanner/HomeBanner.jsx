@@ -4,7 +4,7 @@ import { Trans } from 'react-i18next';
 import logoDark from '@assets/images/logo_dark.svg';
 import videoIcon from '@assets/icons/videoIcon.png';
 import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
-import { CustomButton } from '@ui';
+import { CustomButton } from '@components';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 
