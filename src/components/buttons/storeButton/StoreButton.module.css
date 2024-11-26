@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  gap: 2rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--white);
+  border-radius: 0.625rem;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.45s ease-in-out;
+  width: 330px;
+}
+.button span {
+  font-size: 32px;
+  transition: 0.45s ease-in-out;
+}
+
+.button:hover {
+  border: 2px solid var(--text-decoration-color);
+}
+.button:hover span {
+  color: var(--text-decoration-color);
+}

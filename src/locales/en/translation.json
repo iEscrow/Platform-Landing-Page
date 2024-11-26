@@ -47,7 +47,9 @@
     },
     "TradeOnTheGo": {
       "title": "Trade on the go. <0>Anywhere, anytime.</0>",
-      "description": "Scan to download App <0>iOS and Android</0>"
+      "description": "Scan to download App <0>iOS and Android</0>",
+      "googlePlay": "GET IT ON",
+      "appStore": "Download on the"
     },
     "Community": {
       "title": "Our Community",

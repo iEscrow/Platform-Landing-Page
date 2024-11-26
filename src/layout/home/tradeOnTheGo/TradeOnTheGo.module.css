@@ -1,6 +1,7 @@
 .tradeOnTheGo,
-.textContainer,
 .qrContainer,
+.textContainer,
+.platformButtons,
 .qrContainer p {
   display: flex;
   flex-direction: column;
@@ -9,8 +10,11 @@
 .tradeOnTheGo {
   margin: 8rem 0;
 }
+.textContainer {
+  margin-top: 2rem;
+  gap: 3rem;
+}
 .textContainer h2 {
-  margin: 4rem 0;
   text-align: center;
   max-width: 400px;
 }
@@ -25,6 +29,9 @@
 }
 .qrContainer p {
   margin-top: 2rem;
+  gap: 1rem;
+}
+.platformButtons {
   gap: 1rem;
 }
 
@@ -56,5 +63,8 @@
   .qrContainer p {
     text-align: left;
     align-items: flex-start;
+  }
+  .platformButtons {
+    flex-direction: row;
   }
 }
