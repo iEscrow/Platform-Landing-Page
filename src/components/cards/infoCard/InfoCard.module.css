@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  gap: 2rem;
 }
 .infoCard span {
   text-align: center;
   color: var(--text-decoration-color);
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .infoCard p {
   text-align: center;
@@ -13,9 +18,8 @@
 }
 
 .infoCard.lg span {
-  font-size: 3rem;
-  text-transform: uppercase;
-  max-width: 400px;
+  font-size: 2rem;
+  max-width: 600px;
 }
 
 .infoCard.lg p {

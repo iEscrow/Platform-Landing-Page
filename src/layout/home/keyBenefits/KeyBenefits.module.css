@@ -84,7 +84,8 @@
 }
 @media screen and (min-width: 1024px) {
   .keyBenefits {
-    margin: 6rem 0rem;
+    max-width: 980px;
+    margin: 6rem auto;
   }
   .content {
     flex-direction: row;
@@ -97,5 +98,10 @@
   }
   .textContainer {
     width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .keyBenefits {
+    max-width: 1200px;
   }
 }

@@ -11,12 +11,10 @@ export default function Home() {
   return (
     <main>
       <HomeBanner />
-      <div className="wrapper">
-        <KeyBenefits />
-        <InfoBlock />
-        <Marketplace />
-        <TradeOnTheGo />
-      </div>
+      <KeyBenefits />
+      <InfoBlock />
+      <Marketplace />
+      <TradeOnTheGo />
       <Community />
     </main>
   );

@@ -1,8 +1,9 @@
 .marketplace {
   color: var(--light-text-color);
-  padding: 4rem 1rem;
+  padding: 12rem 1rem;
   text-align: center;
   text-align: center;
+  background-image: url('../../../assets/images/marketplace_bg_dark_desktop.png');
 }
 .marketplaceImage {
   width: 100%;
@@ -25,6 +26,7 @@
 .textContainer a {
   margin-top: 2rem;
 }
+
 @media screen and (min-width: 460px) {
   .textContainer {
     width: 80%;
@@ -40,7 +42,16 @@
     max-width: 800px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1200px;
+  }
   .content {
     margin-top: 2rem;
     display: flex;

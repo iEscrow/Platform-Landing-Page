@@ -1,3 +1,8 @@
+.infoBlock {
+  background-image: url('../../../assets/images/info_block_bg_desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .topBlock {
   display: flex;
   flex-direction: column;
@@ -17,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem;
   padding: 4rem 0;
 }
 
@@ -31,9 +36,25 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .topBlock {
+    align-items: flex-start;
+  }
   .bottomBlock {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1200px;
   }
 }
