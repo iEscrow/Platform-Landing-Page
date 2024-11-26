@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
-import { Hamburger, LanguageChange, ThemeChange } from '@ui';
+import { Hamburger, LanguageChange, ThemeChange } from '@components';
 
 /**
  * Main navbar responsive component
