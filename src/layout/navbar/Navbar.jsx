@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
-import { Hamburger, LanguageChange, ThemeChange } from '@components';
-
+import { Hamburger, LanguageChange, ThemeChange, AuthLinks } from '@components';
 /**
  * Main navbar responsive component
  * @returns {JSX.Element}
@@ -14,6 +13,9 @@ export default function Navbar() {
   const { t } = useTranslation();
   const scrolled = useScrolled();
   const [toggle, setToggle] = useState(false);
+
+  // TODO => Add authentication and remove the isAuthenticated variable
+  const isAuthenticated = true;
 
   const handleToggle = () => {
     setToggle((prev) => !prev);
@@ -50,16 +52,10 @@ export default function Navbar() {
               {t('Navbar.marketplace')}
             </NavLink>
           </li>
-          <li>
-            <NavLink onClick={handleClose} to="/signup">
-              {t('Navbar.register')}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink onClick={handleClose} to="/signin">
-              {t('Navbar.login')}
-            </NavLink>
-          </li>
+
+          {/* Authentication Links */}
+          <AuthLinks isAuthenticated={isAuthenticated} onClose={handleClose} />
+
           <li>
             <Link onClick={handleClose} className={styles.button} to="#">
               Create Escrow

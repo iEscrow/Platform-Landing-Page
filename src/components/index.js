@@ -8,3 +8,5 @@ export { default as CommunitySlider } from './sliders/communitySlider/CommunityS
 export { default as FooterAccordion } from './accordions/footerAccordion/FooterAccordion';
 export { default as SocialIcon } from './socialIcon/SocialIcon';
 export { default as IconText } from './iconText/IconText';
+export { default as AuthLinks } from './authLinks/AuthLinks';
+export { default as AuthDropdown } from './authDropdown/AuthDropdown';

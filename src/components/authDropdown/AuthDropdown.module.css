@@ -1,0 +1,22 @@
+.authButton {
+  cursor: pointer;
+  position: relative;
+}
+
+.authButton ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.45s ease-in-out;
+}
+.authButton.show ul {
+  opacity: 1;
+  visibility: visible;
+}
