@@ -4,10 +4,7 @@ const calculateTimeLeft = (targetDate) => {
   const difference = targetDate - new Date().getTime();
 
   const addZeroToTime = (time) => {
-    if (time < 10) {
-      return `0${time}`;
-    }
-    return time;
+    return `${time < 10 ? `0${time}` : time}`;
   };
 
   if (difference > 0) {

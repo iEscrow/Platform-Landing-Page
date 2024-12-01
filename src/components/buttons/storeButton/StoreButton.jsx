@@ -12,14 +12,15 @@ export default function StoreButton({
     <a
       href={link}
       target={blank ? '_blank' : '_self'}
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className={styles.button}
+      aria-label={`Enlace a ${platform}: ${text}`}
     >
       <img src={icon} alt={platform} />
-      <div>
+      <span>
         <p>{text}</p>
-        <span>{platform}</span>
-      </div>
+        <span className={styles.platform}>{platform}</span>
+      </span>
     </a>
   );
 }

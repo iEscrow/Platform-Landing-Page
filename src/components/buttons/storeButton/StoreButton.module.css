@@ -10,7 +10,10 @@
   transition: 0.45s ease-in-out;
   width: 330px;
 }
-.button span {
+.button span p {
+  text-transform: uppercase;
+}
+.button .platform {
   font-size: 32px;
   transition: 0.45s ease-in-out;
 }
@@ -18,6 +21,6 @@
 .button:hover {
   border: 2px solid var(--text-decoration-color);
 }
-.button:hover span {
+.button:hover .platform {
   color: var(--text-decoration-color);
 }
