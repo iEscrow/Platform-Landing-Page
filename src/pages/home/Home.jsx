@@ -1,5 +1,6 @@
 import {
   HomeBanner,
+  Roadmap,
   InfoBlock,
   KeyBenefits,
   Marketplace,
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main>
       <HomeBanner />
+      <Roadmap />
       <KeyBenefits />
       <InfoBlock />
       <Marketplace />
