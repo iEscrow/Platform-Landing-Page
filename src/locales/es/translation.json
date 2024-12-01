@@ -38,6 +38,12 @@
       "watchVideo": "Mirar video",
       "createEscrow": "Crear escrow"
     },
+    "Countdown": {
+      "days": "Días",
+      "hours": "Horas",
+      "minutes": "Min",
+      "seconds": "Seg"
+    },
     "InfoBlock": {
       "securityTitle": "Your security, our priority",
       "securityDescription": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits.",
