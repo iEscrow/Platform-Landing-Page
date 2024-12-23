@@ -2,7 +2,7 @@ import styles from './Roadmap.module.css';
 import { useCountdown, CountdownTimer } from '@features';
 
 export default function Roadmap() {
-  const tokenPresaleDate = new Date('2025-02-01T00:00:00').getTime();
+  const tokenPresaleDate = new Date('2024-12-05T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 
   return (

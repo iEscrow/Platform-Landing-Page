@@ -24,6 +24,11 @@ export default function Community() {
       name: t('Home.Community.person3.name'),
       description: t('Home.Community.person3.description'),
     },
+    {
+      id: 4,
+      name: t('Home.Community.person3.name'),
+      description: t('Home.Community.person3.description'),
+    },
   ];
 
   return (

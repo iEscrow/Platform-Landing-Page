@@ -44,7 +44,7 @@ CountdownTimer.propTypes = {
     hours: PropTypes.string,
     minutes: PropTypes.string,
     seconds: PropTypes.string,
-  }).isRequired,
+  }),
   variant: PropTypes.string.isRequired,
   color: PropTypes.string,
 };

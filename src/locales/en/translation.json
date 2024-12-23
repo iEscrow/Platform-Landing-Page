@@ -28,7 +28,12 @@
     "Comunity": {
       "title": "Comunidad"
     },
-    "copyright": "© {{year}} iEscrow.crypto Derechos Reservados"
+    "Copyright": {
+      "copyright": "© {{year}} iEscrow.crypto Derechos Reservados",
+      "terms": "Website Terms",
+      "disclaimer": "Protocol disclaimer",
+      "privacy": "Privacy Policy"
+    }
   },
   "Home": {
     "Banner": {
