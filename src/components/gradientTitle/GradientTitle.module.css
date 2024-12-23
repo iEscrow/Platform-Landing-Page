@@ -1,0 +1,19 @@
+.gradientTitle {
+  position: relative;
+  height: auto;
+  background: linear-gradient(to right, var(--pink), var(--cian));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradientTitle::before {
+  position: absolute;
+  content: '';
+  width: 300px;
+  height: 20px;
+  right: 100%;
+  bottom: 10%;
+  z-index: -1;
+  border-radius: 100%;
+  background: linear-gradient(to right, var(--pink), var(--cian));
+  filter: blur(16px);
+}

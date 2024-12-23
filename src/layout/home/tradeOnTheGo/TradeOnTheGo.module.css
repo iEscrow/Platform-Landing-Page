@@ -22,9 +22,12 @@
 .qrContainer p {
   color: var(--light-text-color);
 }
-.textContainer h2 span,
+
 .qrContainer p span {
   color: var(--text-decoration-color);
+  font-weight: 600;
+}
+.textContainer h2 span {
   font-weight: 600;
 }
 .qrContainer p {
@@ -52,7 +55,7 @@
   }
   .textContainer h2 {
     text-align: left;
-    max-width: 550px;
+    max-width: 450px;
     margin-top: 0;
   }
   .qrContainer {

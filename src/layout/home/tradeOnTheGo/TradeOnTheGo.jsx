@@ -5,6 +5,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { StoreButton } from '@components';
 import googlePlayIcon from '@assets/icons/google_play_icon.png';
 import appStoreIcon from '@assets/icons/app_store_icon.png';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image
@@ -22,7 +23,7 @@ export default function TradeOnTheGo() {
         {/* Title */}
         <h2>
           <Trans i18nKey="Home.TradeOnTheGo.title">
-            <span></span>
+            <GradientTitle></GradientTitle>
           </Trans>
         </h2>
 
