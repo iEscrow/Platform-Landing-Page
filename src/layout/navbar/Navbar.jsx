@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
 import { Hamburger, LanguageChange, ThemeChange, AuthLinks } from '@components';
+
 /**
  * Main navbar responsive component
  * @returns {JSX.Element}
