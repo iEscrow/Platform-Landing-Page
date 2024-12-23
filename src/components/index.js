@@ -10,3 +10,4 @@ export { default as SocialIcon } from './socialIcon/SocialIcon';
 export { default as IconText } from './iconText/IconText';
 export { default as AuthLinks } from './authLinks/AuthLinks';
 export { default as AuthDropdown } from './authDropdown/AuthDropdown';
+export { default as GradientTitle } from './gradientTitle/GradientTitle';

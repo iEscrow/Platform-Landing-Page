@@ -1,6 +1,6 @@
 import styles from './Marketplace.module.css';
 import marketplaceDesktopDark from '@assets/images/marketplace_desktop_dark.png';
-import { CustomButton } from '@components';
+import { CustomButton, GradientTitle } from '@components';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ export default function Marketplace() {
       <div className={styles.wrapper}>
         <h2>
           <Trans i18nKey="Home.Marketplace.title">
-            <span></span>
+            <GradientTitle></GradientTitle>
           </Trans>
         </h2>
         <div className={styles.content}>

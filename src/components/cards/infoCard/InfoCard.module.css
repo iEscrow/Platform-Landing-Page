@@ -8,7 +8,6 @@
 }
 .infoCard span {
   text-align: center;
-  color: var(--text-decoration-color);
   font-size: 1.6rem;
   font-weight: 600;
 }

@@ -1,7 +1,7 @@
 import styles from './KeyBenefits.module.css';
 import phoneMobile from '@assets/images/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keybenefits_desktop.png';
-import { IconText } from '@components';
+import { IconText, GradientTitle } from '@components';
 import { useTranslation } from 'react-i18next';
 
 /**
@@ -14,7 +14,9 @@ export default function KeyBenefits() {
 
   return (
     <section className={styles.keyBenefits}>
-      <h2>We have a hybrid CEX/DEX approach</h2>
+      <h2>
+        We have a hybrid <GradientTitle>CEX/DEX approach</GradientTitle>
+      </h2>
       <div className={styles.card}>
         <div className={styles.falseBg}></div>
         {/* Content card */}
