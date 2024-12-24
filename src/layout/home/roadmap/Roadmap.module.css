@@ -1,3 +1,57 @@
 .roadmap {
   color: var(--light-text-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+.roadmap h2 {
+  width: 100%;
+  max-width: 1000px;
+  text-align: start;
+}
+.timeLine {
+  position: absolute;
+  padding-top: 16rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timeLine img {
+  width: 100%;
+}
+.list {
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.list li {
+  width: 100%;
+  display: flex;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tokenPresale {
+  justify-content: flex-start;
+}
+.tokenLaunch {
+  justify-content: center;
+}
+.exchangeLaunch {
+  justify-content: flex-end;
+}
+.date {
+  color: var(--text-decoration-color);
 }
