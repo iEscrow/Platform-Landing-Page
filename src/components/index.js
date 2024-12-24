@@ -2,6 +2,7 @@ export { default as CustomButton } from './buttons/customButton/CustomButton';
 export { default as Hamburger } from './buttons/hamburger/Hamburger';
 export { default as StoreButton } from './buttons/storeButton/StoreButton';
 export { default as LanguageChange } from './locale/languageChange/LanguageChange';
+export { default as LanguageCurrencySelector } from './locale/languageCurrencySelector/LanguageCurrencySelector';
 export { default as ThemeChange } from './themeChange/ThemeChange';
 export { default as InfoCard } from './cards/infoCard/InfoCard';
 export { default as CommunitySlider } from './sliders/communitySlider/CommunitySlider';

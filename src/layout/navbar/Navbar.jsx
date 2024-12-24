@@ -4,7 +4,12 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
-import { Hamburger, LanguageChange, ThemeChange, AuthLinks } from '@components';
+import {
+  Hamburger,
+  LanguageCurrencySelector,
+  ThemeChange,
+  AuthLinks,
+} from '@components';
 
 /**
  * Main navbar responsive component
@@ -58,13 +63,15 @@ export default function Navbar() {
           <AuthLinks isAuthenticated={isAuthenticated} onClose={handleClose} />
 
           <li>
+            <LanguageCurrencySelector />
+          </li>
+          <li>
             <Link onClick={handleClose} className={styles.button} to="#">
               Create Escrow
             </Link>
           </li>
           <li className={styles.settings}>
             <ThemeChange />
-            <LanguageChange />
           </li>
         </ul>
       </nav>
