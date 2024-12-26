@@ -6,7 +6,7 @@
   color: transparent;
   z-index: 1;
 }
-.gradientTitle::before {
+/* .gradientTitle::before {
   position: absolute;
   content: '';
   width: 300px;
@@ -19,4 +19,4 @@
   border-radius: 100%;
   background: linear-gradient(to right, var(--pink), var(--cian));
   filter: blur(16px);
-}
+} */

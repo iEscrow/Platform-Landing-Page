@@ -12,6 +12,7 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
     },
     resources: {
       en: {
@@ -22,6 +23,8 @@ i18n
       },
     },
     fallbackLng: 'en',
+    supportedLngs: ['en', 'es'],
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false,
     },
