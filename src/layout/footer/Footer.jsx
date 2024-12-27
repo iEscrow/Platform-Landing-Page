@@ -1,6 +1,11 @@
 import styles from './Footer.module.css';
 import { useTranslation } from 'react-i18next';
-import { FooterAccordion, SocialIcon } from '@components';
+import {
+  FooterAccordion,
+  SocialIcon,
+  LanguageChange,
+  CurrencyChange,
+} from '@components';
 import facebookIconDark from '@assets/icons/socials/facebook_dark.png';
 import instagramIconDark from '@assets/icons/socials/instagram_dark.png';
 import telegramIconDark from '@assets/icons/socials/telegram_dark.png';
@@ -66,6 +71,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        <div className={styles.locale}>
+          <LanguageChange />
+          <CurrencyChange />
+        </div>
+
         <div className={styles.copyright}>
           <p>
             {t('Footer.Copyright.copyright', {

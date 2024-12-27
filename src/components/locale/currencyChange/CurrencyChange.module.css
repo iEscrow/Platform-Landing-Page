@@ -1,20 +1,18 @@
-.languageChange {
-  cursor: pointer;
+.currencyChange {
   position: relative;
 }
-.languageChange button {
-  cursor: pointer;
+.currencyChange button {
   background-color: transparent;
   border: none;
-  color: var(--light-text-color);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
   color: var(--white);
 }
 .dropdown {
   position: absolute;
-  top: -4rem;
+  top: -10rem;
   right: 0;
   background-color: var(--transparent-black);
   min-width: 100px;
@@ -23,15 +21,23 @@
   border-radius: 6px;
   padding: 1rem;
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: 0.45s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  transition: 0.45s ease-in-out;
 }
 .dropdown.show {
   opacity: 1;
   visibility: visible;
 }
-
+.dropdown li {
+  cursor: pointer;
+}
 .dropdown li.active {
+  color: var(--text-decoration-color);
+}
+.dropdown li:hover {
   color: var(--text-decoration-color);
 }

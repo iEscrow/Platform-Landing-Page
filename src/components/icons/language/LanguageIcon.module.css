@@ -1,0 +1,6 @@
+.cian path {
+  fill: #30c2e2;
+}
+.pink path {
+  fill: var(--pink);
+}
