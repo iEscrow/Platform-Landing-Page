@@ -1,5 +1,6 @@
 import AppRoutes from './routes/AppRoutes';
-import { Navbar, Footer } from '@layout';
+import Navbar from '@layout/navbar/Navbar';
+import Footer from '@layout/footer/Footer';
 
 function App() {
   return (
