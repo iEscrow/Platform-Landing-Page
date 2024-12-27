@@ -14,6 +14,8 @@ import twitterIconDark from '@assets/icons/socials/twitter_dark.png';
 import youtubeIconDark from '@assets/icons/socials/youtube_dark.png';
 import logo from '@assets/images/logo_dark.svg';
 
+import FooterThemeSelector from '@components/theme/footerThemeSelector/FooterThemeSelector';
+
 /**
  * Footer component that contains the footer accordion and the community social links
  * @returns {JSX.Element}
@@ -73,6 +75,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.locale}>
+          <FooterThemeSelector />
           <LanguageChange />
           <CurrencyChange />
         </div>

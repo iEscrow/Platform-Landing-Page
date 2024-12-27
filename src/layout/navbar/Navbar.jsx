@@ -4,12 +4,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
-import {
-  Hamburger,
-  LanguageCurrencySelector,
-  ThemeChange,
-  AuthLinks,
-} from '@components';
+import { Hamburger, LanguageCurrencySelector, AuthLinks } from '@components';
+import NavbarThemeToggle from '../../components/theme/navbarThemeToggle/NavbarThemeToggle';
 
 /**
  * Main navbar responsive component
@@ -71,7 +67,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.settings}>
-            <ThemeChange />
+            <NavbarThemeToggle />
           </li>
         </ul>
       </nav>

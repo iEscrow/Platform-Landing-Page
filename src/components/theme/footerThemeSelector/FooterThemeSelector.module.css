@@ -1,0 +1,33 @@
+.footerThemeSelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 22px;
+  width: 45px;
+  border-radius: 21px;
+  transition: 0.45s ease-in-out;
+}
+
+.footerThemeSelector.light {
+  background-color: #0057b34f;
+  transition: 0.45s ease-in-out;
+}
+.footerThemeSelector.dark {
+  background-color: gray;
+  transition: 0.45s ease-in-out;
+}
+
+.footerThemeSelector .themeIcon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.footerThemeSelector.dark .themeIcon {
+  left: 0;
+}
+
+.footerThemeSelector.light .themeIcon {
+  right: 0;
+}
