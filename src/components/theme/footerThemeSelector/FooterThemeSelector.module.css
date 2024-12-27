@@ -6,28 +6,33 @@
   height: 22px;
   width: 45px;
   border-radius: 21px;
-  transition: 0.45s ease-in-out;
+  transition: background-color 0.45s ease;
+  cursor: pointer;
 }
 
 .footerThemeSelector.light {
   background-color: #0057b34f;
-  transition: 0.45s ease-in-out;
 }
+
 .footerThemeSelector.dark {
-  background-color: gray;
-  transition: 0.45s ease-in-out;
+  background-color: #363333;
 }
 
 .footerThemeSelector .themeIcon {
+  transition: transform 0.45s ease;
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
 }
 
 .footerThemeSelector.dark .themeIcon {
-  left: 0;
+  transform: translateX(0);
 }
 
 .footerThemeSelector.light .themeIcon {
-  right: 0;
+  transform: translateX(25px);
 }
