@@ -10,7 +10,7 @@
   background-position: center;
   padding-bottom: 600px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .roadmap h2 {
   text-align: center;
@@ -60,7 +60,7 @@
 
 @media screen and (min-width: 768px) {
   .roadmap {
-    padding-bottom: 200px;
+    padding-bottom: 400px;
     background-image: url('../../../assets/images/roadmap/roadmap_bg_dark_tablet.png');
   }
   .title {
@@ -69,8 +69,12 @@
     display: flex;
     justify-content: flex-start;
   }
+  .timeLine {
+    padding-top: 28rem;
+  }
   .timeLine img {
     display: block;
+    padding: 0 6rem;
   }
   .list li img {
     display: none;
@@ -92,8 +96,6 @@
 
 @media screen and (min-width: 1440px) {
   .roadmap {
-    padding: 200px 0;
-    background-position: center;
     background-image: url('../../../assets/images/roadmap/roadmap_bg_dark_desktop.png');
   }
 }
