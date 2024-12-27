@@ -14,6 +14,7 @@ export default defineConfig({
       '@context': fileURLToPath(new URL('./src/context', import.meta.url)),
       '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
+      '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
     },
   },
 });

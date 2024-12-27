@@ -1,0 +1,43 @@
+.currencyChange {
+  position: relative;
+}
+.currencyChange button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+.dropdown {
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  background-color: var(--transparent-black);
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  padding: 1rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: 0.45s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown li {
+  cursor: pointer;
+}
+.dropdown li.active {
+  color: var(--text-decoration-color);
+}
+.dropdown li:hover {
+  color: var(--text-decoration-color);
+}

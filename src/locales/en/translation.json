@@ -49,6 +49,9 @@
       "minutes": "Min",
       "seconds": "Sec"
     },
+    "KeyBenefits": {
+      "title": "We have a hybrid <0>CEX/DEX approach</0>"
+    },
     "InfoBlock": {
       "securityTitle": "Your security, our priority",
       "securityDescription": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits.",

@@ -44,6 +44,12 @@
   gap: 1rem;
   max-width: 160px;
 }
+.locale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 .copyright {
   display: flex;
   flex-direction: column;
@@ -83,6 +89,9 @@
   }
   .community {
     width: fit-content;
+  }
+  .locale {
+    justify-content: flex-end;
   }
   .copyright {
     flex-direction: row;

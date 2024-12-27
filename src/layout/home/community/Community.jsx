@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Community.module.css';
-import { CommunitySlider } from '@components';
+import { CommunitySlider, GradientTitle } from '@components';
 
 /**
  * Our Community layout section that contains the title and slider
@@ -33,7 +33,9 @@ export default function Community() {
 
   return (
     <section className={styles.community}>
-      <h2>{t('Home.Community.title')}</h2>
+      <h2>
+        <GradientTitle>{t('Home.Community.title')}</GradientTitle>
+      </h2>
       <CommunitySlider list={list} />
     </section>
   );

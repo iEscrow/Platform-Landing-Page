@@ -1,8 +1,9 @@
 import styles from './TradeOnTheGo.module.css';
-import phone from '@assets/images/trade_on_the_go_desktop_dark.png';
+import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
 import qr from '@assets/images/qr.png';
 import { Trans, useTranslation } from 'react-i18next';
 import { StoreButton } from '@components';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
 import googlePlayIcon from '@assets/icons/google_play_icon.png';
 import appStoreIcon from '@assets/icons/app_store_icon.png';
 
@@ -22,7 +23,7 @@ export default function TradeOnTheGo() {
         {/* Title */}
         <h2>
           <Trans i18nKey="Home.TradeOnTheGo.title">
-            <span></span>
+            <GradientTitle></GradientTitle>
           </Trans>
         </h2>
 

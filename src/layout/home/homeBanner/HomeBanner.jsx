@@ -4,7 +4,7 @@ import { Trans } from 'react-i18next';
 import logoDark from '@assets/images/logo_dark.svg';
 import videoIcon from '@assets/icons/videoIcon.png';
 import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
-import { CustomButton } from '@components';
+import { CustomButton, GradientTitle } from '@components';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 
@@ -23,7 +23,7 @@ export default function HomeBanner() {
       <span className={styles.motto}>{t('Home.Banner.motto')}</span>
       <h1>
         <Trans i18nKey="Home.Banner.title">
-          <span></span>
+          <GradientTitle></GradientTitle>
         </Trans>
       </h1>
       <p>{t('Home.Banner.description')}</p>
