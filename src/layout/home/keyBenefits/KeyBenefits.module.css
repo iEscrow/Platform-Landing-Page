@@ -6,6 +6,9 @@
 }
 .keyBenefits h2 {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 /* Card */
