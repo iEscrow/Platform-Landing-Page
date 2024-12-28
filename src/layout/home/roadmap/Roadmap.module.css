@@ -6,11 +6,16 @@
   align-items: center;
   justify-content: center;
   margin-top: 10rem;
-  background-image: url('../../../assets/images/roadmap/roadmap_bg_dark_mobile.png');
   background-position: center;
   padding-bottom: 600px;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.roadmap.dark {
+  background-image: url('../../../assets/images/roadmap/dark/roadmap_bg_mobile.png');
+}
+.roadmap.light {
+  background-image: url('../../../assets/images/roadmap/light/roadmap_bg_mobile.png');
 }
 .roadmap h2 {
   text-align: center;
@@ -61,7 +66,12 @@
 @media screen and (min-width: 768px) {
   .roadmap {
     padding-bottom: 400px;
-    background-image: url('../../../assets/images/roadmap/roadmap_bg_dark_tablet.png');
+  }
+  .roadmap.dark {
+    background-image: url('../../../assets/images/roadmap/dark/roadmap_bg_tablet.png');
+  }
+  .roadmap.light {
+    background-image: url('../../../assets/images/roadmap/light/roadmap_bg_tablet.png');
   }
   .title {
     width: 100%;
@@ -95,7 +105,10 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .roadmap {
-    background-image: url('../../../assets/images/roadmap/roadmap_bg_dark_desktop.png');
+  .roadmap.dark {
+    background-image: url('../../../assets/images/roadmap/dark/roadmap_bg_desktop.png');
+  }
+  .roadmap.light {
+    background-image: url('../../../assets/images/roadmap/light/roadmap_bg_desktop.png');
   }
 }
