@@ -4,8 +4,10 @@ import qr from '@assets/images/qr.png';
 import { Trans, useTranslation } from 'react-i18next';
 import { StoreButton } from '@components';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
-import googlePlayIcon from '@assets/icons/google_play_icon.png';
-import appStoreIcon from '@assets/icons/app_store_icon.png';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
+import AppStoreIcon from '../../../components/icons/appStore/AppStoreIcon';
+import GooglePlayIcon from '../../../components/icons/googlePlayIcon/googlePlayIcon';
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image
@@ -14,6 +16,7 @@ import appStoreIcon from '@assets/icons/app_store_icon.png';
  */
 export default function TradeOnTheGo() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
 
   return (
     <section className={styles.tradeOnTheGo}>
@@ -40,13 +43,13 @@ export default function TradeOnTheGo() {
         {/* Platform Buttons */}
         <div className={styles.platformButtons}>
           <StoreButton
-            icon={appStoreIcon}
+            icon={<AppStoreIcon theme={theme} />}
             platform="App Store"
             link="#"
             text={t('Home.TradeOnTheGo.appStore')}
           />
           <StoreButton
-            icon={googlePlayIcon}
+            icon={<GooglePlayIcon />}
             platform="Google Play"
             link="#"
             text={t('Home.TradeOnTheGo.googlePlay')}

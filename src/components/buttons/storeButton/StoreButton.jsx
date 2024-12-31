@@ -16,7 +16,7 @@ export default function StoreButton({
       className={styles.button}
       aria-label={`Enlace a ${platform}: ${text}`}
     >
-      <img src={icon} alt={platform} />
+      {icon}
       <span>
         <p>{text}</p>
         <span className={styles.platform}>{platform}</span>
