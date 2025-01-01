@@ -6,11 +6,10 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: var(--light-text-color);
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--white);
+  color: var(--dark-text-color);
 }
 .dropdown {
   position: absolute;

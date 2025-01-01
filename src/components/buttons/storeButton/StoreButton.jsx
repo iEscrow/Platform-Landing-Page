@@ -26,7 +26,7 @@ export default function StoreButton({
 }
 
 StoreButton.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.node,
   platform: PropTypes.string,
   link: PropTypes.string,
   text: PropTypes.string,

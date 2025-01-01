@@ -1,11 +1,7 @@
 import styles from './Footer.module.css';
 import { useTranslation } from 'react-i18next';
-import {
-  FooterAccordion,
-  SocialIcon,
-  LanguageChange,
-  CurrencyChange,
-} from '@components';
+
+// assets
 import facebookIconDark from '@assets/icons/socials/facebook_dark.png';
 import instagramIconDark from '@assets/icons/socials/instagram_dark.png';
 import telegramIconDark from '@assets/icons/socials/telegram_dark.png';
@@ -14,6 +10,11 @@ import twitterIconDark from '@assets/icons/socials/twitter_dark.png';
 import youtubeIconDark from '@assets/icons/socials/youtube_dark.png';
 import logo from '@assets/images/logo_dark.svg';
 
+// components
+import FooterAccordion from '@components/accordions/footerAccordion/FooterAccordion';
+import SocialIcon from '@components/socialIcon/SocialIcon';
+import LanguageChange from '@components/locale/languageChange/LanguageChange';
+import CurrencyChange from '@components/locale/currencyChange/CurrencyChange';
 import FooterThemeSelector from '@components/theme/footerThemeSelector/FooterThemeSelector';
 
 /**

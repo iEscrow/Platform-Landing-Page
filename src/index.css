@@ -37,6 +37,7 @@
   --dark-text-color: #c2bfbf;
   --light-text-color: #ffffff;
   --text-decoration-color: #30c2e2;
+  --footer-bg: #1e1e1e;
 }
 
 [data-theme='light'] {
@@ -47,6 +48,7 @@
   --dark-text-color: #212121;
   --light-text-color: #000000;
   --text-decoration-color: #117e97;
+  --footer-bg: #ffffff;
 }
 
 @font-face {
