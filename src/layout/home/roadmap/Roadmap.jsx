@@ -1,11 +1,15 @@
 import styles from './Roadmap.module.css';
-import { useCountdown, CountdownTimer } from '@features';
+import { useContext } from 'react';
+
+import GradientTitle from '@components/gradientTitle/GradientTitle';
+import CountdownTimer from '@features/countdown/components/CountdownTimer';
+import { ThemeContext } from '@context/ThemeContext';
+import { useCountdown } from '@features/countdown/hooks/useCountdown';
+
+//assets
 import timeLine from '@assets/images/roadmap/line_desktop.svg';
-import { GradientTitle } from '@components';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
-import { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
 
 export default function Roadmap() {
   const { theme } = useContext(ThemeContext);
@@ -14,9 +18,11 @@ export default function Roadmap() {
 
   return (
     <section className={`${styles.roadmap} ${styles[theme]}`}>
-      <h2>
-        <GradientTitle>Roadmap</GradientTitle>
-      </h2>
+      <div className={styles.titleCont}>
+        <h2>
+          <GradientTitle>Roadmap</GradientTitle>
+        </h2>
+      </div>
       <div className={styles.timeLine}>
         <img src={timeLine} alt="roadmap time line" />
       </div>
