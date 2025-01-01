@@ -1,12 +1,12 @@
 import styles from './LanguageIcon.module.css';
 import PropsType from 'prop-types';
 
-export default function LanguageIcon({ variant = 'cian' }) {
+export default function LanguageIcon({ variant = 'cian', size = 22 }) {
   return (
     <svg
       className={styles[variant]}
-      width="33"
-      height="33"
+      width={size}
+      height={size}
       viewBox="0 0 33 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -33,4 +33,5 @@ export default function LanguageIcon({ variant = 'cian' }) {
 
 LanguageIcon.propTypes = {
   variant: PropsType.string,
+  size: PropsType.string,
 };
