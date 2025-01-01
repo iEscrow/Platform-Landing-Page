@@ -1,12 +1,15 @@
 import styles from './AuthDropdown.module.css';
-import authIconDark from '../../assets/icons/auth_icon_dark.png';
 import { Link } from 'react-router-dom';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 import useClickOutside from '@hooks/useClickOutside';
+import AuthIcon from '@components/icons/authIcon/AuthIcon';
 
 export default function AuthDropdown() {
   const [active, setActive] = useState(false);
   const authDropdownRef = useRef(null);
+  const { theme } = useContext(ThemeContext);
+
   useClickOutside(authDropdownRef, () => setActive(false));
 
   return (
@@ -15,7 +18,7 @@ export default function AuthDropdown() {
       onClick={() => setActive(!active)}
       className={`${styles.authButton} ${active ? styles.show : ''}`}
     >
-      <img src={authIconDark} alt="auth icon" />
+      <AuthIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       <ul>
         <li>
           <Link to="/profile">Profile</Link>

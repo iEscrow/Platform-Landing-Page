@@ -1,15 +1,17 @@
 import styles from './LanguageCurrencySelector.module.css';
-import worldIcon from '../../../assets/icons/world_dark.svg';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 import { currencyList } from '@data/currency';
 import { languageList } from '@data/languages';
 import { useTranslation } from 'react-i18next';
 import useClickOutside from '@hooks/useClickOutside';
+import LanguageIcon from '../../icons/language/LanguageIcon';
 
 export default function LanguageCurrencySelector() {
   const [show, setShow] = useState(false);
   const languageDropdownRef = useRef(null);
   const { i18n } = useTranslation();
+  const { theme } = useContext(ThemeContext);
 
   useClickOutside(languageDropdownRef, () => setShow(false));
 
@@ -24,7 +26,7 @@ export default function LanguageCurrencySelector() {
   return (
     <div ref={languageDropdownRef} className={styles.languageCurrencySelector}>
       <button onClick={handleShow}>
-        <img src={worldIcon} alt="world icon" />
+        <LanguageIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       </button>
       <div className={`${show ? styles.show : ''} ${styles.dropdown}`}>
         <ul>
