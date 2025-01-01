@@ -39,11 +39,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .textContainer h2 {
-    max-width: 500px;
-  }
-}
-@media screen and (min-width: 1024px) {
   .tradeOnTheGo {
     flex-direction: row;
     justify-content: center;
@@ -52,11 +47,27 @@
   .textContainer {
     align-items: flex-start;
     justify-content: center;
+    gap: 1rem;
+    margin: 0;
   }
   .textContainer h2 {
     text-align: left;
     max-width: 450px;
     margin-top: 0;
+  }
+  .qrContainer,
+  .qrContainer p {
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tradeOnTheGo {
+    align-items: center;
+  }
+  .textContainer {
+    gap: 3.5rem;
   }
   .qrContainer {
     flex-direction: row;

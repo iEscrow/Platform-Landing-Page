@@ -16,6 +16,10 @@
   color: var(--light-text-color);
 }
 
+.infoCard.lg img {
+  width: 100%;
+  max-width: 450px;
+}
 .infoCard.lg span {
   font-size: 2rem;
   max-width: 600px;

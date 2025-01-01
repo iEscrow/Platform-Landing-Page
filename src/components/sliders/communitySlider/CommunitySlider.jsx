@@ -1,7 +1,7 @@
 import styles from './CommunitySlider.module.css';
 import PropTypes from 'prop-types';
-import quoteDark from '@assets/icons/quote_dark.png';
 import { useEffect, useState, useRef } from 'react';
+import { splitArray } from '../../../utils/splitArray';
 
 /**
  * Reusable carousel for the Our Community section.
@@ -9,113 +9,102 @@ import { useEffect, useState, useRef } from 'react';
  * @returns {JSX.Element}
  */
 export default function CommunitySlider({ list = [] }) {
-  const [active, setActive] = useState(0);
-  const [previous, setPrevious] = useState(list.length - 1);
+  const groupedList = splitArray(list, 2);
+  const slideRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
-  const startX = useRef(0);
+  const [startX, setStartX] = useState(0);
 
-  // Slider movement
-  const handleChange = (id) => {
-    setPrevious(active);
-    setActive(id);
-  };
-  const goToNext = () => {
-    handleChange((active + 1) % list.length);
-  };
-  const goToPrevious = () => {
-    handleChange((active - 1 + list.length) % list.length);
-  };
-
-  // Mouse and touch event handlers
-  const handleMouseDown = (e) => {
-    startX.current = e.clientX;
+  const handleDragStart = (e) => {
     setIsDragging(true);
-  };
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-    setIsDragging(true);
+    setStartX(e.pageX || e.touches[0].pageX);
   };
 
-  const handleMove = (clientX) => {
-    const diffX = clientX - startX.current;
-    if (diffX > 50) {
-      goToPrevious();
+  const handleDragMove = (e) => {
+    if (!isDragging) return;
+    const currentX = e.pageX || e.touches[0].pageX;
+    const translate = currentX - startX;
+    if (translate > 100) {
       setIsDragging(false);
-    } else if (diffX < -50) {
-      goToNext();
+      handlePrevious();
+    } else if (translate < -100) {
       setIsDragging(false);
+      handleNext();
     }
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    handleMove(e.clientX);
-  };
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    handleMove(e.touches[0].clientX);
-  };
-
-  const handleEnd = () => {
+  const handleDragEnd = () => {
     setIsDragging(false);
   };
 
-  // Interval
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleChange((active + 1) % list.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [active, list.length]);
+  const handlePrevious = () => {
+    if (slideRef.current.children.length > 0) {
+      const lastElement =
+        slideRef.current.children[slideRef.current.children.length - 1];
+
+      slideRef.current.insertBefore(lastElement, slideRef.current.firstChild);
+
+      slideRef.current.style.transition = 'none';
+      slideRef.current.style.transform = `translateX(-${lastElement.offsetWidth}px)`;
+
+      requestAnimationFrame(() => {
+        slideRef.current.style.transition = `0.5s ease-out all`;
+        slideRef.current.style.transform = `translateX(0)`;
+      });
+    }
+  };
+
+  const handleNext = () => {
+    if (slideRef.current.children.length > 0) {
+      const firstElement = slideRef.current.children[0];
+      const slideWidth = firstElement.offsetWidth;
+
+      slideRef.current.style.transition = `0.45s ease-out all`;
+      slideRef.current.style.transform = `translateX(-${slideWidth}px)`;
+
+      const transition = () => {
+        slideRef.current.style.transition = `none`;
+        slideRef.current.style.transform = `translateX(0)`;
+
+        slideRef.current.appendChild(firstElement);
+
+        slideRef.current.removeEventListener('transitionend', transition);
+      };
+
+      slideRef.current.addEventListener('transitionend', transition);
+    }
+  };
 
   return (
     <div
       className={styles.container}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleEnd}
-      onMouseLeave={handleEnd}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleEnd}
+      onMouseDown={handleDragStart}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+      onMouseLeave={handleDragEnd}
+      onTouchStart={handleDragStart}
+      onTouchMove={handleDragMove}
+      onTouchEnd={handleDragEnd}
     >
-      {/* Slider */}
-      <div className={styles.slider}>
-        {/* Cards */}
-        {list.map((item, index) => (
-          <div
-            key={item.id}
-            className={`${styles.item} 
-              ${active === index ? styles.active : ''} 
-              ${previous === index ? styles.previous : ''}
-              ${index === active + 1 || (active === list.length - 1 && index === 0) ? styles.next : ''}
-              `}
-          >
-            <p className={styles.description}>
-              <img
-                className={styles.quoteLeft}
-                src={quoteDark}
-                alt="quote icon"
-              />
-              {item.description}
-              <img
-                className={styles.quoteRight}
-                src={quoteDark}
-                alt="quote icon"
-              />
-            </p>
-            <span>{item.name}</span>
-          </div>
+      {/* slider */}
+      <ul className={styles.slider} ref={slideRef}>
+        {groupedList?.map((item, index) => (
+          <li key={`slider-item-${index}`} className={styles.slide}>
+            <ul>
+              {item?.map((item, index) => (
+                <li key={`slider-comment-${index}`}>
+                  <p>“{item.description}”</p>
+                  <span>-{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </li>
         ))}
-      </div>
-      {/* Dots */}
+      </ul>
+
+      {/* dots */}
       <div className={styles.dots}>
-        {list.map((item, index) => (
-          <button
-            onClick={() => handleChange(index)}
-            key={item.id}
-            className={`${styles.dot} ${active === index ? styles.active : ''}`}
-          ></button>
+        {groupedList?.map((item, index) => (
+          <span key={`slider-dot-${index}`} className={styles.dot}></span>
         ))}
       </div>
     </div>

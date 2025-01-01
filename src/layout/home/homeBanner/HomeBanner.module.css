@@ -7,7 +7,7 @@
   gap: 0.8rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-position: center;
   padding: 0 1rem;
 }
 .homeBanner .logo {
@@ -33,10 +33,10 @@
   margin: 20px 0;
 }
 .homeBanner.dark {
-  background-image: url('../../../assets/images/banner_dark_mobile.png');
+  background-image: url('../../../assets/images/banner/dark/banner_mobile.png');
 }
 .homeBanner.light {
-  background-image: url('../../../assets/images/banner_light_prueba.png');
+  background-image: url('../../../assets/images/banner/light/banner_mobile.png');
 }
 .buttonsCont {
   display: flex;
@@ -50,6 +50,12 @@
   .buttonsCont {
     gap: 1.5rem;
   }
+  .homeBanner.dark {
+    background-image: url('../../../assets/images/banner/dark/banner_tablet.png');
+  }
+  .homeBanner.light {
+    background-image: url('../../../assets/images/banner/light/banner_tablet.png');
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -57,9 +63,9 @@
     flex-direction: row;
   }
   .homeBanner.dark {
-    background-image: url('../../../assets/images/banner_dark.png');
+    background-image: url('../../../assets/images/banner/dark/banner_desktop.png');
   }
   .homeBanner.light {
-    background-image: url('../../../assets/images/banner_light_prueba.png');
+    background-image: url('../../../assets/images/banner/light/banner_desktop.png');
   }
 }

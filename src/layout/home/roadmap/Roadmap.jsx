@@ -4,13 +4,16 @@ import timeLine from '@assets/images/roadmap/line_desktop.svg';
 import { GradientTitle } from '@components';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 
 export default function Roadmap() {
+  const { theme } = useContext(ThemeContext);
   const tokenPresaleDate = new Date('2025-01-05T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 
   return (
-    <section className={styles.roadmap}>
+    <section className={`${styles.roadmap} ${styles[theme]}`}>
       <h2>
         <GradientTitle>Roadmap</GradientTitle>
       </h2>
