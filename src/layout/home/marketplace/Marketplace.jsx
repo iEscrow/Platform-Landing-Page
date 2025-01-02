@@ -1,5 +1,6 @@
 import styles from './Marketplace.module.css';
-import marketplaceDesktopDark from '@assets/images/marketplace_desktop_dark.png';
+import marketplaceMobileDark from '@assets/images/marketplace/dark/marketplace_mobile.png';
+import marketplaceDesktopDark from '@assets/images/marketplace/dark/marketplace_desktop.png';
 import { CustomButton, GradientTitle } from '@components';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
@@ -16,11 +17,18 @@ export default function Marketplace() {
           </Trans>
         </h2>
         <div className={styles.content}>
-          <img
-            className={styles.marketplaceImage}
-            src={marketplaceDesktopDark}
-            alt="marketplace"
-          />
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcSet={marketplaceDesktopDark}
+            />
+            <img
+              className={styles.marketplaceImage}
+              src={marketplaceMobileDark}
+              alt="marketplace"
+            />
+          </picture>
+
           <div className={styles.textContainer}>
             <p>
               <Trans i18nKey="Home.Marketplace.description1">
@@ -32,9 +40,8 @@ export default function Marketplace() {
                 <span></span>
               </Trans>
             </p>
-            <p>
-              <Trans i18nKey="Home.Marketplace.description3"></Trans>
-            </p>
+            <p>{t('Home.Marketplace.description3')}</p>
+            <p>{t('Home.Marketplace.description4')}</p>
             <CustomButton to="#" variant="primary">
               <img src={halfArrow} alt="half arrow icon" />
               <Trans i18nKey="Home.Marketplace.visit"></Trans>
