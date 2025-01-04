@@ -1,7 +1,7 @@
 import styles from './SocialIcon.module.css';
 import PropTypes from 'prop-types';
 
-export default function SocialIcon({ icon, alt, link, blank = true }) {
+export default function SocialIcon({ children, link, blank = true }) {
   return (
     <a
       className={styles.icon}
@@ -9,14 +9,13 @@ export default function SocialIcon({ icon, alt, link, blank = true }) {
       target={blank ? '_blank' : '_self'}
       rel="noreferrer"
     >
-      <img src={icon} alt={alt} />
+      {children}
     </a>
   );
 }
 
 SocialIcon.propTypes = {
-  icon: PropTypes.string,
-  alt: PropTypes.string,
+  children: PropTypes.node,
   link: PropTypes.string,
   blank: PropTypes.bool,
 };

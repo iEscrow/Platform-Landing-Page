@@ -1,14 +1,7 @@
 import styles from './Footer.module.css';
 import { useTranslation } from 'react-i18next';
-
-// assets
-import facebookIconDark from '@assets/icons/socials/facebook_dark.png';
-import instagramIconDark from '@assets/icons/socials/instagram_dark.png';
-import telegramIconDark from '@assets/icons/socials/telegram_dark.png';
-import tiktokIconDark from '@assets/icons/socials/tiktok_dark.png';
-import twitterIconDark from '@assets/icons/socials/twitter_dark.png';
-import youtubeIconDark from '@assets/icons/socials/youtube_dark.png';
-import logo from '@assets/images/logo_dark.svg';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 
 // components
 import FooterAccordion from '@components/accordions/footerAccordion/FooterAccordion';
@@ -17,12 +10,61 @@ import LanguageChange from '@components/locale/languageChange/LanguageChange';
 import CurrencyChange from '@components/locale/currencyChange/CurrencyChange';
 import FooterThemeSelector from '@components/theme/footerThemeSelector/FooterThemeSelector';
 
+import logo from '@assets/images/logo_dark.svg';
+// icons
+import FacebookIcon from '@components/icons/socials/FacebookIcon';
+import InstagramIcon from '@components/icons/socials/InstagramIcon';
+import TelegramIcon from '@components/icons/socials/TelegramIcon';
+import TikTokIcon from '@components/icons/socials/TikTokIcon';
+import TwitterIcon from '@components/icons/socials/TwitterIcon';
+import YoutubeIcon from '@components/icons/socials/YoutubeIcon';
+
 /**
  * Footer component that contains the footer accordion and the community social links
  * @returns {JSX.Element}
  */
 export default function Footer() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
+
+  const socials = [
+    {
+      id: 1,
+      icon: <FacebookIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Facebook',
+    },
+    {
+      id: 2,
+      icon: <InstagramIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Instagram',
+    },
+    {
+      id: 3,
+      icon: <TelegramIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Telegram',
+    },
+    {
+      id: 4,
+      icon: <TikTokIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Tiktok',
+    },
+    {
+      id: 5,
+      icon: <TwitterIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Twitter',
+    },
+    {
+      id: 6,
+      icon: <YoutubeIcon theme={theme} />,
+      link: '#',
+      ariaLabel: 'Youtube',
+    },
+  ];
 
   return (
     <footer className={styles.footer}>
@@ -35,42 +77,15 @@ export default function Footer() {
           <div className={styles.community}>
             <span>{t('Footer.Comunity.title')}</span>
             <div className={styles.socials}>
-              <SocialIcon
-                icon={facebookIconDark}
-                alt="facebook icon"
-                link="#"
-                aria-label="Facebook"
-              />
-              <SocialIcon
-                icon={instagramIconDark}
-                alt="instagram icon"
-                link="#"
-                aria-label="Instagram"
-              />
-              <SocialIcon
-                icon={telegramIconDark}
-                alt="telegram icon"
-                link="#"
-                aria-label="Telegram"
-              />
-              <SocialIcon
-                icon={tiktokIconDark}
-                alt="tiktok icon"
-                link="#"
-                aria-label="Tiktok"
-              />
-              <SocialIcon
-                icon={twitterIconDark}
-                alt="twitter icon"
-                link="#"
-                aria-label="Twitter"
-              />
-              <SocialIcon
-                icon={youtubeIconDark}
-                alt="youtube icon"
-                link="#"
-                aria-label="Youtube"
-              />
+              {socials.map((social) => (
+                <SocialIcon
+                  key={social.id}
+                  link={social.link}
+                  ariaLabel={social.ariaLabel}
+                >
+                  {social.icon}
+                </SocialIcon>
+              ))}
             </div>
           </div>
         </div>
