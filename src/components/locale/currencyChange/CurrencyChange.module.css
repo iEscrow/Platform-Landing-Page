@@ -14,13 +14,13 @@
   position: absolute;
   top: -10rem;
   right: 0;
-  background-color: var(--transparent-black);
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--dropdown-bg);
+  box-shadow: 0px 8px 16px 0px var(--dropdown-shadow);
+  color: var(--light-text-color);
   z-index: 1;
   border-radius: 6px;
   padding: 1rem;
-  color: var(--white);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -36,8 +36,8 @@
   cursor: pointer;
 }
 .dropdown li.active {
-  color: var(--text-decoration-color);
+  color: var(--primary-color);
 }
 .dropdown li:hover {
-  color: var(--text-decoration-color);
+  color: var(--primary-color);
 }

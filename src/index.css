@@ -12,6 +12,9 @@
   --transparent-black: #171717ce;
   --transparent-white: rgba(255, 255, 255, 0.1);
 
+  --dropdown-bg: #171717;
+  --dropdown-shadow: #292929;
+
   --dark-text-color: #c2bfbf;
   --light-text-color: #ffffff;
   --text-decoration-color: #30c2e2;
@@ -39,6 +42,9 @@
   --text-decoration-color: #30c2e2;
   --footer-bg: #1e1e1e;
   --navbar-bg: #171717de;
+
+  --dropdown-bg: #171717;
+  --dropdown-shadow: #292929;
 }
 
 [data-theme='light'] {
@@ -51,6 +57,9 @@
   --text-decoration-color: #117e97;
   --footer-bg: #ffffff;
   --navbar-bg: #ffffffcc;
+
+  --dropdown-bg: #ffffff;
+  --dropdown-shadow: #212121;
 }
 
 @font-face {

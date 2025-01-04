@@ -9,14 +9,15 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: var(--black);
-  color: var(--white);
   padding: 0.5rem;
   border-radius: 0.5rem;
   min-width: 8rem;
   opacity: 0;
   visibility: hidden;
   transition: 0.45s ease-in-out;
+  background-color: var(--dropdown-bg);
+  box-shadow: 0px 8px 16px 0px var(--dropdown-shadow);
+  color: var(--light-text-color);
 }
 .authButton.show ul {
   opacity: 1;

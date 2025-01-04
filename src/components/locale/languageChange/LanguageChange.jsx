@@ -2,9 +2,9 @@ import LanguageIcon from '../../icons/language/LanguageIcon';
 import styles from './LanguageChange.module.css';
 import { useTranslation } from 'react-i18next';
 import { languageList } from '@data/languages';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import useClickOutside from '@hooks/useClickOutside';
-
+import { ThemeContext } from '@context/ThemeContext';
 /**
  * Reusable button for language switching
  * @returns {JSX.Element}
@@ -13,6 +13,7 @@ export default function LanguageChange() {
   const { i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const languageDropdownRef = useRef(null);
+  const { theme } = useContext(ThemeContext);
 
   useClickOutside(languageDropdownRef, () => setShow(false));
 
@@ -31,7 +32,7 @@ export default function LanguageChange() {
   return (
     <div className={styles.languageChange} ref={languageDropdownRef}>
       <button onClick={handleShow}>
-        <LanguageIcon />
+        <LanguageIcon variant={theme === 'dark' ? 'cian' : 'blue'} />
         <span>{findLanguage()?.label}</span>
       </button>
 
