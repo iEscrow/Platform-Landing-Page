@@ -7,6 +7,7 @@ import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
 import { CustomButton, GradientTitle } from '@components';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
+import VideoIcon from '../../../components/icons/videoIcon/VideoIcon';
 
 /**
  * Home main banner component
@@ -29,7 +30,7 @@ export default function HomeBanner() {
       <p>{t('Home.Banner.description')}</p>
       <div className={styles.buttonsCont}>
         <CustomButton to="#" variant="secondary">
-          <img src={videoIcon} alt="video icon" />
+          <VideoIcon theme={theme} />
           {t('Home.Banner.watchVideo')}
         </CustomButton>
         <CustomButton to="#" variant="primary">

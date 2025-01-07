@@ -59,7 +59,7 @@
 }
 .menu .button {
   border-radius: 56px;
-  color: var(--light-text-color);
+  color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
