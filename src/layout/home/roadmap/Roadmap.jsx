@@ -13,8 +13,14 @@ import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
 
 export default function Roadmap() {
   const { theme } = useContext(ThemeContext);
-  const tokenPresaleDate = new Date('2025-01-05T00:00:00Z').getTime();
+  const tokenPresaleDate = new Date('2025-01-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
+
+  const tokenLaunchDate = new Date('2025-01-09T00:00:00Z').getTime();
+  const tokenLaunchCountdown = useCountdown(tokenLaunchDate);
+
+  const exchangeLaunchDate = new Date('2025-01-20T00:00:00Z').getTime();
+  const exchangeLaunchCountdown = useCountdown(exchangeLaunchDate);
 
   return (
     <section className={`${styles.roadmap} ${styles[theme]}`}>
@@ -33,6 +39,9 @@ export default function Roadmap() {
             <p>Cryptocurrency</p>
             <p>iESCROW exchange launch</p>
             <span className={styles.date}>1st September 2025</span>
+            {tokenLaunchCountdown === null && (
+              <CountdownTimer timeLeft={exchangeLaunchCountdown} variant="sm" />
+            )}
           </div>
           <img src={mobileLine1} alt="decoration line" />
         </li>
@@ -43,6 +52,9 @@ export default function Roadmap() {
             <p>Cryptocurrency</p>
             <p>$ESCROW token launch</p>
             <span className={styles.date}>15th August 2025</span>
+            {tokenPresaleCountdown === null && (
+              <CountdownTimer timeLeft={tokenLaunchCountdown} variant="sm" />
+            )}
           </div>
           <img src={mobileLine2} alt="decoration line" />
         </li>

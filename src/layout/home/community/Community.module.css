@@ -7,15 +7,15 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 .community h2 {
   color: var(--light-text-color);
 }
 
 .community.dark {
-  background-image: url('../../../assets/images/community/bg_dark.png');
+  background-image: url('../../../assets/images/community/dark/bg_desktop.png');
 }
 .community.light {
-  background-image: url('../../../assets/images/community/bg_light.png');
+  background-image: url('../../../assets/images/community/light/bg_desktop.png');
 }

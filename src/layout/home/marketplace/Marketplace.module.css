@@ -1,10 +1,19 @@
 .marketplace {
   color: var(--light-text-color);
   padding: 12rem 1rem;
+  margin: 10rem 0;
   text-align: center;
-  text-align: center;
-  background-image: url('../../../assets/images/marketplace_bg_dark_desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.marketplace.dark {
+  background-image: url('../../../assets/images/marketplace/dark/bg_desktop.png');
+}
+.marketplace.light {
+  background-image: url('../../../assets/images/marketplace/light/bg_desktop.png');
+}
+
 .marketplaceImage {
   width: 100%;
 }

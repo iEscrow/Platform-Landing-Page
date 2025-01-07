@@ -4,12 +4,15 @@ import marketplaceDesktopDark from '@assets/images/marketplace/dark/marketplace_
 import { CustomButton, GradientTitle } from '@components';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 
 export default function Marketplace() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <section className={styles.marketplace}>
+    <section className={`${styles.marketplace} ${styles[theme]}`}>
       <div className={styles.wrapper}>
         <h2>
           <Trans i18nKey="Home.Marketplace.title">
