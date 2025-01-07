@@ -24,10 +24,22 @@
   visibility: hidden;
   transition: 0.45s ease-in-out;
   background-color: var(--dropdown-bg);
-  box-shadow: 0px 8px 16px 0px var(--dropdown-shadow);
+  box-shadow: 0px 4px 12px 0px var(--dropdown-shadow);
   color: var(--light-text-color);
 }
 .dropdown.show {
   opacity: 1;
   visibility: visible;
+}
+.dropdown ul li {
+  cursor: pointer;
+  font-weight: 400;
+}
+.dropdown ul li:hover {
+  color: var(--primary-color);
+}
+.dropdown ul li.activeCurrency,
+.dropdown ul li.activeLanguage {
+  color: var(--primary-color);
+  font-weight: 800;
 }

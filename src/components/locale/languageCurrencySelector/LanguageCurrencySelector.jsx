@@ -6,12 +6,14 @@ import { languageList } from '@data/languages';
 import { useTranslation } from 'react-i18next';
 import useClickOutside from '@hooks/useClickOutside';
 import LanguageIcon from '../../icons/language/LanguageIcon';
+import { useCurrency } from '@context/CurrencyContext';
 
 export default function LanguageCurrencySelector() {
   const [show, setShow] = useState(false);
   const languageDropdownRef = useRef(null);
   const { i18n } = useTranslation();
   const { theme } = useContext(ThemeContext);
+  const { currency, setCurrency } = useCurrency();
 
   useClickOutside(languageDropdownRef, () => setShow(false));
 
@@ -21,6 +23,11 @@ export default function LanguageCurrencySelector() {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    setShow(false);
+  };
+  const changeCurrency = (currency) => {
+    setCurrency(currency);
+    setShow(false);
   };
 
   return (
@@ -34,7 +41,7 @@ export default function LanguageCurrencySelector() {
             <li
               onClick={() => changeLanguage(value)}
               key={id}
-              className={i18n.language === value ? styles.active : ''}
+              className={i18n.language === value ? styles.activeLanguage : ''}
             >
               {label}
             </li>
@@ -42,8 +49,14 @@ export default function LanguageCurrencySelector() {
         </ul>
 
         <ul>
-          {currencyList?.map((currency) => (
-            <li key={currency.id}>{currency.label}</li>
+          {currencyList?.map(({ id, value, label }) => (
+            <li
+              key={id}
+              onClick={() => changeCurrency(value)}
+              className={currency === value ? styles.activeCurrency : ''}
+            >
+              {label}
+            </li>
           ))}
         </ul>
       </div>

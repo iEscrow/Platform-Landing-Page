@@ -2,7 +2,7 @@
 .keyBenefits {
   margin: 6rem 0;
   position: relative;
-  color: var(--light-text-color);
+  color: var(--white);
 }
 .keyBenefits h2 {
   text-align: center;
@@ -26,7 +26,16 @@
   z-index: -1;
   width: 100%;
   height: calc(100% - 4rem);
-  background: var(--key-benefits-false-bg);
+}
+.keyBenefits.dark .falseBg {
+  background: linear-gradient(
+    180deg,
+    rgba(27, 128, 164, 0.5) 0%,
+    rgba(10, 48, 62, 0.5) 100%
+  );
+}
+.keyBenefits.light .falseBg {
+  background: #1f5c8796;
 }
 
 /* Content */
@@ -34,9 +43,14 @@
   width: calc(100% - 2rem - 3vw);
   padding: 0 1.2rem;
   padding-bottom: 3rem;
-  background: var(--key-benefits-bg);
   display: flex;
   flex-direction: column;
+}
+.keyBenefits.dark .content {
+  background: linear-gradient(180deg, #1b80a4 0%, #144d62 64.65%, #0a303e 100%);
+}
+.keyBenefits.light .content {
+  background: linear-gradient(180deg, #1f5b87, #063e67);
 }
 .phone {
   width: 100%;
