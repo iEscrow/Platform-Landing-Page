@@ -43,6 +43,27 @@
       "watchVideo": "Mirar video",
       "createEscrow": "Crear escrow"
     },
+    "Roadmap": {
+      "title": "Roadmap",
+      "tokenPresale": {
+        "title": "Token Presale",
+        "currency": "Cryptocurrency",
+        "description": "$ESCROW presale starts",
+        "date": "1st July 2025"
+      },
+      "tokenLaunch": {
+        "title": "Token Launch",
+        "currency": "Cryptocurrency",
+        "description": "$ESCROW token launch",
+        "date": "15th August 2025"
+      },
+      "exchangeLaunch": {
+        "title": "Token Presale",
+        "currency": "Cryptocurrency",
+        "description": "$ESCROW exchange launch",
+        "date": "1st September 2025"
+      }
+    },
     "Countdown": {
       "days": "Días",
       "hours": "Horas",
