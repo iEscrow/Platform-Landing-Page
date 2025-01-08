@@ -9,7 +9,7 @@ import lowerFeesVideo from '@assets/videos/lowerfees.mp4';
 import escrowCoin from '@assets/images/lowerfees/escrow_coin.png';
 
 export default function LowerFees() {
-  const tokenPresaleDate = new Date('2025-01-05T00:00:00Z').getTime();
+  const tokenPresaleDate = new Date('2025-01-10T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 
   return (
@@ -33,7 +33,11 @@ export default function LowerFees() {
 
         <div className={styles.counterdown}>
           <p>presale starts in:</p>
-          <CountdownTimer timeLeft={tokenPresaleCountdown} variant="lg" />
+          {tokenPresaleCountdown !== null ? (
+            <CountdownTimer timeLeft={tokenPresaleCountdown} variant="lg" />
+          ) : (
+            <p>Lanzado</p>
+          )}
           <div className={styles.buttons}>
             <a href="" target="blank">
               <img src={halfArrow} alt="half arrow icon" />

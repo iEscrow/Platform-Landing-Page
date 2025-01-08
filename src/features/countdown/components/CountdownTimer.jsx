@@ -11,7 +11,7 @@ export default function CountdownTimer({
   const { t } = useTranslation();
 
   if (!timeLeft) {
-    return variant === 'sm' ? '' : <span>ha comenzado 🚀</span>;
+    return null;
   }
 
   const { days, hours, minutes, seconds } = timeLeft;
