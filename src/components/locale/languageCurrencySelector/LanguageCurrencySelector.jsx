@@ -1,15 +1,19 @@
 import styles from './LanguageCurrencySelector.module.css';
-import worldIcon from '../../../assets/icons/world_dark.svg';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 import { currencyList } from '@data/currency';
 import { languageList } from '@data/languages';
 import { useTranslation } from 'react-i18next';
 import useClickOutside from '@hooks/useClickOutside';
+import LanguageIcon from '../../icons/language/LanguageIcon';
+import { useCurrency } from '@context/CurrencyContext';
 
 export default function LanguageCurrencySelector() {
   const [show, setShow] = useState(false);
   const languageDropdownRef = useRef(null);
   const { i18n } = useTranslation();
+  const { theme } = useContext(ThemeContext);
+  const { currency, setCurrency } = useCurrency();
 
   useClickOutside(languageDropdownRef, () => setShow(false));
 
@@ -19,12 +23,17 @@ export default function LanguageCurrencySelector() {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    setShow(false);
+  };
+  const changeCurrency = (currency) => {
+    setCurrency(currency);
+    setShow(false);
   };
 
   return (
     <div ref={languageDropdownRef} className={styles.languageCurrencySelector}>
       <button onClick={handleShow}>
-        <img src={worldIcon} alt="world icon" />
+        <LanguageIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       </button>
       <div className={`${show ? styles.show : ''} ${styles.dropdown}`}>
         <ul>
@@ -32,7 +41,7 @@ export default function LanguageCurrencySelector() {
             <li
               onClick={() => changeLanguage(value)}
               key={id}
-              className={i18n.language === value ? styles.active : ''}
+              className={i18n.language === value ? styles.activeLanguage : ''}
             >
               {label}
             </li>
@@ -40,8 +49,14 @@ export default function LanguageCurrencySelector() {
         </ul>
 
         <ul>
-          {currencyList?.map((currency) => (
-            <li key={currency.id}>{currency.label}</li>
+          {currencyList?.map(({ id, value, label }) => (
+            <li
+              key={id}
+              onClick={() => changeCurrency(value)}
+              className={currency === value ? styles.activeCurrency : ''}
+            >
+              {label}
+            </li>
           ))}
         </ul>
       </div>

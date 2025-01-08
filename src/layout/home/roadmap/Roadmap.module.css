@@ -17,8 +17,11 @@
 .roadmap.light {
   background-image: url('../../../assets/images/roadmap/light/roadmap_bg_mobile.png');
 }
-.roadmap h2 {
-  text-align: center;
+.titleCont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
   margin: 4rem 0;
 }
 .timeLine {
@@ -73,11 +76,9 @@
   .roadmap.light {
     background-image: url('../../../assets/images/roadmap/light/roadmap_bg_tablet.png');
   }
-  .title {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
+  .titleCont {
     justify-content: flex-start;
+    transform: translateY(7rem);
   }
   .timeLine {
     padding-top: 28rem;

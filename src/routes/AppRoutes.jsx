@@ -1,5 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home } from '../pages';
+import Home from '../pages/home/Home';
+import LoginPage from '../pages/auth/login/LoginPage';
+import RegisterPage from '../pages/auth/register/RegisterPage';
+import NotFound from '../pages/not_found/NotFound';
 
 export default function AppRoutes() {
   return (
@@ -9,11 +12,11 @@ export default function AppRoutes() {
       <Route path="/marketplace" element={<h1>Marketplace</h1>} />
 
       {/* Auth pages */}
-      <Route path="/signin" element={<h1>Login</h1>} />
-      <Route path="/signup" element={<h1>Register</h1>} />
+      <Route path="/signin" element={<LoginPage />} />
+      <Route path="/signup" element={<RegisterPage />} />
 
       {/* Error pages */}
-      <Route path="*" element={<h1>Error 404</h1>} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

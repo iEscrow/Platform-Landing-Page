@@ -3,6 +3,8 @@ import phoneMobile from '@assets/images/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keybenefits_desktop.png';
 import { IconText, GradientTitle } from '@components';
 import { Trans, useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 
 /**
  * Key benefits section that contains the title and the card}
@@ -11,9 +13,10 @@ import { Trans, useTranslation } from 'react-i18next';
  */
 export default function KeyBenefits() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <section className={styles.keyBenefits}>
+    <section className={`${styles.keyBenefits} ${styles[theme]}`}>
       <h2>
         <Trans i18nKey="Home.KeyBenefits.title">
           <GradientTitle></GradientTitle>

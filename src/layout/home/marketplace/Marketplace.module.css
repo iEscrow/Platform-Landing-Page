@@ -1,10 +1,19 @@
 .marketplace {
   color: var(--light-text-color);
   padding: 12rem 1rem;
+  margin: 10rem 0;
   text-align: center;
-  text-align: center;
-  background-image: url('../../../assets/images/marketplace_bg_dark_desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.marketplace.dark {
+  background-image: url('../../../assets/images/marketplace/dark/bg_desktop.png');
+}
+.marketplace.light {
+  background-image: url('../../../assets/images/marketplace/light/bg_desktop.png');
+}
+
 .marketplaceImage {
   width: 100%;
 }
@@ -51,18 +60,20 @@
   .wrapper {
     max-width: 1200px;
   }
+  .marketplaceImage {
+    width: 600px;
+  }
   .content {
     margin-top: 2rem;
     display: flex;
+    flex-direction: row-reverse;
     align-items: flex-start;
     gap: 2rem;
   }
   .textContainer {
-    text-align: left;
-    align-items: flex-start;
     margin: 0;
   }
   .textContainer a {
-    margin: 0;
+    margin-top: 1rem;
   }
 }

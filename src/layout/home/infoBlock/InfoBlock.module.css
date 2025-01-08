@@ -1,7 +1,13 @@
 .infoBlock {
-  background-image: url('../../../assets/images/info_block_bg_desktop.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+.infoBlock.dark {
+  background-image: url('../../../assets/images/iconsSection/dark/bg_desktop.png');
+}
+.infoBlock.light {
+  background-image: url('../../../assets/images/iconsSection/light/bg_desktop.png');
 }
 .topBlock {
   display: flex;

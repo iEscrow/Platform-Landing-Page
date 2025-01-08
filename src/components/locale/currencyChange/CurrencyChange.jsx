@@ -1,11 +1,13 @@
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { useCurrency } from '../../../context/CurrencyContext';
 import styles from './CurrencyChange.module.css';
 import CurrencyIcon from '@components/icons/currency/CurrencyIcon';
 import { currencyList } from '@data/currency';
 import useClickOutside from '@hooks/useClickOutside';
+import { ThemeContext } from '@context/ThemeContext';
 
 export default function CurrencyChange() {
+  const { theme } = useContext(ThemeContext);
   const { currency, setCurrency } = useCurrency();
   const [show, setShow] = useState(false);
   const currencyDropdownRef = useRef(null);
@@ -24,7 +26,7 @@ export default function CurrencyChange() {
   return (
     <div className={styles.currencyChange} ref={currencyDropdownRef}>
       <button onClick={handleShow}>
-        <CurrencyIcon />
+        <CurrencyIcon theme={theme} />
         <span>{currency}</span>
       </button>
       <ul className={`${show ? styles.show : ''} ${styles.dropdown}`}>
