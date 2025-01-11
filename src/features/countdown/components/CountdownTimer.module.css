@@ -1,8 +1,9 @@
 .countdown {
   display: flex;
+  color: var(--light-text-color);
 }
 .countdown.white {
-  color: var(--light-text-color);
+  color: var(--white);
 }
 .countdown.black {
   color: var(--black);
