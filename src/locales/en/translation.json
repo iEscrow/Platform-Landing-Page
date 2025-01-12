@@ -3,7 +3,8 @@
     "roadmap": "Roadmap",
     "marketplace": "Marketplace",
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "createEscrow": "Create escrow"
   },
   "Footer": {
     "About": {

@@ -3,7 +3,8 @@
     "roadmap": "Roadmap",
     "marketplace": "Marketplace",
     "login": "Iniciar sesión",
-    "register": "Registrarse"
+    "register": "Registrarse",
+    "createEscrow": "Crear escrow"
   },
   "Footer": {
     "About": {
@@ -74,7 +75,7 @@
       "title": "We have a hybrid <0>CEX/DEX approach</0>"
     },
     "LowerFees": {
-      "titleSpan": "25% menos en tarifas",
+      "titleSpan": "25% lower fees",
       "title": "con nuestra criptomoneda.",
       "coin": "Escrow",
       "comingSoon": "Próximamente",

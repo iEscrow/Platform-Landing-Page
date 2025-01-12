@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function LowerFees() {
   const { t } = useTranslation();
-  const tokenPresaleDate = new Date('2025-01-10T00:00:00Z').getTime();
+  const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 
   return (

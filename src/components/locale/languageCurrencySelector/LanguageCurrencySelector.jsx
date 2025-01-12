@@ -1,4 +1,5 @@
 import styles from './LanguageCurrencySelector.module.css';
+import PropTypes from 'prop-types';
 import { useContext, useRef, useState } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { currencyList } from '@data/currency';
@@ -8,7 +9,7 @@ import useClickOutside from '@hooks/useClickOutside';
 import LanguageIcon from '../../icons/language/LanguageIcon';
 import { useCurrency } from '@context/CurrencyContext';
 
-export default function LanguageCurrencySelector() {
+export default function LanguageCurrencySelector({ closeNavbar }) {
   const [show, setShow] = useState(false);
   const languageDropdownRef = useRef(null);
   const { i18n } = useTranslation();
@@ -24,10 +25,12 @@ export default function LanguageCurrencySelector() {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setShow(false);
+    closeNavbar();
   };
   const changeCurrency = (currency) => {
     setCurrency(currency);
     setShow(false);
+    closeNavbar();
   };
 
   return (
@@ -63,3 +66,7 @@ export default function LanguageCurrencySelector() {
     </div>
   );
 }
+
+LanguageCurrencySelector.propTypes = {
+  closeNavbar: PropTypes.func,
+};

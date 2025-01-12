@@ -59,11 +59,11 @@ export default function Navbar() {
           <AuthLinks isAuthenticated={isAuthenticated} onClose={handleClose} />
 
           <li>
-            <LanguageCurrencySelector />
+            <LanguageCurrencySelector closeNavbar={handleClose} />
           </li>
           <li>
             <Link onClick={handleClose} className={styles.button} to="#">
-              Create Escrow
+              {t('Navbar.createEscrow')}
             </Link>
           </li>
           <li className={styles.settings}>
