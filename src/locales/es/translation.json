@@ -3,13 +3,14 @@
     "roadmap": "Roadmap",
     "marketplace": "Marketplace",
     "login": "Iniciar sesión",
-    "register": "Registrarse"
+    "register": "Registrarse",
+    "createEscrow": "Crear escrow"
   },
   "Footer": {
     "About": {
       "title": "Sobre Nosotros",
       "about": "acerca",
-      "terms": "terminos",
+      "terms": "términos",
       "privacy": "privacidad"
     },
     "Services": {
@@ -30,9 +31,9 @@
     },
     "Copyright": {
       "copyright": "© {{year}} iEscrow.crypto Derechos Reservados",
-      "terms": "Website Terms",
-      "disclaimer": "Protocol disclaimer",
-      "privacy": "Privacy Policy"
+      "terms": "Términos del sitio",
+      "disclaimer": "Aviso de protocolo",
+      "privacy": "Políticas de privacidad"
     }
   },
   "Home": {
@@ -73,6 +74,15 @@
     "KeyBenefits": {
       "title": "We have a hybrid <0>CEX/DEX approach</0>"
     },
+    "LowerFees": {
+      "titleSpan": "25% lower fees",
+      "title": "con nuestra criptomoneda.",
+      "coin": "Escrow",
+      "comingSoon": "Próximamente",
+      "presale": "La preventa comienza en",
+      "website": "website",
+      "whitepaper": "whitepaper"
+    },
     "InfoBlock": {
       "securityTitle": "Your security, our priority",
       "securityDescription": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits.",
@@ -86,12 +96,12 @@
       "privacyDescription": "At iEscrow, we care about the privacy of our users. We not only understand it's important, but we also believe it's your right. That's why we don't implement KYC in countries where it's not mandatory."
     },
     "Marketplace": {
-      "title": "Discover Your Perfect Match: <0>Explore Our Marketplace</0>",
-      "description1": "If <0>you already have the other party to make a transaction,</0>your most efficient option would be to <0>make a private escrow.</0>",
-      "description2": "However, if you want to make a transaction but you´re yet <0>looking for a counterparty,</0> then you can <0>use the marketplace to immediately make the exchange you need.</0>",
-      "description3": "We have developed an intuitive marketplace in which the user can easily find what they need by just setting 3 simple options: 1) What they want to buy, 2) how they want to pay it with and 3) the country in which they want to make the transaction.",
-      "description4": " Finally, you can sort your search by the users with the best reputation, the users with the best price, or the users with the fastest response time on making their transactions.",
-      "visit": "Visit Marketplace"
+      "title": "Descubre tu match ideal: <0>Explora nuestro Marketplace</0>",
+      "description1": "Si <0>ya tienes la otra parte para realizar una transacción,</0> tu opción más eficiente sería <0>hacer un fideicomiso privado.</0>",
+      "description2": "Sin embargo, si quieres realizar una transacción pero <0>aún estás buscando una contraparte,</0> entonces puedes <0>usar el marketplace para hacer el intercambio que necesitas de inmediato.</0>",
+      "description3": "Hemos desarrollado un marketplace intuitivo en el que el usuario puede encontrar fácilmente lo que necesita configurando solo 3 opciones simples: 1) Qué desea comprar, 2) con qué desea pagarlo y 3) el país en el que desea realizar la transacción.",
+      "description4": "Finalmente, puedes ordenar tu búsqueda por los usuarios con la mejor reputación, los usuarios con el mejor precio o los usuarios con el tiempo de respuesta más rápido en realizar sus transacciones.",
+      "visit": "Visita Marketplace"
     },
     "TradeOnTheGo": {
       "title": "Opera sobre la marcha. <0>Donde sea, cuando sea.</0>",

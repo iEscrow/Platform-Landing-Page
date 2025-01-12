@@ -16,11 +16,11 @@ export default function Roadmap() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
 
-  const tokenPresaleDate = new Date('2025-01-01T00:00:00Z').getTime();
+  const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
-  const tokenLaunchDate = new Date('2025-01-09T00:00:00Z').getTime();
+  const tokenLaunchDate = new Date('2025-08-15T00:00:00Z').getTime();
   const tokenLaunchCountdown = useCountdown(tokenLaunchDate);
-  const exchangeLaunchDate = new Date('2025-01-20T00:00:00Z').getTime();
+  const exchangeLaunchDate = new Date('2025-09-01T00:00:00Z').getTime();
   const exchangeLaunchCountdown = useCountdown(exchangeLaunchDate);
 
   const roadmapEvents = [
@@ -31,7 +31,8 @@ export default function Roadmap() {
       description: t('Home.Roadmap.exchangeLaunch.description'),
       date: t('Home.Roadmap.exchangeLaunch.date'),
       countdown: exchangeLaunchCountdown,
-      isCountdownVisible: tokenPresaleCountdown !== null,
+      isCountdownVisible:
+        tokenLaunchCountdown === null && tokenPresaleCountdown === null,
     },
     {
       id: 'tokenLaunch',

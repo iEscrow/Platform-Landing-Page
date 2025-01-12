@@ -1,8 +1,9 @@
 .countdown {
   display: flex;
+  color: var(--light-text-color);
 }
 .countdown.white {
-  color: var(--light-text-color);
+  color: var(--white);
 }
 .countdown.black {
   color: var(--black);
@@ -25,11 +26,34 @@
 }
 
 .countdown.lg .timerContainer {
-  width: 6.5rem;
+  width: 5rem;
 }
 .countdown.lg span {
-  font-size: 4.375rem;
+  font-size: 3rem;
 }
 .countdown.lg p {
-  font-size: 1.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .countdown.lg .timerContainer {
+    width: 7rem;
+  }
+  .countdown.lg span {
+    font-size: 4.375rem;
+  }
+  .countdown.lg p {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .countdown.lg .timerContainer {
+    width: 6.5rem;
+  }
+  .countdown.lg span {
+    font-size: 4.375rem;
+  }
+  .countdown.lg p {
+    font-size: 1.875rem;
+  }
 }

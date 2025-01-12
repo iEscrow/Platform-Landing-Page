@@ -18,6 +18,11 @@
   bottom: 25%;
   z-index: -1;
   border-radius: 100%;
-  background: linear-gradient(to right, var(--pink), var(--cian));
   filter: blur(12px);
+}
+.gradientTitle.dark::before {
+  background: linear-gradient(to right, var(--pink), var(--cian));
+}
+.gradientTitle.light::before {
+  background: #1d6ae6;
 }

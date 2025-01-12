@@ -3,15 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-export default function CountdownTimer({
-  timeLeft,
-  variant = 'sm',
-  color = 'white',
-}) {
+export default function CountdownTimer({ timeLeft, variant = 'sm', color }) {
   const { t } = useTranslation();
 
   if (!timeLeft) {
-    return variant === 'sm' ? '' : <span>ha comenzado 🚀</span>;
+    return null;
   }
 
   const { days, hours, minutes, seconds } = timeLeft;

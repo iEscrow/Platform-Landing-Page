@@ -7,9 +7,9 @@
 
 .authButton ul {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2rem);
   right: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   min-width: 8rem;
   opacity: 0;
@@ -22,4 +22,8 @@
 .authButton.show ul {
   opacity: 1;
   visibility: visible;
+}
+.authButton ul li:hover,
+.authButton ul li a:hover {
+  color: var(--primary-color);
 }

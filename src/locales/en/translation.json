@@ -3,33 +3,34 @@
     "roadmap": "Roadmap",
     "marketplace": "Marketplace",
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "createEscrow": "Create escrow"
   },
   "Footer": {
     "About": {
-      "title": "Sobre Nosotros",
-      "about": "acerca",
-      "terms": "terminos",
-      "privacy": "privacidad"
+      "title": "About Us",
+      "about": "about",
+      "terms": "terms",
+      "privacy": "privacy"
     },
     "Services": {
-      "title": "Servicios",
-      "download": "Descargar",
+      "title": "Services",
+      "download": "Download",
       "terms": "Marketplace",
       "escrow": "Escrow",
-      "refer": "Programa de referidos",
-      "list": "Solicitud de listado"
+      "refer": "Referral Program",
+      "list": "Listing Request"
     },
     "Support": {
-      "title": "Soporte",
-      "help": "Centro de ayuda",
-      "security": "Seguridad"
+      "title": "Support",
+      "help": "Help Center",
+      "security": "Security"
     },
     "Comunity": {
-      "title": "Comunidad"
+      "title": "Comunity"
     },
     "Copyright": {
-      "copyright": "© {{year}} iEscrow.crypto Derechos Reservados",
+      "copyright": "© {{year}} iEscrow.crypto All rights reserved.",
       "terms": "Website Terms",
       "disclaimer": "Protocol disclaimer",
       "privacy": "Privacy Policy"
@@ -72,6 +73,15 @@
     },
     "KeyBenefits": {
       "title": "We have a hybrid <0>CEX/DEX approach</0>"
+    },
+    "LowerFees": {
+      "titleSpan": "25% Lower fees",
+      "title": "with our cryptocurrency",
+      "coin": "Escrow",
+      "comingSoon": "Coming soon",
+      "presale": "Presale starts in",
+      "website": "website",
+      "whitepaper": "whitepaper"
     },
     "InfoBlock": {
       "securityTitle": "Your security, our priority",
