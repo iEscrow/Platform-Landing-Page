@@ -7,8 +7,8 @@
   flex-direction: column;
   align-items: center;
 }
-.tradeOnTheGo {
-  margin: 8rem 0;
+.phone {
+  max-width: 60%;
 }
 .textContainer {
   margin-top: 2rem;
@@ -16,6 +16,8 @@
 }
 .textContainer h2 {
   text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem auto;
 }
 .textContainer h2,
 .qrContainer p {
@@ -63,6 +65,9 @@
 @media screen and (min-width: 1024px) {
   .tradeOnTheGo {
     align-items: center;
+  }
+  .textContainer h2 {
+    margin: 0;
   }
   .textContainer {
     gap: 3.5rem;

@@ -20,7 +20,7 @@ export default function TradeOnTheGo() {
 
   return (
     <section className={styles.tradeOnTheGo}>
-      <img src={phone} alt="phone" />
+      <img className={styles.phone} src={phone} alt="phone" />
 
       <div className={styles.textContainer}>
         {/* Title */}
