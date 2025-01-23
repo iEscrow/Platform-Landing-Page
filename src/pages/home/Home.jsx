@@ -1,11 +1,11 @@
-import HomeBanner from '@layout/home/homeBanner/HomeBanner';
-import Roadmap from '@layout/home/roadmap/Roadmap';
-import KeyBenefits from '@layout/home/keyBenefits/KeyBenefits';
-// import InfoBlock from '@layout/home/infoBlock/InfoBlock';
-import Marketplace from '@layout/home/marketplace/Marketplace';
-import TradeOnTheGo from '@layout/home/tradeOnTheGo/TradeOnTheGo';
-import Community from '@layout/home/community/Community';
-import LowerFees from '@layout/home/lowerFees/LowerFees';
+import HomeBanner from '@layouts/home/homeBanner/HomeBanner';
+import Roadmap from '@layouts/home/roadmap/Roadmap';
+import KeyBenefits from '@layouts/home/keyBenefits/KeyBenefits';
+import InfoBlock from '@layouts/home/infoBlock/InfoBlock';
+import Marketplace from '@layouts/home/marketplace/Marketplace';
+import TradeOnTheGo from '@layouts/home/tradeOnTheGo/TradeOnTheGo';
+import Community from '@layouts/home/community/Community';
+import LowerFees from '@layouts/home/lowerFees/LowerFees';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Roadmap />
       <KeyBenefits />
       <LowerFees />
-      {/* <InfoBlock /> */}
+      <InfoBlock />
       <Marketplace />
       <TradeOnTheGo />
       <Community />

@@ -26,20 +26,21 @@ export default function InfoBlock() {
         <div className={styles.topBlock}>
           <InfoCard
             icon={securityIcon}
-            title={t('Home.InfoBlock.securityTitle')}
-            text={t('Home.InfoBlock.securityDescription')}
+            title={t('Home.InfoBlock.Security.title')}
+            text={t('Home.InfoBlock.Security.description')}
           />
           <div className={styles.divider}></div>
           <InfoCard
             icon={missionIcon}
-            title={t('Home.InfoBlock.missionTitle')}
-            text={t('Home.InfoBlock.missionDescription')}
+            title={t('Home.InfoBlock.Mission.title')}
+            text={t('Home.InfoBlock.Mission.description')}
           />
           <div className={styles.divider}></div>
           <InfoCard
             icon={reputationIcon}
-            title={t('Home.InfoBlock.reputationTitle')}
-            text={t('Home.InfoBlock.reputationDescription')}
+            title={t('Home.InfoBlock.Reputation.title')}
+            title2={t('Home.InfoBlock.Reputation.title2')}
+            text={t('Home.InfoBlock.Reputation.description')}
           />
         </div>
 
@@ -47,14 +48,14 @@ export default function InfoBlock() {
         <div className={styles.bottomBlock}>
           <InfoCard
             icon={adaptabilityIcon}
-            title={t('Home.InfoBlock.adaptabilityTitle')}
-            text={t('Home.InfoBlock.adaptabilityDescription')}
+            title={t('Home.InfoBlock.Adaptability.title')}
+            text={t('Home.InfoBlock.Adaptability.description')}
             lg
           />
           <InfoCard
             icon={privacyIcon}
-            title={t('Home.InfoBlock.privacyTitle')}
-            text={t('Home.InfoBlock.privacyDescription')}
+            title={t('Home.InfoBlock.Privacy.title')}
+            text={t('Home.InfoBlock.Privacy.description')}
             lg
           />
         </div>
