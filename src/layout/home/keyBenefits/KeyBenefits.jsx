@@ -1,7 +1,8 @@
 import styles from './KeyBenefits.module.css';
 import phoneMobile from '@assets/images/keyBenefits/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keyBenefits/keybenefits_desktop.png';
-import { IconText, GradientTitle } from '@components';
+import IconText from '@components/iconText/IconText';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { Trans, useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';

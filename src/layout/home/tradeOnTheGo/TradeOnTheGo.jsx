@@ -2,12 +2,12 @@ import styles from './TradeOnTheGo.module.css';
 import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
 import qr from '@assets/images/qr.png';
 import { Trans, useTranslation } from 'react-i18next';
-import { StoreButton } from '@components';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { useContext } from 'react';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { ThemeContext } from '@context/ThemeContext';
-import AppStoreIcon from '../../../components/icons/appStore/AppStoreIcon';
-import GooglePlayIcon from '../../../components/icons/googlePlayIcon/googlePlayIcon';
+import AppStoreIcon from '@components/icons/appStore/AppStoreIcon';
+import GooglePlayIcon from '@components/icons/googlePlayIcon/googlePlayIcon';
+import StoreButton from '@components/buttons/storeButton/StoreButton';
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image

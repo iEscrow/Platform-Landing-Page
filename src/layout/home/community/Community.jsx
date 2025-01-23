@@ -2,7 +2,8 @@ import styles from './Community.module.css';
 import { useContext, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '@context/ThemeContext';
-import { CommunitySlider, GradientTitle } from '@components';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
+import CommunitySlider from '@components/sliders/communitySlider/CommunitySlider';
 
 /**
  * Our Community layout section that contains the title and slider

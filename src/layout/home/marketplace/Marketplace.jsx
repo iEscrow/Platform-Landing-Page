@@ -1,7 +1,8 @@
 import styles from './Marketplace.module.css';
 import marketplaceMobileDark from '@assets/images/marketplace/dark/marketplace_mobile.png';
 import marketplaceDesktopDark from '@assets/images/marketplace/dark/marketplace_desktop.png';
-import { CustomButton, GradientTitle } from '@components';
+import CustomButton from '@components/buttons/customButton/CustomButton';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
 import { useContext } from 'react';

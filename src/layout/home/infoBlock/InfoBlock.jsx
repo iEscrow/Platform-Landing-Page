@@ -1,5 +1,5 @@
 import styles from './InfoBlock.module.css';
-import { InfoCard } from '@components';
+import InfoCard from '@components/cards/infoCard/InfoCard';
 import securityIcon from '@assets/icons/security_icon.png';
 import missionIcon from '@assets/icons/mission_icon.png';
 import reputationIcon from '@assets/icons/reputation_icon.png';

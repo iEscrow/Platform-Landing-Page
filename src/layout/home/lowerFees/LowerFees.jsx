@@ -4,7 +4,7 @@ import { useCountdown } from '@features/countdown/hooks/useCountdown';
 
 // assets
 import halfArrow from '@assets/icons/halfArrowIcon.png';
-import lowerFeesVideo from '@assets/videos/lowerfees.mp4';
+import lowerFeesVideo from '@assets/videos/lower_fees_bg.mp4';
 import escrowCoin from '@assets/images/lowerfees/escrow_coin.png';
 import { useTranslation } from 'react-i18next';
 
