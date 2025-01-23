@@ -57,3 +57,9 @@
     font-size: 1.875rem;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .countdown.lg .timerContainer {
+    width: 7rem;
+  }
+}

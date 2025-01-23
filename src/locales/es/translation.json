@@ -84,16 +84,27 @@
       "whitepaper": "whitepaper"
     },
     "InfoBlock": {
-      "securityTitle": "Your security, our priority",
-      "securityDescription": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits.",
-      "missionTitle": "What is our mission",
-      "missionDescription": "Our mission is to totally eliminate the risk of scam in case you want to transact with someone you don't know. You can easily achieve this through our escrow system.",
-      "reputationTitle": "Innovative reputation and rating system",
-      "reputationDescription": "We have developed an innovative reputation and rating system, which represents a significant improvement over previous systems.",
-      "adaptabilityTitle": "Amazing Adaptability",
-      "adaptabilityDescription": "In iEscrow you don't necessarily need to hold your funds inside the platform in order to use our services, since you can complete a p2p escrow transaction by sending the funds directly to the escrow wallet, from any DeFi wallet or centralized exchange. Not only that, you can receive the funds in any address you prefer, wether it's inside iEscrow or in any other address.",
-      "privacyTitle": "We care about privacy",
-      "privacyDescription": "At iEscrow, we care about the privacy of our users. We not only understand it's important, but we also believe it's your right. That's why we don't implement KYC in countries where it's not mandatory."
+      "Security": {
+        "title": "Your security, our priority",
+        "description": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits."
+      },
+      "Mission": {
+        "title": "What is our mission",
+        "description": "Our mission is to totally eliminate the risk of scam in case you want to transact with someone you don't know. You can easily achieve this through our escrow system."
+      },
+      "Reputation": {
+        "title": "Innovative reputation",
+        "title2": "and rating system",
+        "description": "We have developed an innovative reputation and rating system, which represents a significant improvement over previous systems."
+      },
+      "Adaptability": {
+        "title": "Amazing Adaptability",
+        "description": "In iEscrow you don't necessarily need to hold your funds inside the platform in order to use our services, since you can complete a p2p escrow transaction by sending the funds directly to the escrow wallet, from any DeFi wallet or centralized exchange. Not only that, you can receive the funds in any address you prefer, wether it's inside iEscrow or in any other address."
+      },
+      "Privacy": {
+        "title": "We care about privacy",
+        "description": "At iEscrow, we care about the privacy of our users. We not only understand it's important, but we also believe it's your right. That's why we don't implement KYC in countries where it's not mandatory."
+      }
     },
     "Marketplace": {
       "title": "Descubre tu match ideal: <0>Explora nuestro Marketplace</0>",

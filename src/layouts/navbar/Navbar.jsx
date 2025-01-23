@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logo from '@assets/images/logo_dark.svg';
-import { Hamburger, LanguageCurrencySelector, AuthLinks } from '@components';
-import NavbarThemeToggle from '../../components/theme/navbarThemeToggle/NavbarThemeToggle';
+import AuthLinks from '@components/authLinks/AuthLinks';
+import Hamburger from '@components/buttons/hamburger/Hamburger';
+import LanguageCurrencySelector from '@components/locale/languageCurrencySelector/LanguageCurrencySelector';
+import NavbarThemeToggle from '@components/theme/navbarThemeToggle/NavbarThemeToggle';
 
 /**
  * Main navbar responsive component

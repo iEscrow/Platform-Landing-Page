@@ -19,6 +19,7 @@
 }
 .marketplace h2 {
   margin: 4rem 0;
+  font-size: calc(1.3rem + 0.6vw);
 }
 
 .textContainer {
@@ -32,13 +33,21 @@
   color: var(--text-decoration-color);
 }
 .textContainer a {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 @media screen and (min-width: 460px) {
   .textContainer {
     width: 80%;
     margin: 2rem auto;
+  }
+  .marketplace h2 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 570px) {
+  .marketplace h2 {
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -48,6 +57,11 @@
   .marketplace h2 {
     margin: 6rem auto;
     max-width: 700px;
+    font-size: 2.8rem;
+  }
+  .textContainer p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -63,6 +77,9 @@
   .marketplaceImage {
     width: 600px;
   }
+  .marketplace h2 {
+    margin: 8rem auto;
+  }
   .content {
     margin-top: 2rem;
     display: flex;
@@ -73,7 +90,11 @@
   .textContainer {
     margin: 0;
   }
+  .textContainer p {
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+  }
   .textContainer a {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
   }
 }

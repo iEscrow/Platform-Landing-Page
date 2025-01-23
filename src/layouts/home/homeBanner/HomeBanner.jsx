@@ -2,12 +2,12 @@ import styles from './HomeBanner.module.css';
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import logoDark from '@assets/images/logo_dark.svg';
-import videoIcon from '@assets/icons/videoIcon.png';
 import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
-import { CustomButton, GradientTitle } from '@components';
+import CustomButton from '@components/buttons/customButton/CustomButton';
+import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
-import VideoIcon from '../../../components/icons/videoIcon/VideoIcon';
+import VideoIcon from '@components/icons/videoIcon/VideoIcon';
 
 /**
  * Home main banner component
