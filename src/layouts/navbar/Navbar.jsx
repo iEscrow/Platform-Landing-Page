@@ -1,13 +1,15 @@
 import styles from './Navbar.module.css';
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
-import logo from '@assets/images/logo_dark.svg';
+import logoDark from '@assets/images/logo_dark.svg';
+import logoLight from '@assets/images/logo_light.svg';
 import AuthLinks from '@components/authLinks/AuthLinks';
 import Hamburger from '@components/buttons/hamburger/Hamburger';
 import LanguageCurrencySelector from '@components/locale/languageCurrencySelector/LanguageCurrencySelector';
 import NavbarThemeToggle from '@components/theme/navbarThemeToggle/NavbarThemeToggle';
+import { ThemeContext } from '@context/ThemeContext';
 
 /**
  * Main navbar responsive component
@@ -17,6 +19,7 @@ export default function Navbar() {
   const { t } = useTranslation();
   const scrolled = useScrolled();
   const [toggle, setToggle] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   // TODO => Add authentication and remove the isAuthenticated variable
   const isAuthenticated = true;
@@ -36,7 +39,11 @@ export default function Navbar() {
     >
       <nav>
         <Link to="/">
-          <img className={styles.logo} src={logo} alt="iEscrow logo" />
+          <img
+            className={styles.logo}
+            src={theme === 'dark' ? logoDark : logoLight}
+            alt="iEscrow logo"
+          />
         </Link>
         {/* Hamburger menu */}
         <Hamburger handleToggle={handleToggle} toggle={toggle} />

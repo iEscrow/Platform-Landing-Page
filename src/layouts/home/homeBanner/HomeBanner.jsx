@@ -2,6 +2,7 @@ import styles from './HomeBanner.module.css';
 import { useTranslation } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import logoDark from '@assets/images/logo_dark.svg';
+import logoLight from '@assets/images/logo_light.svg';
 import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
 import CustomButton from '@components/buttons/customButton/CustomButton';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
@@ -20,7 +21,12 @@ export default function HomeBanner() {
 
   return (
     <section className={`${styles.homeBanner} ${styles[theme]}`}>
-      <img className={styles.logo} src={logoDark} alt="iEscrow logo" />
+      <img
+        className={styles.logo}
+        src={theme === 'dark' ? logoDark : logoLight}
+        alt="iEscrow logo"
+        draggable={false}
+      />
       <span className={styles.motto}>{t('Home.Banner.motto')}</span>
       <h1>
         <Trans i18nKey="Home.Banner.title">
