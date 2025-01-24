@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { ThemeContext } from '@context/ThemeContext';
 import AppStoreIcon from '@components/icons/appStore/AppStoreIcon';
-import GooglePlayIcon from '@components/icons/googlePlayIcon/googlePlayIcon';
+import GooglePlayIcon from '@components/icons/googlePlayIcon/GooglePlayIcon';
 import StoreButton from '@components/buttons/storeButton/StoreButton';
 
 /**
