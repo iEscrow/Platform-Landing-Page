@@ -12,6 +12,7 @@ export default function CommunitySlider({ list = [] }) {
   const groupedList = splitArray(list, 2);
   const slideRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [startX, setStartX] = useState(0);
 
   const handleDragStart = (e) => {
@@ -50,6 +51,12 @@ export default function CommunitySlider({ list = [] }) {
         slideRef.current.style.transition = `0.5s ease-out all`;
         slideRef.current.style.transform = `translateX(0)`;
       });
+
+      if (activeSlide > 0) {
+        setActiveSlide(activeSlide - 1);
+      } else {
+        setActiveSlide(groupedList.length - 1);
+      }
     }
   };
 
@@ -71,6 +78,12 @@ export default function CommunitySlider({ list = [] }) {
       };
 
       slideRef.current.addEventListener('transitionend', transition);
+
+      if (activeSlide < groupedList.length - 1) {
+        setActiveSlide(activeSlide + 1);
+      } else {
+        setActiveSlide(0);
+      }
     }
   };
 
@@ -104,7 +117,10 @@ export default function CommunitySlider({ list = [] }) {
       {/* dots */}
       <div className={styles.dots}>
         {groupedList?.map((item, index) => (
-          <span key={`slider-dot-${index}`} className={styles.dot}></span>
+          <span
+            key={`slider-dot-${index}`}
+            className={`${styles.dot} ${activeSlide === index ? styles.active : ''}`}
+          ></span>
         ))}
       </div>
     </div>

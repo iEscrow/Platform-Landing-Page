@@ -59,9 +59,10 @@
   border: none;
   cursor: pointer;
   background-color: var(--dark-text-color);
+  transition: all 0.45s ease;
 }
 .dot.active {
   height: 10px;
   width: 10px;
-  background-color: var(--light-text-color);
+  background-color: var(--white);
 }

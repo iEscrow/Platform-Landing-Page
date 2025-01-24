@@ -14,7 +14,7 @@
 }
 .infoCard p {
   text-align: center;
-  color: var(--light-text-color);
+  color: var(--dark-text-color);
 }
 .titleCont {
   min-height: 80px;
