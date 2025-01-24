@@ -1,3 +1,4 @@
+import styles from './AuthLinks.module.css';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -7,17 +8,17 @@ export default function AuthLinks({ isAuthenticated, onClose }) {
   const { t } = useTranslation();
 
   return isAuthenticated ? (
-    <li>
+    <li className={styles.authLink}>
       <AuthDropdown />
     </li>
   ) : (
     <>
-      <li>
+      <li className={styles.authLink}>
         <NavLink onClick={onClose} to="/signup">
           {t('Navbar.register')}
         </NavLink>
       </li>
-      <li>
+      <li className={styles.authLink}>
         <NavLink onClick={onClose} to="/signin">
           {t('Navbar.login')}
         </NavLink>

@@ -1,3 +1,9 @@
+# TODO
+- navbar responsive (auth links, languages, hamburger menu animation)
+- language change (some sections crashed)
+- secctions spacing (put sections closer)
+
+
 # iEscrow Platform Landing Page
 
 ## How to start
