@@ -47,22 +47,22 @@
     "Roadmap": {
       "title": "Roadmap",
       "tokenPresale": {
-        "title": "Token Presale",
-        "currency": "Cryptocurrency",
-        "description": "$ESCROW presale starts",
-        "date": "1st July 2025"
+        "title": "Preventa de Tokens",
+        "currency": "Criptomoneda",
+        "description": "La preventa de $ESCROW comienza",
+        "date": "1 de julio de 2025"
       },
       "tokenLaunch": {
-        "title": "Token Launch",
-        "currency": "Cryptocurrency",
-        "description": "$ESCROW token launch",
-        "date": "15th August 2025"
+        "title": "Lanzamiento del token",
+        "currency": "Criptomoneda",
+        "description": "Lanzamiento del token $ESCROW",
+        "date": "15 de agosto de 2025"
       },
       "exchangeLaunch": {
-        "title": "Token Presale",
-        "currency": "Cryptocurrency",
-        "description": "$ESCROW exchange launch",
-        "date": "1st September 2025"
+        "title": "Preventa del token",
+        "currency": "Criptomoneda",
+        "description": "Lanzamiento del exchange de $ESCROW",
+        "date": "1 de septiembre de 2025"
       }
     },
     "Countdown": {
@@ -72,7 +72,26 @@
       "seconds": "Seg"
     },
     "KeyBenefits": {
-      "title": "We have a hybrid <0>CEX/DEX approach</0>"
+      "title": "Tenemos un enfoque <0>híbrido CEX/DEX</0>",
+      "Defi": {
+        "title": "Beneficios clave de un DEX (DeFi)",
+        "list": {
+          "0": "Sin intermediarios",
+          "1": "Sin confianza",
+          "2": "Accesibilidad",
+          "3": "Sin permisos",
+          "4": "Inmutable"
+        }
+      },
+      "Gefi": {
+        "title": "Beneficios clave de un CEX (GeFi)",
+        "list": {
+          "0": "Soporte al cliente",
+          "1": "Comisiones más bajas"
+        }
+      },
+      "cta1": "iEscrow combina todas estas características en una sola plataforma.",
+      "cta2": "Puedes usar iEscrow como un DEX completo, o como un CEX, ¡tú eliges!"
     },
     "LowerFees": {
       "titleSpan": "25% lower fees",
@@ -85,25 +104,25 @@
     },
     "InfoBlock": {
       "Security": {
-        "title": "Your security, our priority",
-        "description": "That's iEscrow's slogan. All the development of our platform had security as it's main premise, which is the reason we executed two security audits."
+        "title": "Tu seguridad, nuestra prioridad",
+        "description": "Ese es el lema de iEscrow. Todo el desarrollo de nuestra plataforma tuvo la seguridad como su premisa principal, por lo que ejecutamos dos auditorías de seguridad."
       },
       "Mission": {
         "title": "What is our mission",
-        "description": "Our mission is to totally eliminate the risk of scam in case you want to transact with someone you don't know. You can easily achieve this through our escrow system."
+        "description": "Nuestra misión es ofrecer una plataforma segura y confiable para el intercambio de criptomonedas, garantizando la protección de los fondos de nuestros usuarios mediante un enfoque híbrido CEX/DEX y auditorías de seguridad constantes."
       },
       "Reputation": {
-        "title": "Innovative reputation",
-        "title2": "and rating system",
-        "description": "We have developed an innovative reputation and rating system, which represents a significant improvement over previous systems."
+        "title": "Sistema innovador de",
+        "title2": "reputación y calificación",
+        "description": "Desarrollamos un sistema innovador de reputación y calificación, que representa una mejora significativa con respecto a los sistemas anteriores."
       },
       "Adaptability": {
-        "title": "Amazing Adaptability",
-        "description": "In iEscrow you don't necessarily need to hold your funds inside the platform in order to use our services, since you can complete a p2p escrow transaction by sending the funds directly to the escrow wallet, from any DeFi wallet or centralized exchange. Not only that, you can receive the funds in any address you prefer, wether it's inside iEscrow or in any other address."
+        "title": "Asombrosa adaptabilidad",
+        "description": "En iEscrow, no es necesario mantener tus fondos dentro de la plataforma para utilizar nuestros servicios, ya que puedes completar una transacción de escrow p2p enviando los fondos directamente a la billetera de escrow, desde cualquier billetera DeFi o exchange centralizado. No solo eso, también puedes recibir los fondos en cualquier dirección que prefieras, ya sea dentro de iEscrow o en cualquier otra dirección."
       },
       "Privacy": {
-        "title": "We care about privacy",
-        "description": "At iEscrow, we care about the privacy of our users. We not only understand it's important, but we also believe it's your right. That's why we don't implement KYC in countries where it's not mandatory."
+        "title": "Nos importa la privacidad",
+        "description": "En iEscrow, nos importa la privacidad de nuestros usuarios. No solo entendemos lo importante que es, sino que también creemos que es un derecho. Es por eso que no implementamos KYC en países donde no es obligatorio."
       }
     },
     "Marketplace": {
@@ -117,8 +136,8 @@
     "TradeOnTheGo": {
       "title": "Opera sobre la marcha. <0>Donde sea, cuando sea.</0>",
       "description": "Escanea para descargar la app <0>iOS y Android</0>",
-      "googlePlay": "GET IT ON",
-      "appStore": "Download on the"
+      "googlePlay": "Consíguelo ahora",
+      "appStore": "Descargar en el"
     },
     "Community": {
       "title": "Nuestra comunidad",

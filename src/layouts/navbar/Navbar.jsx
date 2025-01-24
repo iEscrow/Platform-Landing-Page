@@ -18,8 +18,8 @@ import { ThemeContext } from '@context/ThemeContext';
 export default function Navbar() {
   const { t } = useTranslation();
   const scrolled = useScrolled();
-  const [toggle, setToggle] = useState(false);
   const { theme } = useContext(ThemeContext);
+  const [toggle, setToggle] = useState(false);
 
   // TODO => Add authentication and remove the isAuthenticated variable
   const isAuthenticated = true;

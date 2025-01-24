@@ -72,7 +72,26 @@
       "seconds": "Sec"
     },
     "KeyBenefits": {
-      "title": "We have a hybrid <0>CEX/DEX approach</0>"
+      "title": "We have a hybrid <0>CEX/DEX approach</0>",
+      "Defi": {
+        "title": "Key Benefits of a DEX (DeFi)",
+        "list": {
+          "0": "No Intermediaries",
+          "1": "Trustless",
+          "2": "Accesibility",
+          "3": "Permissionless",
+          "4": "Immutable"
+        }
+      },
+      "Gefi": {
+        "title": "Key Benefits of a CEX (GeFi)",
+        "list": {
+          "0": "Customer support",
+          "1": "Lower fees"
+        }
+      },
+      "cta1": "iEscrow combines all of these features in one platform.",
+      "cta2": "You can use iEscrow as a complete DEX, or you can use it as a CEX, it´s your choice!"
     },
     "LowerFees": {
       "titleSpan": "25% Lower fees",

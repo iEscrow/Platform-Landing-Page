@@ -20,7 +20,7 @@ export default function InfoBlock() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`${styles.infoBlock} ${styles[theme]}`}>
+    <section className={`${styles.infoBlock} ${styles[theme]}`}>
       <div className={styles.wrapper}>
         {/* Top block */}
         <div className={styles.topBlock}>
@@ -60,6 +60,6 @@ export default function InfoBlock() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

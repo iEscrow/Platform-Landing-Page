@@ -64,5 +64,5 @@
 .dot.active {
   height: 10px;
   width: 10px;
-  background-color: var(--white);
+  background-color: var(--primary-color);
 }

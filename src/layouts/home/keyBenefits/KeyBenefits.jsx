@@ -44,37 +44,33 @@ export default function KeyBenefits() {
             {/* Text Articles */}
             <div className={styles.articles}>
               <article>
-                <h3>
-                  Key Benefits <span>of a DEX (DeFi)</span>
-                </h3>
+                <h3>{t('Home.KeyBenefits.Defi.title')}</h3>
                 <ul>
                   <li>
-                    <IconText>No Intermediaries</IconText>
+                    <IconText>{t('Home.KeyBenefits.Defi.list.0')}</IconText>
                   </li>
                   <li>
-                    <IconText>Trustless</IconText>
+                    <IconText>{t('Home.KeyBenefits.Defi.list.1')}</IconText>
                   </li>
                   <li>
-                    <IconText>Accesibility</IconText>
+                    <IconText>{t('Home.KeyBenefits.Defi.list.2')}</IconText>
                   </li>
                   <li>
-                    <IconText>Permissionless</IconText>
+                    <IconText>{t('Home.KeyBenefits.Defi.list.3')}</IconText>
                   </li>
                   <li>
-                    <IconText>Immutable</IconText>
+                    <IconText>{t('Home.KeyBenefits.Defi.list.4')}</IconText>
                   </li>
                 </ul>
               </article>
               <article>
-                <h3>
-                  Key Benefits <span>of a CEX (GeFi)</span>
-                </h3>
+                <h3>{t('Home.KeyBenefits.Gefi.title')}</h3>
                 <ul>
                   <li>
-                    <IconText>Customer support</IconText>
+                    <IconText>{t('Home.KeyBenefits.Gefi.list.0')}</IconText>
                   </li>
                   <li>
-                    <IconText>Lower fees</IconText>
+                    <IconText>{t('Home.KeyBenefits.Gefi.list.1')}</IconText>
                   </li>
                 </ul>
               </article>
@@ -82,11 +78,8 @@ export default function KeyBenefits() {
 
             {/* Text */}
             <div className={styles.text}>
-              <p>iEscrow combines all of these features in one platform.</p>
-              <p>
-                You can use iEscrow as a complete DEX, or you can use it as a
-                CEX, it´s your choice!
-              </p>
+              <p>{t('Home.KeyBenefits.cta1')}</p>
+              <p>{t('Home.KeyBenefits.cta2')}</p>
             </div>
           </div>
         </div>
