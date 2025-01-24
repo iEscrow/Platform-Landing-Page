@@ -42,7 +42,7 @@ export default function Navbar() {
         <Hamburger handleToggle={handleToggle} toggle={toggle} />
         {/* Menu */}
         <ul className={styles.menu}>
-          <li>
+          <li className={styles.navLink}>
             <NavLink
               onClick={handleClose}
               className={({ isActive }) => (isActive ? styles.activeNav : '')}
@@ -51,7 +51,7 @@ export default function Navbar() {
               {t('Navbar.roadmap')}
             </NavLink>
           </li>
-          <li>
+          <li className={styles.navLink}>
             <NavLink onClick={handleClose} to="/marketplace">
               {t('Navbar.marketplace')}
             </NavLink>

@@ -46,15 +46,15 @@
   visibility: visible;
   transform: translateX(0);
 }
-.menu li a {
+.menu .navLink a {
   color: var(--dark-text-color);
   text-decoration: none;
   transition: 0.45s ease-in-out;
 }
-.menu li a:hover {
+.menu .navLink a:hover {
   color: var(--light-text-color);
 }
-.menu li a.activeNav {
+.menu .navLink a.activeNav {
   color: var(--light-text-color);
 }
 .menu .button {
@@ -72,6 +72,11 @@
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   transition: 0.45s;
+}
+.menu .button:hover {
+  background-color: var(--primary-hover);
+  border: 1px solid var(--primary-hover);
+  box-shadow: 0px 8px 16px 0px rgba(46, 46, 46, 0.295);
 }
 .settings {
   display: flex;
