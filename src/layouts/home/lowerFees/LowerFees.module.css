@@ -103,6 +103,10 @@
   text-decoration: none;
   transition: 0.3s;
 }
+.buttons a:hover {
+  background-color: #104baa;
+  box-shadow: 0px 8px 16px 0px rgba(66, 66, 66, 0.37);
+}
 @media screen and (min-width: 570px) {
   .content h2 {
     font-size: 3rem;

@@ -6,6 +6,9 @@
   --background-color: #171717;
   --footer-bg: #1e1e1e;
 
+  --primary-hover: #106483;
+  --secondary-hover: #ffffff;
+
   --pink: #e020f1;
   --cian: #30c2e2;
 
@@ -25,6 +28,9 @@
   --secondary-color: #1b80a4;
   --background-color: #171717;
 
+  --primary-hover: #1b6079;
+  --secondary-hover: #ffffff;
+
   --dark-text-color: #c2bfbf;
   --light-text-color: #ffffff;
   --text-decoration-color: #30c2e2;
@@ -41,6 +47,9 @@
   --primary-color: #0056b3;
   --secondary-color: #076f94;
   --background-color: #ffffff;
+
+  --primary-hover: #004186;
+  --secondary-hover: #ffffff;
 
   --dark-text-color: #212121;
   --light-text-color: #000000;

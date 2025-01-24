@@ -10,7 +10,8 @@ import LanguageChange from '@components/locale/languageChange/LanguageChange';
 import CurrencyChange from '@components/locale/currencyChange/CurrencyChange';
 import FooterThemeSelector from '@components/theme/footerThemeSelector/FooterThemeSelector';
 
-import logo from '@assets/images/logo_dark.svg';
+import logoDark from '@assets/images/logo_dark.svg';
+import logoLight from '@assets/images/logo_light.svg';
 // icons
 import FacebookIcon from '@components/icons/socials/FacebookIcon';
 import InstagramIcon from '@components/icons/socials/InstagramIcon';
@@ -70,7 +71,11 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <div className={styles.top}>
-          <img className={styles.logo} src={logo} alt="iescrow logo" />
+          <img
+            className={styles.logo}
+            src={theme === 'dark' ? logoDark : logoLight}
+            alt="iescrow logo"
+          />
           {/* Acordion */}
           <FooterAccordion />
           {/* Community */}
