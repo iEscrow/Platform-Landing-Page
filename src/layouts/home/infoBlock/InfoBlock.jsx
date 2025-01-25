@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './InfoBlock.module.css';
 import InfoCard from '@components/cards/infoCard/InfoCard';
 import securityIcon from '@assets/icons/security_icon.png';
@@ -11,6 +12,10 @@ import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 
+InfoBlock.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
 /**
  * Home info section
  *
@@ -18,8 +23,7 @@ import { scaleVariant } from '@animations/scaleVariants';
  *
  * @returns {JSX.Element}
  */
-export default function InfoBlock() {
-  const { t } = useTranslation();
+export default function InfoBlock({ t }) {
   const { theme } = useContext(ThemeContext);
   return (
     <section className={`${styles.infoBlock} ${styles[theme]}`}>
