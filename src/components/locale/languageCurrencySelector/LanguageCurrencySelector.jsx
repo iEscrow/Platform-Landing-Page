@@ -27,6 +27,7 @@ export default function LanguageCurrencySelector({ closeNavbar }) {
     setShow(false);
     closeNavbar();
   };
+
   const changeCurrency = (currency) => {
     setCurrency(currency);
     setShow(false);
@@ -44,7 +45,7 @@ export default function LanguageCurrencySelector({ closeNavbar }) {
             <li
               onClick={() => changeLanguage(value)}
               key={id}
-              className={i18n.language === value ? styles.activeLanguage : ''}
+              className={`${i18n.language === value || (value === 'en' && i18n.language === 'en-US') ? styles.activeLanguage : ''}`}
             >
               {label}
             </li>
