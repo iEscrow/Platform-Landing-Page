@@ -7,10 +7,12 @@ import { Trans, useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
+import { keyBenefitSlideVariants } from '@animations/slideVariants';
 import {
   fadeInRightToLeft,
   fadeInLeftToRight,
 } from '@animations/fadeInVariants';
+import { keyBenefitsVariants } from '@animations/itemVariants';
 
 /**
  * Key benefits section that contains the title and the card}
@@ -55,48 +57,62 @@ export default function KeyBenefits() {
             />
           </motion.picture>
           {/* Text container */}
-          <div className={styles.textContainer}>
+          <motion.div
+            className={styles.textContainer}
+            variants={keyBenefitSlideVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {/* Text Articles */}
             <div className={styles.articles}>
               <article>
-                <h3>{t('Home.KeyBenefits.Defi.title')}</h3>
+                <motion.h3 variants={keyBenefitsVariants}>
+                  {t('Home.KeyBenefits.Defi.title')}
+                </motion.h3>
                 <ul>
-                  <li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Defi.list.0')}</IconText>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Defi.list.1')}</IconText>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Defi.list.2')}</IconText>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Defi.list.3')}</IconText>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Defi.list.4')}</IconText>
-                  </li>
+                  </motion.li>
                 </ul>
               </article>
               <article>
-                <h3>{t('Home.KeyBenefits.Gefi.title')}</h3>
+                <motion.h3 variants={keyBenefitsVariants}>
+                  {t('Home.KeyBenefits.Gefi.title')}
+                </motion.h3>
                 <ul>
-                  <li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Gefi.list.0')}</IconText>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={keyBenefitsVariants}>
                     <IconText>{t('Home.KeyBenefits.Gefi.list.1')}</IconText>
-                  </li>
+                  </motion.li>
                 </ul>
               </article>
             </div>
 
             {/* Text */}
             <div className={styles.text}>
-              <p>{t('Home.KeyBenefits.cta1')}</p>
-              <p>{t('Home.KeyBenefits.cta2')}</p>
+              <motion.p variants={keyBenefitsVariants}>
+                {t('Home.KeyBenefits.cta1')}
+              </motion.p>
+              <motion.p variants={keyBenefitsVariants}>
+                {t('Home.KeyBenefits.cta2')}
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -10,6 +10,19 @@ export const slideVariants = {
     },
   },
 };
+export const keyBenefitSlideVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export const roadmapSlideVariants = {
   hidden: { opacity: 0 },
   visible: {
