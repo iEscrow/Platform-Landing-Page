@@ -7,13 +7,14 @@ export default function FooterThemeSelector() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div
+    <button
       className={`${styles.footerThemeSelector} ${styles[theme]}`}
       onClick={toggleTheme}
+      aria-label="Change theme"
     >
       <div className={styles.themeIcon}>
         <ThemeIcon theme={theme} />
       </div>
-    </div>
+    </button>
   );
 }

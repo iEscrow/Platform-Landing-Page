@@ -6,7 +6,6 @@ import missionIcon from '@assets/icons/mission_icon.png';
 import reputationIcon from '@assets/icons/reputation_icon.png';
 import adaptabilityIcon from '@assets/icons/adaptability_icon.png';
 import privacyIcon from '@assets/icons/privacy_icon.png';
-import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';

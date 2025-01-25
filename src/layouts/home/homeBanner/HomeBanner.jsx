@@ -54,11 +54,11 @@ export default function HomeBanner({ t }) {
           {t('Home.Banner.description')}
         </motion.p>
         <motion.div variants={fadeInBottomToTop} className={styles.buttonsCont}>
-          <CustomButton to="#" variant="secondary">
+          <CustomButton to="#" variant="secondary" aria-label="Watch video">
             <VideoIcon theme={theme} />
             {t('Home.Banner.watchVideo')}
           </CustomButton>
-          <CustomButton to="#" variant="primary">
+          <CustomButton to="#" variant="primary" aria-label="Create escrow">
             <img src={halfArrowIcon} alt="half arrow icon" />
             {t('Home.Banner.createEscrow')}
           </CustomButton>

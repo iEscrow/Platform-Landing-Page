@@ -31,7 +31,7 @@ export default function LanguageChange() {
 
   return (
     <div className={styles.languageChange} ref={languageDropdownRef}>
-      <button onClick={handleShow}>
+      <button onClick={handleShow} aria-label="Change language">
         <LanguageIcon variant={theme === 'dark' ? 'cian' : 'blue'} />
         <span>{findLanguage()?.label}</span>
       </button>

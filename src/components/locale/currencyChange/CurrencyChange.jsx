@@ -25,7 +25,7 @@ export default function CurrencyChange() {
 
   return (
     <div className={styles.currencyChange} ref={currencyDropdownRef}>
-      <button onClick={handleShow}>
+      <button onClick={handleShow} aria-label="Change currency">
         <CurrencyIcon theme={theme} />
         <span>{currency}</span>
       </button>

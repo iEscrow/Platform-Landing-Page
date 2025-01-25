@@ -82,7 +82,7 @@ export default function Roadmap({ t }) {
         variants={roadmapSlideVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.6 }}
         className={styles.list}
       >
         {roadmapEvents.map(

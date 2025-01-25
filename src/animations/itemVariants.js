@@ -30,7 +30,7 @@ export const roadmapItemVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: 'easeOut',
       delay: custom === 0 ? 0 : custom === 1 ? 0.4 : 0.8,
     },

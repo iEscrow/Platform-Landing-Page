@@ -75,6 +75,8 @@ export default function Footer() {
             className={styles.logo}
             src={theme === 'dark' ? logoDark : logoLight}
             alt="iescrow logo"
+            draggable={false}
+            loading="lazy"
           />
           {/* Acordion */}
           <FooterAccordion />
@@ -86,7 +88,7 @@ export default function Footer() {
                 <SocialIcon
                   key={social.id}
                   link={social.link}
-                  ariaLabel={social.ariaLabel}
+                  aria-label={social.ariaLabel}
                 >
                   {social.icon}
                 </SocialIcon>
@@ -109,13 +111,19 @@ export default function Footer() {
           </p>
           <ul>
             <li>
-              <a href="#">{t('Footer.Copyright.terms')}</a>
+              <a href="#" aria-label="go to terms">
+                {t('Footer.Copyright.terms')}
+              </a>
             </li>
             <li>
-              <a href="#">{t('Footer.Copyright.disclaimer')}</a>
+              <a href="#" aria-label="go to disclaimer">
+                {t('Footer.Copyright.disclaimer')}
+              </a>
             </li>
             <li>
-              <a href="#">{t('Footer.Copyright.privacy')}</a>
+              <a href="#" aria-label="go to privacy">
+                {t('Footer.Copyright.privacy')}
+              </a>
             </li>
           </ul>
         </div>
