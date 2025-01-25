@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import HomeBanner from '@layouts/home/homeBanner/HomeBanner';
 import Roadmap from '@layouts/home/roadmap/Roadmap';
 import { useTranslation } from 'react-i18next';
@@ -15,11 +14,16 @@ const InfoBlock = React.lazy(() => import('@layouts/home/infoBlock/InfoBlock'));
 const TradeOnTheGo = React.lazy(
   () => import('@layouts/home/tradeOnTheGo/TradeOnTheGo')
 );
-
 const Community = React.lazy(() => import('@layouts/home/community/Community'));
 
 export default function Home() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+    });
+  }, []);
 
   return (
     <main>

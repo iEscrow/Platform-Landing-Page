@@ -47,6 +47,7 @@ export default function Marketplace({ t }) {
               className={styles.marketplaceImage}
               src={marketplaceMobileDark}
               alt="marketplace"
+              loading="lazy"
             />
           </motion.picture>
 

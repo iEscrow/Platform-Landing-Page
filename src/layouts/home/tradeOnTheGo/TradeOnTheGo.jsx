@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './TradeOnTheGo.module.css';
 import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
 import qr from '@assets/images/qr.png';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import { useContext } from 'react';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { ThemeContext } from '@context/ThemeContext';
@@ -36,6 +36,7 @@ export default function TradeOnTheGo({ t }) {
         className={styles.phone}
         src={phone}
         alt="phone"
+        loading="lazy"
       />
 
       <motion.div
@@ -54,7 +55,7 @@ export default function TradeOnTheGo({ t }) {
 
         {/* QR Code */}
         <motion.div className={styles.qrContainer} variants={fadeInRightToLeft}>
-          <img src={qr} alt="qr code phone" />
+          <img src={qr} alt="qr code phone" loading="lazy" />
           <p>
             <Trans i18nKey="Home.TradeOnTheGo.description">
               <span></span>
