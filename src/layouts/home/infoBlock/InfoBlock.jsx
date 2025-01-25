@@ -10,7 +10,6 @@ import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
-import { fadeInBottomToTop } from '@animations/fadeInVariants';
 
 /**
  * Home info section

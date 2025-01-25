@@ -10,3 +10,15 @@ export const slideVariants = {
     },
   },
 };
+export const roadmapSlideVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.8,
+      delayChildren: 1,
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
