@@ -32,6 +32,13 @@ export default function LowerFees({ t }) {
       </span>
       <video autoPlay loop muted className={styles.video}>
         <source src={lowerFeesVideo} type="video/mp4" />
+        <track
+          default
+          kind="captions"
+          srcLang="en"
+          src={lowerFeesVideo}
+          label="English"
+        />
         Your browser does not support the video tag.
       </video>
       <div className={styles.content}>

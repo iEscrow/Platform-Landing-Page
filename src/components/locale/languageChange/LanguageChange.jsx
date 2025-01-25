@@ -23,7 +23,11 @@ export default function LanguageChange() {
   };
 
   const findLanguage = () => {
-    return languageList?.find((lang) => lang.value === i18n.language);
+    if (i18n.language === 'en-US') {
+      return languageList?.find((lang) => lang.value === 'en');
+    } else {
+      return languageList?.find((lang) => lang.value === i18n.language);
+    }
   };
   const handleShow = () => {
     setShow(!show);
@@ -41,7 +45,7 @@ export default function LanguageChange() {
           <li
             onClick={() => changeLanguage(value)}
             key={id}
-            className={i18n.language === value ? styles.active : ''}
+            className={`${i18n.language === value || (value === 'en' && i18n.language === 'en-US') ? styles.active : ''}`}
           >
             {label}
           </li>

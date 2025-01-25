@@ -1,5 +1,6 @@
 .tradeOnTheGo {
   margin-top: 10rem;
+  overflow-x: hidden;
 }
 .tradeOnTheGo,
 .qrContainer,

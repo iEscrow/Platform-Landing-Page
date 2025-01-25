@@ -1,3 +1,5 @@
+const isMobile = window.innerWidth <= 768;
+
 export const itemVariants = {
   hidden: {
     opacity: 0,
@@ -32,7 +34,7 @@ export const roadmapItemVariants = {
     transition: {
       duration: 0.3,
       ease: 'easeOut',
-      delay: custom === 0 ? 0 : custom === 1 ? 0.4 : 0.8,
+      delay: custom === 0 || isMobile ? 0 : custom === 1 ? 0.4 : 0.8,
     },
   }),
 };
