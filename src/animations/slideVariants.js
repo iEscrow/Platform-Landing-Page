@@ -5,7 +5,7 @@ export const slideVariants = {
     transition: {
       staggerChildren: 0.3,
       delayChildren: 0.2,
-      duration: 0.8,
+      duration: 0.2,
       ease: 'easeOut',
     },
   },
