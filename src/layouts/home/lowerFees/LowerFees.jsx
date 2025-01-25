@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './LowerFees.module.css';
 import CountdownTimer from '@features/countdown/components/CountdownTimer';
 import { useCountdown } from '@features/countdown/hooks/useCountdown';
@@ -6,10 +7,12 @@ import { useCountdown } from '@features/countdown/hooks/useCountdown';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import lowerFeesVideo from '@assets/videos/lower_fees_bg.mp4';
 import escrowCoin from '@assets/images/lowerfees/escrow_coin.png';
-import { useTranslation } from 'react-i18next';
 
-export default function LowerFees() {
-  const { t } = useTranslation();
+LowerFees.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default function LowerFees({ t }) {
   const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 

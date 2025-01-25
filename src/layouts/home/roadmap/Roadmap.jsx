@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import styles from './Roadmap.module.css';
 import { motion } from 'framer-motion';
 import { roadmapSlideVariants } from '@animations/slideVariants';
 import { roadmapItemVariants } from '@animations/itemVariants';
 import { scaleVariant } from '@animations/scaleVariants';
 import { useContext } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import CountdownTimer from '@features/countdown/components/CountdownTimer';
@@ -16,8 +16,11 @@ import timeLine from '@assets/images/roadmap/line_desktop.svg';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
 
-export default function Roadmap() {
-  const { t } = useTranslation();
+Roadmap.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default function Roadmap({ t }) {
   const { theme } = useContext(ThemeContext);
 
   const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();

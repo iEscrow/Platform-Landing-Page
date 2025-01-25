@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './TradeOnTheGo.module.css';
 import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
 import qr from '@assets/images/qr.png';
@@ -10,16 +11,19 @@ import GooglePlayIcon from '@components/icons/googlePlayIcon/GooglePlayIcon';
 import StoreButton from '@components/buttons/storeButton/StoreButton';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
-import { fadeIn, fadeInRightToLeft } from '@animations/fadeInVariants';
+import { fadeInRightToLeft } from '@animations/fadeInVariants';
 import { slideVariants } from '@animations/slideVariants';
+
+TradeOnTheGo.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image
  *
  * @returns {JSX.Element}
  */
-export default function TradeOnTheGo() {
-  const { t } = useTranslation();
+export default function TradeOnTheGo({ t }) {
   const { theme } = useContext(ThemeContext);
 
   return (

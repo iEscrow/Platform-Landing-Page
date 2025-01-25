@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import styles from './HomeBanner.module.css';
-import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Trans } from 'react-i18next';
 import logoDark from '@assets/images/logo_dark.svg';
 import logoLight from '@assets/images/logo_light.svg';
@@ -13,13 +13,16 @@ import VideoIcon from '@components/icons/videoIcon/VideoIcon';
 import { fadeInBottomToTop } from '@animations/fadeInVariants';
 import { slideVariants } from '@animations/slideVariants';
 
+HomeBanner.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
 /**
  * Home main banner component
  *
  * @returns {JSX.Element}
  */
-export default function HomeBanner() {
-  const { t } = useTranslation();
+export default function HomeBanner({ t }) {
   const { theme } = useContext(ThemeContext);
 
   return (

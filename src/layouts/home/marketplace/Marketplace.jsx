@@ -1,18 +1,22 @@
+import PropTypes from 'prop-types';
 import styles from './Marketplace.module.css';
 import marketplaceMobileDark from '@assets/images/marketplace/dark/marketplace_mobile.png';
 import marketplaceDesktopDark from '@assets/images/marketplace/dark/marketplace_desktop.png';
 import CustomButton from '@components/buttons/customButton/CustomButton';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 import { fadeInLeftToRight } from '@animations/fadeInVariants';
 
-export default function Marketplace() {
-  const { t } = useTranslation();
+Marketplace.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default function Marketplace({ t }) {
   const { theme } = useContext(ThemeContext);
 
   return (

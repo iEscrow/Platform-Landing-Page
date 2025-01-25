@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import styles from './KeyBenefits.module.css';
 import phoneMobile from '@assets/images/keyBenefits/keybenefits_mobile.png';
 import phoneDesktop from '@assets/images/keyBenefits/keybenefits_desktop.png';
 import IconText from '@components/iconText/IconText';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
@@ -14,13 +15,16 @@ import {
 } from '@animations/fadeInVariants';
 import { keyBenefitsVariants } from '@animations/itemVariants';
 
+KeyBenefits.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
 /**
  * Key benefits section that contains the title and the card}
  *
  * @returns {JSX.Element}
  */
-export default function KeyBenefits() {
-  const { t } = useTranslation();
+export default function KeyBenefits({ t }) {
   const { theme } = useContext(ThemeContext);
 
   return (

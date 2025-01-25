@@ -1,18 +1,21 @@
+import PropTypes from 'prop-types';
 import styles from './Community.module.css';
 import { useContext, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '@context/ThemeContext';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import CommunitySlider from '@components/sliders/communitySlider/CommunitySlider';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 
+Community.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
 /**
  * Our Community layout section that contains the title and slider
  * @returns {JSX.Element}
  */
-export default function Community() {
-  const { t } = useTranslation();
+export default function Community({ t }) {
   const { theme } = useContext(ThemeContext);
   const list = useMemo(
     () => [
