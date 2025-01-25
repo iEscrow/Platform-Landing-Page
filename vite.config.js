@@ -15,6 +15,10 @@ export default defineConfig({
       '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
       '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
+      '@animations': fileURLToPath(
+        new URL('./src/animations', import.meta.url)
+      ),
     },
   },
 });

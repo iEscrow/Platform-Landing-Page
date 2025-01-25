@@ -9,6 +9,7 @@
   padding-bottom: 600px;
   background-repeat: no-repeat;
   background-size: contain;
+  overflow-x: hidden;
 }
 .roadmap.dark {
   background-image: url('../../../assets/images/roadmap/dark/roadmap_bg_mobile.png');

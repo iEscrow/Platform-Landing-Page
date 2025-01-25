@@ -6,6 +6,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.wrapper {
+  overflow-x: hidden;
+}
 .marketplace.dark {
   background-image: url('../../../assets/images/marketplace/dark/bg_desktop.png');
 }

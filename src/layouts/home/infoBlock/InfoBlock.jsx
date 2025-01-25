@@ -8,6 +8,8 @@ import privacyIcon from '@assets/icons/privacy_icon.png';
 import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
+import { motion } from 'framer-motion';
+import { scaleVariant } from '@animations/scaleVariants';
 
 /**
  * Home info section
@@ -24,40 +26,75 @@ export default function InfoBlock() {
       <div className={styles.wrapper}>
         {/* Top block */}
         <div className={styles.topBlock}>
-          <InfoCard
-            icon={securityIcon}
-            title={t('Home.InfoBlock.Security.title')}
-            text={t('Home.InfoBlock.Security.description')}
-          />
+          <motion.div
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <InfoCard
+              icon={securityIcon}
+              title={t('Home.InfoBlock.Security.title')}
+              text={t('Home.InfoBlock.Security.description')}
+            />
+          </motion.div>
           <div className={styles.divider}></div>
-          <InfoCard
-            icon={missionIcon}
-            title={t('Home.InfoBlock.Mission.title')}
-            text={t('Home.InfoBlock.Mission.description')}
-          />
+          <motion.div
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <InfoCard
+              icon={missionIcon}
+              title={t('Home.InfoBlock.Mission.title')}
+              text={t('Home.InfoBlock.Mission.description')}
+            />
+          </motion.div>
           <div className={styles.divider}></div>
-          <InfoCard
-            icon={reputationIcon}
-            title={t('Home.InfoBlock.Reputation.title')}
-            title2={t('Home.InfoBlock.Reputation.title2')}
-            text={t('Home.InfoBlock.Reputation.description')}
-          />
+          <motion.div
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            <InfoCard
+              icon={reputationIcon}
+              title={t('Home.InfoBlock.Reputation.title')}
+              title2={t('Home.InfoBlock.Reputation.title2')}
+              text={t('Home.InfoBlock.Reputation.description')}
+            />
+          </motion.div>
         </div>
 
         {/* Bottom block */}
         <div className={styles.bottomBlock}>
-          <InfoCard
-            icon={adaptabilityIcon}
-            title={t('Home.InfoBlock.Adaptability.title')}
-            text={t('Home.InfoBlock.Adaptability.description')}
-            lg
-          />
-          <InfoCard
-            icon={privacyIcon}
-            title={t('Home.InfoBlock.Privacy.title')}
-            text={t('Home.InfoBlock.Privacy.description')}
-            lg
-          />
+          <motion.div
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <InfoCard
+              icon={adaptabilityIcon}
+              title={t('Home.InfoBlock.Adaptability.title')}
+              text={t('Home.InfoBlock.Adaptability.description')}
+              lg
+            />
+          </motion.div>
+          <motion.div
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <InfoCard
+              icon={privacyIcon}
+              title={t('Home.InfoBlock.Privacy.title')}
+              text={t('Home.InfoBlock.Privacy.description')}
+              lg
+            />
+          </motion.div>
         </div>
       </div>
     </section>

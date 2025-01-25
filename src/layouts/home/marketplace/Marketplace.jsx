@@ -7,6 +7,9 @@ import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans, useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
+import { motion } from 'framer-motion';
+import { scaleVariant } from '@animations/scaleVariants';
+import { fadeInLeftToRight } from '@animations/fadeInVariants';
 
 export default function Marketplace() {
   const { t } = useTranslation();
@@ -15,13 +18,23 @@ export default function Marketplace() {
   return (
     <section className={`${styles.marketplace} ${styles[theme]}`}>
       <div className={styles.wrapper}>
-        <h2>
+        <motion.h2
+          variants={scaleVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <Trans i18nKey="Home.Marketplace.title">
             <GradientTitle></GradientTitle>
           </Trans>
-        </h2>
+        </motion.h2>
         <div className={styles.content}>
-          <picture>
+          <motion.picture
+            variants={scaleVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <source
               media="(min-width: 1200px)"
               srcSet={marketplaceDesktopDark}
@@ -31,9 +44,15 @@ export default function Marketplace() {
               src={marketplaceMobileDark}
               alt="marketplace"
             />
-          </picture>
+          </motion.picture>
 
-          <div className={styles.textContainer}>
+          <motion.div
+            variants={fadeInLeftToRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className={styles.textContainer}
+          >
             <p>
               <Trans i18nKey="Home.Marketplace.description1">
                 <span></span>
@@ -50,7 +69,7 @@ export default function Marketplace() {
               <img src={halfArrow} alt="half arrow icon" />
               <Trans i18nKey="Home.Marketplace.visit"></Trans>
             </CustomButton>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
