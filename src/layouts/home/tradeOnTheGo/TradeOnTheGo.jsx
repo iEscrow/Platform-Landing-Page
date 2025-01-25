@@ -8,6 +8,10 @@ import { ThemeContext } from '@context/ThemeContext';
 import AppStoreIcon from '@components/icons/appStore/AppStoreIcon';
 import GooglePlayIcon from '@components/icons/googlePlayIcon/GooglePlayIcon';
 import StoreButton from '@components/buttons/storeButton/StoreButton';
+import { motion } from 'framer-motion';
+import { scaleVariant } from '@animations/scaleVariants';
+import { fadeIn, fadeInRightToLeft } from '@animations/fadeInVariants';
+import { slideVariants } from '@animations/slideVariants';
 
 /**
  * Home Trade on the go component, that contains the title, qr code and a phone image
@@ -20,28 +24,45 @@ export default function TradeOnTheGo() {
 
   return (
     <section className={styles.tradeOnTheGo}>
-      <img className={styles.phone} src={phone} alt="phone" />
+      <motion.img
+        variants={scaleVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className={styles.phone}
+        src={phone}
+        alt="phone"
+      />
 
-      <div className={styles.textContainer}>
+      <motion.div
+        variants={slideVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className={styles.textContainer}
+      >
         {/* Title */}
-        <h2>
+        <motion.h2 variants={fadeInRightToLeft}>
           <Trans i18nKey="Home.TradeOnTheGo.title">
             <GradientTitle></GradientTitle>
           </Trans>
-        </h2>
+        </motion.h2>
 
         {/* QR Code */}
-        <div className={styles.qrContainer}>
+        <motion.div className={styles.qrContainer} variants={fadeInRightToLeft}>
           <img src={qr} alt="qr code phone" />
           <p>
             <Trans i18nKey="Home.TradeOnTheGo.description">
               <span></span>
             </Trans>
           </p>
-        </div>
+        </motion.div>
 
         {/* Platform Buttons */}
-        <div className={styles.platformButtons}>
+        <motion.div
+          variants={fadeInRightToLeft}
+          className={styles.platformButtons}
+        >
           <StoreButton
             icon={<AppStoreIcon theme={theme} />}
             platform="App Store"
@@ -54,8 +75,8 @@ export default function TradeOnTheGo() {
             link="#"
             text={t('Home.TradeOnTheGo.googlePlay')}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

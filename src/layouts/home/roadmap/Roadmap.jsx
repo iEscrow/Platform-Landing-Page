@@ -1,4 +1,8 @@
 import styles from './Roadmap.module.css';
+import { motion } from 'framer-motion';
+import { fadeInLeftToRight } from '@animations/fadeInVariants';
+import { slideVariants } from '@animations/slideVariants';
+import { zoomItemVariants } from '@animations/itemVariants';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -57,14 +61,25 @@ export default function Roadmap() {
   return (
     <section className={`${styles.roadmap} ${styles[theme]}`}>
       <div className={styles.titleCont}>
-        <h2>
+        <motion.h2
+          variants={fadeInLeftToRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <GradientTitle>Roadmap</GradientTitle>
-        </h2>
+        </motion.h2>
       </div>
       <div className={styles.timeLine}>
         <img src={timeLine} alt="roadmap time line" />
       </div>
-      <ul className={styles.list}>
+      <motion.ul
+        variants={slideVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className={styles.list}
+      >
         {roadmapEvents.map(
           ({
             id,
@@ -75,7 +90,11 @@ export default function Roadmap() {
             countdown,
             isCountdownVisible,
           }) => (
-            <li key={id} className={styles[id]}>
+            <motion.li
+              variants={zoomItemVariants}
+              key={id}
+              className={styles[id]}
+            >
               <div className={styles.container}>
                 <h3>{title}</h3>
                 <p>{currency}</p>
@@ -91,10 +110,10 @@ export default function Roadmap() {
                   alt="decoration line"
                 />
               )}
-            </li>
+            </motion.li>
           )
         )}
-      </ul>
+      </motion.ul>
     </section>
   );
 }

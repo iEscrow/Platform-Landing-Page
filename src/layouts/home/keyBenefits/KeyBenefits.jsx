@@ -6,6 +6,11 @@ import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { Trans, useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
+import { motion } from 'framer-motion';
+import {
+  fadeInRightToLeft,
+  fadeInLeftToRight,
+} from '@animations/fadeInVariants';
 
 /**
  * Key benefits section that contains the title and the card}
@@ -18,16 +23,26 @@ export default function KeyBenefits() {
 
   return (
     <section className={`${styles.keyBenefits} ${styles[theme]}`}>
-      <h2>
+      <motion.h2
+        variants={fadeInRightToLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Trans i18nKey="Home.KeyBenefits.title">
           <GradientTitle></GradientTitle>
         </Trans>
-      </h2>
+      </motion.h2>
       <div className={styles.card}>
         <div className={styles.falseBg}></div>
         {/* Content card */}
         <div className={styles.content}>
-          <picture>
+          <motion.picture
+            variants={fadeInLeftToRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <source
               className={styles.phone}
               media="(max-width: 1024px)"
@@ -38,7 +53,7 @@ export default function KeyBenefits() {
               src={phoneDesktop}
               alt="key benefits phone image"
             />
-          </picture>
+          </motion.picture>
           {/* Text container */}
           <div className={styles.textContainer}>
             {/* Text Articles */}
