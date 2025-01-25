@@ -1,4 +1,5 @@
 .footerThemeSelector {
+  border: none;
   position: relative;
   display: flex;
   align-items: center;

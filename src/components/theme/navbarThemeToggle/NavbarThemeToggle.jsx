@@ -7,7 +7,11 @@ export default function NavbarThemeToggle() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button className={styles.navbarThemeToggle} onClick={toggleTheme}>
+    <button
+      className={styles.navbarThemeToggle}
+      onClick={toggleTheme}
+      aria-label="Change theme"
+    >
       <ThemeIcon theme={theme} width={32} height={32} />
     </button>
   );

@@ -47,6 +47,7 @@ export default function Marketplace({ t }) {
               className={styles.marketplaceImage}
               src={marketplaceMobileDark}
               alt="marketplace"
+              loading="lazy"
             />
           </motion.picture>
 
@@ -69,7 +70,11 @@ export default function Marketplace({ t }) {
             </p>
             <p>{t('Home.Marketplace.description3')}</p>
             <p>{t('Home.Marketplace.description4')}</p>
-            <CustomButton to="#" variant="primary">
+            <CustomButton
+              to="#"
+              variant="primary"
+              aria-label="visit marketplace"
+            >
               <img src={halfArrow} alt="half arrow icon" />
               <Trans i18nKey="Home.Marketplace.visit"></Trans>
             </CustomButton>

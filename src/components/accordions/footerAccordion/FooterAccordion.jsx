@@ -85,12 +85,15 @@ export default function FooterAccordion() {
           <button
             onClick={() => handleToggle(index)}
             className={styles.accordion_item_btn}
+            aria-expanded={active === index}
+            aria-controls={`accordion-content-${index}`}
+            aria-label="Toggle accordion section"
           >
             <span>{item.title}</span>
             <img
               className={styles.chevron}
               src={chevronDark}
-              alt="chevron icon"
+              alt={active === index ? 'Collapse section' : 'Expand section'}
             />
           </button>
           {/* Accordion Menu */}

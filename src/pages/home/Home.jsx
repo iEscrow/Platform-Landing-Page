@@ -1,36 +1,44 @@
-import React from 'react';
-
+import React, { useEffect, lazy } from 'react';
 import HomeBanner from '@layouts/home/homeBanner/HomeBanner';
 import Roadmap from '@layouts/home/roadmap/Roadmap';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
-const KeyBenefits = React.lazy(
-  () => import('@layouts/home/keyBenefits/KeyBenefits')
-);
-const LowerFees = React.lazy(() => import('@layouts/home/lowerFees/LowerFees'));
-const Marketplace = React.lazy(
-  () => import('@layouts/home/marketplace/Marketplace')
-);
-const InfoBlock = React.lazy(() => import('@layouts/home/infoBlock/InfoBlock'));
-const TradeOnTheGo = React.lazy(
+const KeyBenefits = lazy(() => import('@layouts/home/keyBenefits/KeyBenefits'));
+const LowerFees = lazy(() => import('@layouts/home/lowerFees/LowerFees'));
+const Marketplace = lazy(() => import('@layouts/home/marketplace/Marketplace'));
+const InfoBlock = lazy(() => import('@layouts/home/infoBlock/InfoBlock'));
+const TradeOnTheGo = lazy(
   () => import('@layouts/home/tradeOnTheGo/TradeOnTheGo')
 );
-
-const Community = React.lazy(() => import('@layouts/home/community/Community'));
+const Community = lazy(() => import('@layouts/home/community/Community'));
 
 export default function Home() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <main>
-      <HomeBanner t={t} />
-      <Roadmap t={t} />
-      <KeyBenefits t={t} />
-      <LowerFees t={t} />
-      <InfoBlock t={t} />
-      <Marketplace t={t} />
-      <TradeOnTheGo t={t} />
-      <Community t={t} />
-    </main>
+    <>
+      <Helmet>
+        <title>P2P Crypto Escrow Exchange</title>
+        <meta
+          name="description"
+          content="P2P Crypto Escrow Exchange. Trade safely and securely on P2P Crypto Escrow Exchange."
+        />
+      </Helmet>
+      <main>
+        <HomeBanner t={t} />
+        <Roadmap t={t} />
+        <KeyBenefits t={t} />
+        <LowerFees t={t} />
+        <InfoBlock t={t} />
+        <Marketplace t={t} />
+        <TradeOnTheGo t={t} />
+        <Community t={t} />
+      </main>
+    </>
   );
 }

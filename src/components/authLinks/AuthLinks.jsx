@@ -14,12 +14,12 @@ export default function AuthLinks({ isAuthenticated, onClose }) {
   ) : (
     <>
       <li className={styles.authLink}>
-        <NavLink onClick={onClose} to="/signup">
+        <NavLink onClick={onClose} to="/signup" aria-label="Sign up">
           {t('Navbar.register')}
         </NavLink>
       </li>
       <li className={styles.authLink}>
-        <NavLink onClick={onClose} to="/signin">
+        <NavLink onClick={onClose} to="/signin" aria-label="Sign in">
           {t('Navbar.login')}
         </NavLink>
       </li>

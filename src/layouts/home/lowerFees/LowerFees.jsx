@@ -58,11 +58,11 @@ export default function LowerFees({ t }) {
             <p>Lounched</p>
           )}
           <div className={styles.buttons}>
-            <a href="" target="blank">
+            <a href="#" target="blank" aria-label="link to website">
               <img src={halfArrow} alt="half arrow icon" />
               {t('Home.LowerFees.website')}
             </a>
-            <a href="" target="blank">
+            <a href="#" target="blank" aria-label="link to whitepaper">
               <img src={halfArrow} alt="half arrow icon" />
               {t('Home.LowerFees.whitepaper')}
             </a>

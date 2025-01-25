@@ -35,7 +35,7 @@ export default function LanguageCurrencySelector({ closeNavbar }) {
 
   return (
     <div ref={languageDropdownRef} className={styles.languageCurrencySelector}>
-      <button onClick={handleShow}>
+      <button onClick={handleShow} aria-label="Change language">
         <LanguageIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       </button>
       <div className={`${show ? styles.show : ''} ${styles.dropdown}`}>

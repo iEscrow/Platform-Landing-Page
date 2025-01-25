@@ -38,7 +38,7 @@ export default function Navbar() {
       }`}
     >
       <nav>
-        <Link to="/">
+        <Link to="/" aria-label="go to roadmap">
           <img
             className={styles.logo}
             src={theme === 'dark' ? logoDark : logoLight}
@@ -54,12 +54,17 @@ export default function Navbar() {
               onClick={handleClose}
               className={({ isActive }) => (isActive ? styles.activeNav : '')}
               to="/"
+              aria-label="go to roadmap"
             >
               {t('Navbar.roadmap')}
             </NavLink>
           </li>
           <li className={styles.navLink}>
-            <NavLink onClick={handleClose} to="/marketplace">
+            <NavLink
+              onClick={handleClose}
+              to="/marketplace"
+              aria-label="go to marketplace"
+            >
               {t('Navbar.marketplace')}
             </NavLink>
           </li>
@@ -71,7 +76,12 @@ export default function Navbar() {
             <LanguageCurrencySelector closeNavbar={handleClose} />
           </li>
           <li>
-            <Link onClick={handleClose} className={styles.button} to="#">
+            <Link
+              onClick={handleClose}
+              className={styles.button}
+              to="#"
+              aria-label="go to create escrow"
+            >
               {t('Navbar.createEscrow')}
             </Link>
           </li>

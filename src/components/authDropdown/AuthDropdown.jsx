@@ -13,10 +13,14 @@ export default function AuthDropdown() {
   useClickOutside(authDropdownRef, () => setActive(false));
 
   return (
-    <div
+    <button
       ref={authDropdownRef}
       onClick={() => setActive(!active)}
       className={`${styles.authButton} ${active ? styles.show : ''}`}
+      aria-haspopup="true"
+      aria-expanded={active ? 'true' : 'false'}
+      aria-controls="user-menu"
+      aria-label="User menu"
     >
       <AuthIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       <ul>
@@ -25,6 +29,6 @@ export default function AuthDropdown() {
         </li>
         <li>Logout</li>
       </ul>
-    </div>
+    </button>
   );
 }
