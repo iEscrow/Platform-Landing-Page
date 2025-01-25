@@ -8,6 +8,9 @@ import halfArrow from '@assets/icons/halfArrowIcon.png';
 import lowerFeesVideo from '@assets/videos/lower_fees_bg.mp4';
 import escrowCoin from '@assets/images/lowerfees/escrow_coin.png';
 
+import { motion } from 'framer-motion';
+import { fadeIn } from '@animations/fadeInVariants';
+
 LowerFees.propTypes = {
   t: PropTypes.func.isRequired,
 };
@@ -17,7 +20,13 @@ export default function LowerFees({ t }) {
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
 
   return (
-    <section className={styles.lowerFees}>
+    <motion.section
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className={styles.lowerFees}
+    >
       <span className={styles.comingSoon}>
         {t('Home.LowerFees.comingSoon')}
       </span>
@@ -60,6 +69,6 @@ export default function LowerFees({ t }) {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
