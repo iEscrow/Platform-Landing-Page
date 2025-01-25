@@ -4,6 +4,7 @@
   padding: 1rem;
   position: relative;
   color: var(--white);
+  overflow-x: hidden;
 }
 .keyBenefits h2 {
   text-align: center;
