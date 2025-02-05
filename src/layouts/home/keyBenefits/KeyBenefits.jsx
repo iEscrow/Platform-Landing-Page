@@ -5,8 +5,6 @@ import phoneDesktop from '@assets/images/keyBenefits/keybenefits_desktop.png';
 import IconText from '@components/iconText/IconText';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import { Trans } from 'react-i18next';
-import { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { keyBenefitSlideVariants } from '@animations/slideVariants';
 import {
@@ -17,6 +15,7 @@ import { keyBenefitsVariants } from '@animations/itemVariants';
 
 KeyBenefits.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 /**
@@ -24,9 +23,7 @@ KeyBenefits.propTypes = {
  *
  * @returns {JSX.Element}
  */
-export default function KeyBenefits({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function KeyBenefits({ t, theme }) {
   return (
     <section className={`${styles.keyBenefits} ${styles[theme]}`}>
       <motion.h2

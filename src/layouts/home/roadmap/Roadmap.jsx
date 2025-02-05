@@ -4,11 +4,9 @@ import { motion } from 'framer-motion';
 import { roadmapSlideVariants } from '@animations/slideVariants';
 import { roadmapItemVariants } from '@animations/itemVariants';
 import { scaleVariant } from '@animations/scaleVariants';
-import { useContext } from 'react';
 
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import CountdownTimer from '@features/countdown/components/CountdownTimer';
-import { ThemeContext } from '@context/ThemeContext';
 import { useCountdown } from '@features/countdown/hooks/useCountdown';
 
 //assets
@@ -18,11 +16,10 @@ import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
 
 Roadmap.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
-export default function Roadmap({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function Roadmap({ t, theme }) {
   const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
   const tokenLaunchDate = new Date('2025-08-15T00:00:00Z').getTime();

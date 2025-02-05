@@ -6,13 +6,12 @@ import missionIcon from '@assets/icons/mission_icon.png';
 import reputationIcon from '@assets/icons/reputation_icon.png';
 import adaptabilityIcon from '@assets/icons/adaptability_icon.png';
 import privacyIcon from '@assets/icons/privacy_icon.png';
-import { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 
 InfoBlock.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 /**
@@ -22,8 +21,7 @@ InfoBlock.propTypes = {
  *
  * @returns {JSX.Element}
  */
-export default function InfoBlock({ t }) {
-  const { theme } = useContext(ThemeContext);
+export default function InfoBlock({ t, theme }) {
   return (
     <section className={`${styles.infoBlock} ${styles[theme]}`}>
       <div className={styles.wrapper}>

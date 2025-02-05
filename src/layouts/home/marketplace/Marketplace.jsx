@@ -6,19 +6,16 @@ import CustomButton from '@components/buttons/customButton/CustomButton';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans } from 'react-i18next';
-import { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 import { fadeInLeftToRight } from '@animations/fadeInVariants';
 
 Marketplace.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
-export default function Marketplace({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function Marketplace({ t, theme }) {
   return (
     <section className={`${styles.marketplace} ${styles[theme]}`}>
       <div className={styles.wrapper}>

@@ -1,8 +1,9 @@
-import React, { useEffect, lazy } from 'react';
+import React, { useEffect, lazy, useContext } from 'react';
 import HomeBanner from '@layouts/home/homeBanner/HomeBanner';
 import Roadmap from '@layouts/home/roadmap/Roadmap';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { ThemeContext } from '@context/ThemeContext';
 
 const KeyBenefits = lazy(() => import('@layouts/home/keyBenefits/KeyBenefits'));
 const LowerFees = lazy(() => import('@layouts/home/lowerFees/LowerFees'));
@@ -15,6 +16,7 @@ const Community = lazy(() => import('@layouts/home/community/Community'));
 
 export default function Home() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,14 +32,14 @@ export default function Home() {
         />
       </Helmet>
       <main>
-        <HomeBanner t={t} />
-        <Roadmap t={t} />
-        <KeyBenefits t={t} />
-        <LowerFees t={t} />
-        <InfoBlock t={t} />
-        <Marketplace t={t} />
-        <TradeOnTheGo t={t} />
-        <Community t={t} />
+        <HomeBanner t={t} theme={theme} />
+        <Roadmap t={t} theme={theme} />
+        <KeyBenefits t={t} theme={theme} />
+        <LowerFees t={t} theme={theme} />
+        <InfoBlock t={t} theme={theme} />
+        <Marketplace t={t} theme={theme} />
+        <TradeOnTheGo t={t} theme={theme} />
+        <Community t={t} theme={theme} />
       </main>
     </>
   );

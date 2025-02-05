@@ -3,9 +3,7 @@ import styles from './TradeOnTheGo.module.css';
 import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
 import qr from '@assets/images/qr.png';
 import { Trans } from 'react-i18next';
-import { useContext } from 'react';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
-import { ThemeContext } from '@context/ThemeContext';
 import AppStoreIcon from '@components/icons/appStore/AppStoreIcon';
 import GooglePlayIcon from '@components/icons/googlePlayIcon/GooglePlayIcon';
 import StoreButton from '@components/buttons/storeButton/StoreButton';
@@ -16,6 +14,7 @@ import { slideVariants } from '@animations/slideVariants';
 
 TradeOnTheGo.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 /**
@@ -23,9 +22,7 @@ TradeOnTheGo.propTypes = {
  *
  * @returns {JSX.Element}
  */
-export default function TradeOnTheGo({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function TradeOnTheGo({ t, theme }) {
   return (
     <section className={styles.tradeOnTheGo}>
       <motion.img
