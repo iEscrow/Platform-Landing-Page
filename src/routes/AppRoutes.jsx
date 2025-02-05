@@ -4,6 +4,12 @@ import LoginPage from '../pages/auth/login/LoginPage';
 import RegisterPage from '../pages/auth/register/RegisterPage';
 import NotFound from '../pages/not_found/NotFound';
 
+/**
+ * AppRoutes defines all the routing in the application.
+ * It includes routes for Home, Marketplace, Authentication, and Error pages.
+ *
+ * @returns {JSX.Element} The Routes component with various page routes.
+ */
 export default function AppRoutes() {
   return (
     <Routes>
