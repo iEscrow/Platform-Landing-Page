@@ -24,7 +24,7 @@ export default function LowerFees({ t }) {
       variants={fadeIn}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.4 }}
       className={styles.lowerFees}
     >
       <span className={styles.comingSoon}>

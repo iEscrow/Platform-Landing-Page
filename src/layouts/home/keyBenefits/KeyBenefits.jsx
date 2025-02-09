@@ -63,7 +63,7 @@ export default function KeyBenefits({ t, theme }) {
             variants={keyBenefitSlideVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.4 }}
           >
             {/* Text Articles */}
             <div className={styles.articles}>
