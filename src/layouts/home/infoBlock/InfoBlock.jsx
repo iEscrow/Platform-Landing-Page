@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import styles from './InfoBlock.module.css';
 import InfoCard from '@components/cards/infoCard/InfoCard';
-import securityIcon from '@assets/icons/security_icon.png';
-import missionIcon from '@assets/icons/mission_icon.png';
-import reputationIcon from '@assets/icons/reputation_icon.png';
-import adaptabilityIcon from '@assets/icons/adaptability_icon.png';
-import privacyIcon from '@assets/icons/privacy_icon.png';
+import adaptabilityIcon from '@assets/images/iconsSection/dark/adaptabilityIcon.png';
+import privacyIcon from '@assets/images/iconsSection/dark/privacyIcon.png';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
+
+import SecurityIcon from '@components/icons/icons-section/SecurityIcon';
+import MissionIcon from '@components/icons/icons-section/MissionIcon';
+import ReputationIcon from '@components/icons/icons-section/ReputationIcon';
 
 InfoBlock.propTypes = {
   t: PropTypes.func.isRequired,
@@ -34,10 +35,11 @@ export default function InfoBlock({ t, theme }) {
             viewport={{ once: true, amount: 0.5 }}
           >
             <InfoCard
-              icon={securityIcon}
               title={t('Home.InfoBlock.Security.title')}
               text={t('Home.InfoBlock.Security.description')}
-            />
+            >
+              <SecurityIcon theme={theme} />
+            </InfoCard>
           </motion.div>
           <div className={styles.divider}></div>
           <motion.div
@@ -47,10 +49,11 @@ export default function InfoBlock({ t, theme }) {
             viewport={{ once: true, amount: 0.5 }}
           >
             <InfoCard
-              icon={missionIcon}
               title={t('Home.InfoBlock.Mission.title')}
               text={t('Home.InfoBlock.Mission.description')}
-            />
+            >
+              <MissionIcon theme={theme} />
+            </InfoCard>
           </motion.div>
           <div className={styles.divider}></div>
           <motion.div
@@ -60,11 +63,12 @@ export default function InfoBlock({ t, theme }) {
             viewport={{ once: true, amount: 0.5 }}
           >
             <InfoCard
-              icon={reputationIcon}
               title={t('Home.InfoBlock.Reputation.title')}
               title2={t('Home.InfoBlock.Reputation.title2')}
               text={t('Home.InfoBlock.Reputation.description')}
-            />
+            >
+              <ReputationIcon theme={theme} />
+            </InfoCard>
           </motion.div>
         </div>
 
@@ -77,11 +81,17 @@ export default function InfoBlock({ t, theme }) {
             viewport={{ once: true, amount: 0.3 }}
           >
             <InfoCard
-              icon={adaptabilityIcon}
               title={t('Home.InfoBlock.Adaptability.title')}
               text={t('Home.InfoBlock.Adaptability.description')}
               lg
-            />
+            >
+              <img
+                src={adaptabilityIcon}
+                alt="adaptability icon"
+                loading="lazy"
+                draggable={false}
+              />
+            </InfoCard>
           </motion.div>
           <motion.div
             variants={scaleVariant}
@@ -90,11 +100,17 @@ export default function InfoBlock({ t, theme }) {
             viewport={{ once: true, amount: 0.3 }}
           >
             <InfoCard
-              icon={privacyIcon}
               title={t('Home.InfoBlock.Privacy.title')}
               text={t('Home.InfoBlock.Privacy.description')}
               lg
-            />
+            >
+              <img
+                src={privacyIcon}
+                alt="privacy icon"
+                loading="lazy"
+                draggable={false}
+              />
+            </InfoCard>
           </motion.div>
         </div>
       </div>
