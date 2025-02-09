@@ -1,9 +1,3 @@
-# TODO
-- navbar responsive (auth links, languages, hamburger menu animation)
-- language change (some sections crashed)
-- secctions spacing (put sections closer)
-
-
 # iEscrow Platform Landing Page
 
 ## How to start
@@ -18,39 +12,36 @@ npm run dev
 ### Architecture
 
 ```bash
-    client/
+    app/
     │
-    ├── src/                                #app folder
-    │   ├── assets/                         #images, icons, fonts
-    │   ├── components/                     #components
-    │   │      ├── features/                #
-    │   │      ├── layout/                  #layout components
-    │   │      └── ui/                      #recyclable components
-    │   │
-    │   ├── context/                        #
+    ├── src/
+    │   ├── assets/                         #images, icons, fonts, videos
+    │   ├── components/                     #recyclable components
+    │   ├── context/
+    │   │      ├── Currency context
     │   │      └── Theme context
-    │   │
     │   ├── hooks/                          #custom hooks
-    │   │      ├── useLocalStorage.jsx
-    │   │      └── useScrolled.jsx          #hook for scoll navbar animation
-    │   │
     │   ├── locales/                        #translation folder
-    │   │      ├── en/
-    │   │      ├── es/
-    │   │      └── i18n.js                  #i18n config
-    │   │
     │   ├── pages/                          #pages folder
-    │   │      ├── home/
-    │   │      └── index.js                 #pages barrel
-    │   │
     │   ├── providers/                      #providers folder
     │   │      ├── AppProviders.jsx         #principal provider
     │   │      └── rest_of_providers...
-    │   │
     │   └── routes/                         #routes folder
     │          ├── AppRoutes.jsx            #app routes
-    │          └── rest_of_routes/          #private routes
+    │          └── rest_of_routes...        #private routes
     │
-    │
+    ├── index.html                          #root page
     └── ...configs
 ```
+
+### Where can i Add More Languages?
+
+In src/data/languages.js you can add a language to appear in the selector.
+example: { id: 2, value: 'en', label: 'English' }.
+In src/locales/i18n.js add the new language.
+In src/locales add a new folder with a translation.json archive with the language variables.
+
+### Where can i Add More Currency?
+
+In src/data/currency.js you can add a currency to appear in the selector.
+example: { id: 1, value: 'USD', label: 'USD' }

@@ -8,10 +8,16 @@ import GradientTitle from '@components/gradientTitle/GradientTitle';
  * @param {{icon: string, title: string, text: string, lg: boolean}}
  * @returns {JSX.Element}
  */
-export default function InfoCard({ icon, title, title2, text, lg = false }) {
+export default function InfoCard({
+  children,
+  title,
+  title2,
+  text,
+  lg = false,
+}) {
   return (
     <div className={`${styles.infoCard} ${styles[lg ? 'lg' : 'sm']}`}>
-      <img src={icon} alt={`${title} icon`} />
+      {children}
       <div className={styles.titleCont}>
         <GradientTitle>{title}</GradientTitle>
         {title2 && <GradientTitle>{title2}</GradientTitle>}
@@ -22,7 +28,7 @@ export default function InfoCard({ icon, title, title2, text, lg = false }) {
 }
 
 InfoCard.propTypes = {
-  icon: PropTypes.string,
+  children: PropTypes.node,
   title: PropTypes.string,
   title2: PropTypes.string || undefined,
   text: PropTypes.string,

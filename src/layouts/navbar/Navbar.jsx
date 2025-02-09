@@ -1,6 +1,6 @@
 import styles from './Navbar.module.css';
 import { Link, NavLink } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@hooks/useScrolled';
 import logoDark from '@assets/images/logo_dark.svg';
@@ -12,7 +12,14 @@ import NavbarThemeToggle from '@components/theme/navbarThemeToggle/NavbarThemeTo
 import { ThemeContext } from '@context/ThemeContext';
 
 /**
- * Main navbar responsive component
+ * Main responsive navbar component
+ *
+ * Features:
+ * - Dynamic styles based on scroll position
+ * - Accessible keyboard navigation
+ * - Responsive hamburger menu
+ * - Multilingual support
+ *
  * @returns {JSX.Element}
  */
 export default function Navbar() {
@@ -20,72 +27,93 @@ export default function Navbar() {
   const scrolled = useScrolled();
   const { theme } = useContext(ThemeContext);
   const [toggle, setToggle] = useState(false);
+  const navRef = useRef(null);
 
-  // TODO => Add authentication and remove the isAuthenticated variable
-  const isAuthenticated = true;
+  const isAuthenticated = true; // Replace with actual auth logic
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     setToggle((prev) => !prev);
-  };
-  const handleClose = () => {
+    document.body.style.overflow = toggle ? 'auto' : 'hidden'; // Prevent background scroll
+  }, [toggle]);
+
+  const handleClose = useCallback(() => {
     setToggle(false);
-  };
+    document.body.style.overflow = 'auto';
+  }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        handleClose();
+      }
+    };
+
+    if (toggle) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [toggle, handleClose]);
+
+  const getNavLinkClass = ({ isActive }) => (isActive ? styles.activeNav : '');
 
   return (
     <header
-      className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${
-        toggle ? styles.activeNav : ''
-      }`}
+      className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${toggle ? styles.activeNav : ''}`}
+      role="banner"
     >
-      <nav>
-        <Link to="/" aria-label="go to roadmap">
+      <nav ref={navRef} role="navigation" aria-label="Main navigation">
+        <Link to="/" aria-label="Go to homepage">
           <img
             className={styles.logo}
             src={theme === 'dark' ? logoDark : logoLight}
             alt="iEscrow logo"
           />
         </Link>
-        {/* Hamburger menu */}
-        <Hamburger handleToggle={handleToggle} toggle={toggle} />
-        {/* Menu */}
-        <ul className={styles.menu}>
-          <li className={styles.navLink}>
-            <NavLink
-              onClick={handleClose}
-              className={({ isActive }) => (isActive ? styles.activeNav : '')}
-              to="/"
-              aria-label="go to roadmap"
-            >
+
+        <Hamburger
+          handleToggle={handleToggle}
+          toggle={toggle}
+          aria-expanded={toggle}
+        />
+
+        <ul className={styles.menu} role="menu">
+          <li className={styles.navLink} role="menuitem">
+            <NavLink to="/" onClick={handleClose} className={getNavLinkClass}>
               {t('Navbar.roadmap')}
             </NavLink>
           </li>
-          <li className={styles.navLink}>
+          <li className={styles.navLink} role="menuitem">
             <NavLink
-              onClick={handleClose}
               to="/marketplace"
-              aria-label="go to marketplace"
+              onClick={handleClose}
+              className={getNavLinkClass}
             >
               {t('Navbar.marketplace')}
             </NavLink>
           </li>
 
-          {/* Authentication Links */}
           <AuthLinks isAuthenticated={isAuthenticated} onClose={handleClose} />
 
-          <li>
+          <li role="menuitem">
             <LanguageCurrencySelector closeNavbar={handleClose} />
           </li>
-          <li>
+
+          <li role="menuitem">
             <Link
-              onClick={handleClose}
-              className={styles.button}
               to="#"
-              aria-label="go to create escrow"
+              className={styles.button}
+              onClick={handleClose}
+              aria-label="Create an escrow"
             >
               {t('Navbar.createEscrow')}
             </Link>
           </li>
-          <li className={styles.settings}>
+
+          <li className={styles.settings} role="menuitem">
             <NavbarThemeToggle />
           </li>
         </ul>

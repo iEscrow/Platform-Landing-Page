@@ -7,14 +7,13 @@ import logoLight from '@assets/images/logo_light.svg';
 import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
 import CustomButton from '@components/buttons/customButton/CustomButton';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
-import { useContext } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
 import VideoIcon from '@components/icons/videoIcon/VideoIcon';
 import { fadeInBottomToTop } from '@animations/fadeInVariants';
 import { slideVariants } from '@animations/slideVariants';
 
 HomeBanner.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 /**
@@ -22,9 +21,7 @@ HomeBanner.propTypes = {
  *
  * @returns {JSX.Element}
  */
-export default function HomeBanner({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function HomeBanner({ t, theme }) {
   return (
     <section className={`${styles.homeBanner} ${styles[theme]}`}>
       <motion.div

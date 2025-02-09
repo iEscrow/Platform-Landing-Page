@@ -4,25 +4,23 @@ import { motion } from 'framer-motion';
 import { roadmapSlideVariants } from '@animations/slideVariants';
 import { roadmapItemVariants } from '@animations/itemVariants';
 import { scaleVariant } from '@animations/scaleVariants';
-import { useContext } from 'react';
 
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import CountdownTimer from '@features/countdown/components/CountdownTimer';
-import { ThemeContext } from '@context/ThemeContext';
 import { useCountdown } from '@features/countdown/hooks/useCountdown';
 
 //assets
 import timeLine from '@assets/images/roadmap/line_desktop.svg';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
+import { fadeInLeftToRight } from '@animations/fadeInVariants';
 
 Roadmap.propTypes = {
   t: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
-export default function Roadmap({ t }) {
-  const { theme } = useContext(ThemeContext);
-
+export default function Roadmap({ t, theme }) {
   const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
   const tokenLaunchDate = new Date('2025-08-15T00:00:00Z').getTime();
@@ -65,10 +63,10 @@ export default function Roadmap({ t }) {
     <section className={`${styles.roadmap} ${styles[theme]}`}>
       <div className={styles.titleCont}>
         <motion.h2
-          variants={scaleVariant}
+          variants={fadeInLeftToRight}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 1 }}
         >
           <GradientTitle>Roadmap</GradientTitle>
         </motion.h2>
@@ -82,7 +80,7 @@ export default function Roadmap({ t }) {
         variants={roadmapSlideVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.2 }}
         className={styles.list}
       >
         {roadmapEvents.map(
