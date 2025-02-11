@@ -100,7 +100,15 @@
       "comingSoon": "Coming soon",
       "presale": "Presale starts in",
       "website": "website",
-      "whitepaper": "whitepaper"
+      "whitepaper": "whitepaper",
+      "presaleLaunch": "Coming soon",
+      "presaleStartsIn": "Presale starts in",
+      "tokenLaunch": "Coming soon",
+      "tokenStartsIn": "Launch starts in",
+      "exchangeLaunch": "Coming soon",
+      "exchangeStartsIn": "Exchange starts in",
+      "launched": "Launched",
+      "endMessage": "Exchange has been launched 🚀"
     },
     "InfoBlock": {
       "Security": {

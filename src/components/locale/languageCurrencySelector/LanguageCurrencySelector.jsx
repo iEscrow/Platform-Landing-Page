@@ -40,29 +40,37 @@ export default function LanguageCurrencySelector({ closeNavbar }) {
         <LanguageIcon size="32" variant={theme === 'dark' ? 'gray' : 'black'} />
       </button>
       <div className={`${show ? styles.show : ''} ${styles.dropdown}`}>
-        <ul>
-          {languageList?.map(({ value, id, label }) => (
-            <li
-              onClick={() => changeLanguage(value)}
-              key={id}
-              className={`${i18n.language === value || (value === 'en' && i18n.language === 'en-US') ? styles.activeLanguage : ''}`}
-            >
-              {label}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.languageCont}>
+          <span className={styles.title}>Language</span>
+          <ul>
+            {languageList?.map(({ value, id, label }) => (
+              <li
+                onClick={() => changeLanguage(value)}
+                key={id}
+                className={`${i18n.language === value || (value === 'en' && i18n.language === 'en-US') ? styles.activeLanguage : ''}`}
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <ul>
-          {currencyList?.map(({ id, value, label }) => (
-            <li
-              key={id}
-              onClick={() => changeCurrency(value)}
-              className={currency === value ? styles.activeCurrency : ''}
-            >
-              {label}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.divider}></div>
+
+        <div className={styles.currencyCont}>
+          <span className={styles.title}>Currency</span>
+          <ul>
+            {currencyList?.map(({ id, value, label }) => (
+              <li
+                key={id}
+                onClick={() => changeCurrency(value)}
+                className={currency === value ? styles.activeCurrency : ''}
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

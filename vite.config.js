@@ -11,13 +11,16 @@ export default defineConfig({
       ),
       '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
       '@features': fileURLToPath(new URL('./src/features', import.meta.url)),
-      '@context': fileURLToPath(new URL('./src/context', import.meta.url)),
-      '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
+      '@context': fileURLToPath(new URL('./src/lib/context', import.meta.url)),
+      '@hooks': fileURLToPath(new URL('./src/lib/hooks', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
-      '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
-      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
+      '@data': fileURLToPath(new URL('./src/lib/data', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/lib/utils', import.meta.url)),
+      '@constants': fileURLToPath(
+        new URL('./src/lib/constants', import.meta.url)
+      ),
       '@animations': fileURLToPath(
-        new URL('./src/animations', import.meta.url)
+        new URL('./src/lib/animations', import.meta.url)
       ),
     },
   },

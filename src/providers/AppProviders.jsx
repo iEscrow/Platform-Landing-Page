@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
-import { ThemeProvider } from '../context/ThemeContext';
+import { ThemeProvider } from '@context/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { CurrencyProvider } from '../context/CurrencyContext';
+import { CurrencyProvider } from '@context/CurrencyContext';
 import { HelmetProvider } from 'react-helmet-async';
 
 /**

@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from 'react';
-import { useCurrency } from '../../../context/CurrencyContext';
+import { useCurrency } from '@context/CurrencyContext';
 import styles from './CurrencyChange.module.css';
 import CurrencyIcon from '@components/icons/currency/CurrencyIcon';
 import { currencyList } from '@data/currency';
