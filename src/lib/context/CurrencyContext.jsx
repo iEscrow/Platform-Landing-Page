@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 const CurrencyContext = createContext();
 
+// TODO => Add currency logic to a global state like Redux or Zustand.
 /**
  * CurrencyProvider component that provides currency context to its children.
  * It stores the selected currency in localStorage to persist between sessions.
