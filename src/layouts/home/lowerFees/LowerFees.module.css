@@ -166,7 +166,7 @@
   }
   .counterdown {
     justify-content: flex-end;
-    margin-bottom: 2rem;
+    padding-bottom: 4rem;
   }
   .buttons {
     flex-direction: row;

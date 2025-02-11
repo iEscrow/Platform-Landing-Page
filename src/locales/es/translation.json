@@ -100,7 +100,15 @@
       "comingSoon": "Próximamente",
       "presale": "La preventa comienza en",
       "website": "website",
-      "whitepaper": "whitepaper"
+      "whitepaper": "whitepaper",
+      "presaleLaunch": "Próximamente",
+      "presaleStartsIn": "La preventa comienza en",
+      "tokenLaunch": "Próximamente",
+      "tokenStartsIn": "Lanzamiento del token en",
+      "exchangeLaunch": "Próximamente",
+      "exchangeStartsIn": "Lanzamiento del exchange en",
+      "launched": "Lanzado",
+      "endMessage": "El Exchange fue Lanzado 🚀"
     },
     "InfoBlock": {
       "Security": {

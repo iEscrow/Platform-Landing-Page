@@ -3,7 +3,6 @@ import styles from './Roadmap.module.css';
 import { motion } from 'framer-motion';
 import { roadmapSlideVariants } from '@animations/slideVariants';
 import { roadmapItemVariants } from '@animations/itemVariants';
-import { scaleVariant } from '@animations/scaleVariants';
 
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import CountdownTimer from '@features/countdown/components/CountdownTimer';
@@ -14,6 +13,11 @@ import timeLine from '@assets/images/roadmap/line_desktop.svg';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
 import { fadeInLeftToRight } from '@animations/fadeInVariants';
+import {
+  exchangeLaunchDate,
+  tokenLaunchDate,
+  tokenPresaleDate,
+} from '@constants/coundown';
 
 Roadmap.propTypes = {
   t: PropTypes.func.isRequired,
@@ -21,11 +25,8 @@ Roadmap.propTypes = {
 };
 
 export default function Roadmap({ t, theme }) {
-  const tokenPresaleDate = new Date('2025-07-01T00:00:00Z').getTime();
   const tokenPresaleCountdown = useCountdown(tokenPresaleDate);
-  const tokenLaunchDate = new Date('2025-08-15T00:00:00Z').getTime();
   const tokenLaunchCountdown = useCountdown(tokenLaunchDate);
-  const exchangeLaunchDate = new Date('2025-09-01T00:00:00Z').getTime();
   const exchangeLaunchCountdown = useCountdown(exchangeLaunchDate);
 
   const roadmapEvents = [
