@@ -5,10 +5,10 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@features/*": ["src/features/*"],
-      "@context/*": ["src/context/*"],
+      "@context/*": ["src/lib/context/*"],
       "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
-      "@data/*": ["src/data/*"]
+      "@data/*": ["src/lib/data/*"]
     }
   }
 }

@@ -24,7 +24,7 @@ import { ThemeContext } from '@context/ThemeContext';
  */
 export default function Navbar() {
   const { t } = useTranslation();
-  const scrolled = useScrolled();
+  const scrolled = useScrolled(30);
   const { theme } = useContext(ThemeContext);
   const [toggle, setToggle] = useState(false);
   const navRef = useRef(null);

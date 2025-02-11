@@ -1,7 +1,7 @@
 import styles from './CommunitySlider.module.css';
 import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
-import { splitArray } from '../../../utils/splitArray';
+import { splitArray } from '../../../lib/utils/splitArray';
 
 /**
  * Reusable carousel for the Our Community section.
