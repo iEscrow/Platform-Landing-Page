@@ -74,7 +74,12 @@ export default function Roadmap({ t, theme }) {
       </div>
 
       <div className={styles.timeLine}>
-        <img src={timeLine} alt="roadmap time line" />
+        <img
+          src={timeLine}
+          alt="roadmap time line"
+          loading="lazy"
+          draggable={false}
+        />
       </div>
 
       <motion.ul
