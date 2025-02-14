@@ -19,3 +19,10 @@
 .community.light {
   background-image: url('../../../assets/images/community/light/bg_desktop.png');
 }
+.cta {
+  margin-top: 4rem;
+  color: var(--light-text-color);
+}
+.cta a {
+  color: var(--primary-color);
+}

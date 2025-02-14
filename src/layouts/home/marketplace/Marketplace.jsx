@@ -8,7 +8,10 @@ import halfArrow from '@assets/icons/halfArrowIcon.png';
 import { Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
-import { fadeInLeftToRight } from '@animations/fadeInVariants';
+import {
+  slowFadeInLeftToRight,
+  slowFadeInBottomToTop,
+} from '@animations/fadeInVariants';
 
 Marketplace.propTypes = {
   t: PropTypes.func.isRequired,
@@ -20,7 +23,7 @@ export default function Marketplace({ t, theme }) {
     <section className={`${styles.marketplace} ${styles[theme]}`}>
       <div className={styles.wrapper}>
         <motion.h2
-          variants={scaleVariant}
+          variants={slowFadeInBottomToTop}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -49,7 +52,7 @@ export default function Marketplace({ t, theme }) {
           </motion.picture>
 
           <motion.div
-            variants={fadeInLeftToRight}
+            variants={slowFadeInLeftToRight}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

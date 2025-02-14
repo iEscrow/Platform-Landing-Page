@@ -19,6 +19,10 @@
   background-color: #1d6ae6;
   padding: 0.5rem 0;
   font-size: 1.4rem;
+  font-weight: 700;
+}
+.startsIn {
+  font-weight: 500;
 }
 .video {
   position: absolute;
@@ -102,6 +106,7 @@
   gap: 1rem;
   text-decoration: none;
   transition: 0.3s;
+  font-weight: 600;
 }
 .buttons a:hover {
   background-color: #104baa;
@@ -142,7 +147,7 @@
 
 @media screen and (min-width: 1280px) {
   .lowerFees {
-    padding: 4rem;
+    padding: 5rem 4rem;
     margin: 16rem auto;
   }
   .comingSoon {
@@ -164,12 +169,24 @@
     font-size: 48px;
     padding: 0;
   }
+  .counterdown .startsIn {
+    font-size: 40px;
+  }
+  .startsIn {
+    margin-bottom: 2rem;
+  }
   .counterdown {
     justify-content: flex-end;
-    padding-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    gap: 0rem;
+    transform: translateX(16px);
   }
   .buttons {
     flex-direction: row;
+    padding: 1rem 0;
+  }
+  .buttons a {
+    font-size: 18px;
   }
 }
 

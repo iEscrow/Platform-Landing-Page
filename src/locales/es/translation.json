@@ -47,7 +47,7 @@
     "Roadmap": {
       "title": "Roadmap",
       "tokenPresale": {
-        "title": "Preventa de Tokens",
+        "title": "IEO Preventa de Tokens",
         "currency": "Criptomoneda",
         "description": "La preventa de $ESCROW comienza",
         "date": "1 de julio de 2025"
@@ -59,7 +59,7 @@
         "date": "15 de agosto de 2025"
       },
       "exchangeLaunch": {
-        "title": "Preventa del token",
+        "title": "Lanzamiento del Exchange",
         "currency": "Criptomoneda",
         "description": "Lanzamiento del exchange de $ESCROW",
         "date": "1 de septiembre de 2025"
@@ -96,16 +96,16 @@
     "LowerFees": {
       "titleSpan": "25% lower fees",
       "title": "con nuestra criptomoneda.",
-      "coin": "Escrow",
-      "comingSoon": "Próximamente",
+      "coin": "$Escrow",
+      "comingSoon": "Próximamente!",
       "presale": "La preventa comienza en",
       "website": "website",
       "whitepaper": "whitepaper",
-      "presaleLaunch": "Próximamente",
+      "presaleLaunch": "Próximamente!",
       "presaleStartsIn": "La preventa comienza en",
-      "tokenLaunch": "Próximamente",
+      "tokenLaunch": "Próximamente!",
       "tokenStartsIn": "Lanzamiento del token en",
-      "exchangeLaunch": "Próximamente",
+      "exchangeLaunch": "Próximamente!",
       "exchangeStartsIn": "Lanzamiento del exchange en",
       "launched": "Lanzado",
       "endMessage": "El Exchange fue Lanzado 🚀"
@@ -160,6 +160,12 @@
       "person3": {
         "name": "Nose meocurrenada",
         "description": "Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat"
+      },
+      "cta": {
+        "0": "Tienes preguntas?",
+        "1": "Contactanos",
+        "2": "o unete a nuestro",
+        "3": "Telegram"
       }
     }
   }

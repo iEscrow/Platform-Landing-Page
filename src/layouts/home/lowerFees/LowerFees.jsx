@@ -92,7 +92,7 @@ export default function LowerFees({ t }) {
         <div className={styles.counterdown}>
           {activeEvent ? (
             <>
-              <p>{activeEvent.startsIn}</p>
+              <p className={styles.startsIn}>{activeEvent.startsIn}</p>
               <CountdownTimer
                 timeLeft={activeEvent.countdown}
                 variant="lg"
