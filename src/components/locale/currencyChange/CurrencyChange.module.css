@@ -29,6 +29,9 @@
   visibility: hidden;
   height: 200px;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--primary-color) var(--scrollbar-bg);
 }
 .dropdown.show {
   opacity: 1;
