@@ -12,7 +12,7 @@
 }
 .dropdown {
   position: absolute;
-  top: -10rem;
+  top: -13rem;
   right: 0;
   min-width: 100px;
   background-color: var(--dropdown-bg);
@@ -27,6 +27,8 @@
   transition: 0.45s ease-in-out;
   opacity: 0;
   visibility: hidden;
+  height: 200px;
+  overflow-y: scroll;
 }
 .dropdown.show {
   opacity: 1;

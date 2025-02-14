@@ -16,7 +16,7 @@
   min-width: 400px;
   z-index: 1;
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -47,10 +47,12 @@
   font-weight: 800;
 }
 
-.currencyCont,
 .languageCont {
-  padding: 0 1rem;
-  width: 50%;
+  width: 40%;
+}
+.currencyCont {
+  width: 60%;
+  padding-left: 3rem;
 }
 .currencyCont ul {
   max-height: 100px;
@@ -58,6 +60,7 @@
   padding-right: 1rem;
   scrollbar-width: thin;
   scrollbar-gutter: stable;
+  scrollbar-color: var(--primary-color) var(--scrollbar-bg);
 }
 
 .title {
