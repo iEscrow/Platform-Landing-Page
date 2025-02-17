@@ -1,10 +1,10 @@
 import React, { useEffect, lazy, useContext } from 'react';
 import HomeBanner from '@layouts/home/homeBanner/HomeBanner';
-import Roadmap from '@layouts/home/roadmap/Roadmap';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { ThemeContext } from '@context/ThemeContext';
 
+const Roadmap = lazy(() => import('@layouts/home/roadmap/Roadmap'));
 const KeyBenefits = lazy(() => import('@layouts/home/keyBenefits/KeyBenefits'));
 const LowerFees = lazy(() => import('@layouts/home/lowerFees/LowerFees'));
 const Marketplace = lazy(() => import('@layouts/home/marketplace/Marketplace'));
@@ -25,11 +25,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>P2P Crypto Escrow Exchange</title>
-        <meta
-          name="description"
-          content="P2P Crypto Escrow Exchange. Trade safely and securely on P2P Crypto Escrow Exchange."
-        />
+        <title>{t('Home.Metadata.title')}</title>
+        <meta name="description" content={t('Home.Metadata.description')} />
       </Helmet>
       <main>
         <HomeBanner t={t} theme={theme} />
