@@ -17,7 +17,15 @@
   background-color: var(--light-text-color);
   transition: 0.45s ease-in-out;
 }
-
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 @media screen and (min-width: 1024px) {
   .hamburger {
     display: none;
