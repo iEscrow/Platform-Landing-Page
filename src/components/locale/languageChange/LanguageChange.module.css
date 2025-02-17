@@ -31,6 +31,7 @@
   visibility: visible;
 }
 
-.dropdown li.active {
+.dropdown li.active,
+.dropdown li:hover {
   color: var(--primary-color);
 }

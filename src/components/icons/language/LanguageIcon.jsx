@@ -16,16 +16,7 @@ export default function LanguageIcon({ variant = 'cian', size = 22 }) {
           fill="#A8A8A8"
         />
       </g>
-      <defs>
-        <clipPath id="clip0_1373_8">
-          <rect
-            width="32"
-            height="32"
-            fill="white"
-            transform="translate(0.470703 0.525391)"
-          />
-        </clipPath>
-      </defs>
+      <defs></defs>
     </svg>
   );
 }
