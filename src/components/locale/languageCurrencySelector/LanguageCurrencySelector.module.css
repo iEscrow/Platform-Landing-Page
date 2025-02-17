@@ -1,5 +1,9 @@
 .languageCurrencySelector {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .languageCurrencySelector button {
   display: flex;
@@ -12,7 +16,6 @@
 .dropdown {
   position: absolute;
   top: calc(100% + 2rem);
-  right: 0;
   min-width: 400px;
   z-index: 1;
   border-radius: 6px;
@@ -74,4 +77,10 @@
   min-height: 140px;
   background-color: var(--dark-text-color);
   margin: 0 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .dropdown {
+    right: 0;
+  }
 }
