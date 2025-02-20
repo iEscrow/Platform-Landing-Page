@@ -12,7 +12,7 @@ import { useCountdown } from '@features/countdown/hooks/useCountdown';
 import timeLine from '@assets/images/roadmap/line_desktop.svg';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
-import { fadeInLeftToRight } from '@animations/fadeInVariants';
+import { mediumFadeInLeftToRight } from '@animations/fadeInVariants';
 import {
   exchangeLaunchDate,
   tokenLaunchDate,
@@ -64,10 +64,10 @@ export default function Roadmap({ t, theme }) {
     <section className={`${styles.roadmap} ${styles[theme]}`}>
       <div className={styles.titleCont}>
         <motion.h2
-          variants={fadeInLeftToRight}
+          variants={mediumFadeInLeftToRight}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0 }}
         >
           <GradientTitle>Roadmap</GradientTitle>
         </motion.h2>
@@ -86,7 +86,7 @@ export default function Roadmap({ t, theme }) {
         variants={roadmapSlideVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.8 }}
         className={styles.list}
       >
         {roadmapEvents.map(

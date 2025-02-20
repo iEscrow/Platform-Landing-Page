@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 import {
   slowFadeInLeftToRight,
-  slowFadeInBottomToTop,
+  mediumFadeInBottomToTop,
 } from '@animations/fadeInVariants';
 
 Marketplace.propTypes = {
@@ -23,7 +23,7 @@ export default function Marketplace({ t, theme }) {
     <section className={`${styles.marketplace} ${styles[theme]}`}>
       <div className={styles.wrapper}>
         <motion.h2
-          variants={slowFadeInBottomToTop}
+          variants={mediumFadeInBottomToTop}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
