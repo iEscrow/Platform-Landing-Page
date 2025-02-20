@@ -79,3 +79,8 @@
     background-image: url('../../../assets/images/banner/light/banner_desktop.png');
   }
 }
+@media screen and (min-width: 1280px) {
+  .homeBanner {
+    padding-top: 5rem;
+  }
+}

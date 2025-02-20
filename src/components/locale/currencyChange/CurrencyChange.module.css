@@ -9,6 +9,10 @@
   gap: 0.5rem;
   cursor: pointer;
   color: var(--dark-text-color);
+  transition: 0.45s ease-in-out;
+}
+.currencyChange button:hover {
+  color: var(--primary-color);
 }
 .dropdown {
   position: absolute;

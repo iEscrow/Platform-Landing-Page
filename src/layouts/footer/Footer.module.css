@@ -1,5 +1,6 @@
 .footer {
   padding: 1rem;
+  padding-bottom: 0;
   background-color: var(--footer-bg);
 }
 .wrapper {
@@ -67,6 +68,9 @@
   font-size: 12px;
   transition: 0.45s ease-in-out;
 }
+.copyright p {
+  padding: 0;
+}
 .copyright ul li a:hover {
   color: var(--primary-color);
 }
@@ -91,6 +95,7 @@
 @media screen and (min-width: 1024px) {
   .footer {
     padding: 2rem 0;
+    padding-bottom: 0;
   }
   .wrapper {
     max-width: 1200px;
