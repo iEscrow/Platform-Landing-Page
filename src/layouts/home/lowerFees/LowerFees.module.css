@@ -181,6 +181,10 @@
     gap: 0rem;
     transform: translateX(16px);
   }
+  .endMessage {
+    margin-bottom: 4rem;
+    font-weight: bold;
+  }
   .buttons {
     flex-direction: row;
     padding: 1rem 0;

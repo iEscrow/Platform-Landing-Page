@@ -100,7 +100,9 @@ export default function LowerFees({ t }) {
               />
             </>
           ) : (
-            <p>{t('Home.LowerFees.endMessage')}</p>
+            <p className={styles.endMessage}>
+              {t('Home.LowerFees.endMessage')}
+            </p>
           )}
 
           <div className={styles.buttons}>
