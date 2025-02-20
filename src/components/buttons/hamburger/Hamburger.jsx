@@ -11,6 +11,7 @@ export default function Hamburger({ toggle, handleToggle }) {
     <button
       onClick={handleToggle}
       className={`${styles.hamburger} ${toggle ? styles.active : ''}`}
+      aria-label="Toggle navigation"
     >
       <div className={styles.bar}></div>
       <div className={styles.bar}></div>

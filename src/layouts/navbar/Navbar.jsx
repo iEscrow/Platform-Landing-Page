@@ -86,6 +86,7 @@ export default function Navbar() {
               {t('Navbar.roadmap')}
             </NavLink>
           </li>
+
           <li className={styles.navLink} role="menuitem">
             <NavLink
               to="/marketplace"

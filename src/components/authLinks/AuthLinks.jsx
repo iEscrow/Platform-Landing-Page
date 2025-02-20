@@ -12,7 +12,7 @@ export default function AuthLinks({ isAuthenticated, onClose }) {
       <AuthDropdown />
     </li>
   ) : (
-    <>
+    <ul>
       <li className={styles.authLink}>
         <NavLink onClick={onClose} to="/signup" aria-label="Sign up">
           {t('Navbar.register')}
@@ -23,7 +23,7 @@ export default function AuthLinks({ isAuthenticated, onClose }) {
           {t('Navbar.login')}
         </NavLink>
       </li>
-    </>
+    </ul>
   );
 }
 

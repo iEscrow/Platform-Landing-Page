@@ -85,9 +85,11 @@ export default function FooterAccordion() {
           <button
             onClick={() => handleToggle(index)}
             className={styles.accordion_item_btn}
-            aria-expanded={active === index}
+            aria-expanded={active === index ? 'true' : 'false'}
             aria-controls={`accordion-content-${index}`}
-            aria-label="Toggle accordion section"
+            aria-label={
+              active === index ? 'Collapse section' : 'Expand section'
+            }
           >
             <span>{item.title}</span>
             <img
@@ -97,9 +99,12 @@ export default function FooterAccordion() {
             />
           </button>
           {/* Accordion Menu */}
-          <div className={styles.accordion_menu}>
+          <div
+            className={styles.accordion_menu}
+            id={`accordion-content-${index}`}
+          >
             {item.content.map(({ text, link }, index) => (
-              <Link href={link} key={index}>
+              <Link to={link} key={index}>
                 {text}
               </Link>
             ))}
