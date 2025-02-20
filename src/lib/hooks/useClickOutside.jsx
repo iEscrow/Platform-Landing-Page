@@ -1,42 +1,21 @@
 import { useEffect } from 'react';
 
-/**
- * Custom hook to detect clicks outside of a specified element and trigger a callback.
- *
- * @param {React.RefObject} ref - A React ref pointing to the element you want to detect outside clicks for.
- * @param {Function} callback - The function to be called when an outside click is detected.
- * @param {Array<string>} [eventTypes=['mousedown', 'touchstart']] - Optional array of event types to listen for.
- *
- * @example
- * const ref = useRef(null);
- * useClickOutside(ref, () => setIsOpen(false));
- *
- * return (
- *   <div ref={ref}>
- *     Dropdown Content
- *   </div>
- * );
- */
-export default function useClickOutside(
-  ref,
-  callback,
-  eventTypes = ['mousedown', 'touchstart']
-) {
+export default function useClickOutside(ref, callback) {
   useEffect(() => {
+    if (!ref?.current || typeof callback !== 'function') return;
+
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
         callback();
       }
     };
 
-    eventTypes.forEach((eventType) => {
-      document.addEventListener(eventType, handleClickOutside);
-    });
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
 
     return () => {
-      eventTypes.forEach((eventType) => {
-        document.removeEventListener(eventType, handleClickOutside);
-      });
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, [ref, callback, eventTypes]);
+  }, [callback]);
 }

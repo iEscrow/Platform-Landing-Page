@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
 }
@@ -10,7 +11,6 @@
 .authButton ul {
   position: absolute;
   top: calc(100% + 2rem);
-  right: 0;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   min-width: 8rem;
@@ -20,6 +20,7 @@
   background-color: var(--dropdown-bg);
   box-shadow: 0px 8px 16px 0px var(--dropdown-shadow);
   color: var(--light-text-color);
+  z-index: 9999;
 }
 .authButton.show ul {
   opacity: 1;
@@ -28,4 +29,10 @@
 .authButton ul li:hover,
 .authButton ul li a:hover {
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .authButton ul {
+    right: 0;
+  }
 }

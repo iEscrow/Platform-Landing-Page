@@ -41,9 +41,11 @@
   }
   .countdown.lg span {
     font-size: 4.375rem;
+    font-weight: 500;
   }
   .countdown.lg p {
     font-size: 1.875rem;
+    font-weight: 500;
   }
 }
 @media screen and (min-width: 1024px) {

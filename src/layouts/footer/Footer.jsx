@@ -10,8 +10,8 @@ import LanguageChange from '@components/locale/languageChange/LanguageChange';
 import CurrencyChange from '@components/locale/currencyChange/CurrencyChange';
 import FooterThemeSelector from '@components/theme/footerThemeSelector/FooterThemeSelector';
 
-import logoDark from '@assets/images/logo_dark.svg';
-import logoLight from '@assets/images/logo_light.svg';
+import logoDark from '@assets/images/logo_dark.png';
+import logoLight from '@assets/images/logo_light.png';
 // icons
 import FacebookIcon from '@components/icons/socials/FacebookIcon';
 import InstagramIcon from '@components/icons/socials/InstagramIcon';

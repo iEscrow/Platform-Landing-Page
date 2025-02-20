@@ -23,7 +23,8 @@
   justify-content: center;
   transition: all 0.45s ease;
   z-index: 1;
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .slide span {
@@ -49,9 +50,11 @@
 .dots {
   display: flex;
   gap: 1rem;
-  align-slides: center;
   justify-content: center;
+  align-items: center;
+  height: 1rem;
 }
+
 .dot {
   width: 8px;
   height: 8px;

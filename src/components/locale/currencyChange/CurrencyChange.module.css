@@ -9,10 +9,14 @@
   gap: 0.5rem;
   cursor: pointer;
   color: var(--dark-text-color);
+  transition: 0.45s ease-in-out;
+}
+.currencyChange button:hover {
+  color: var(--primary-color);
 }
 .dropdown {
   position: absolute;
-  top: -10rem;
+  top: -13rem;
   right: 0;
   min-width: 100px;
   background-color: var(--dropdown-bg);
@@ -27,6 +31,11 @@
   transition: 0.45s ease-in-out;
   opacity: 0;
   visibility: hidden;
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--primary-color) var(--scrollbar-bg);
 }
 .dropdown.show {
   opacity: 1;

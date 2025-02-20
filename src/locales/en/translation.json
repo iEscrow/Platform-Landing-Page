@@ -47,7 +47,7 @@
     "Roadmap": {
       "title": "Roadmap",
       "tokenPresale": {
-        "title": "Token Presale",
+        "title": "IEO Token Presale",
         "currency": "Cryptocurrency",
         "description": "$ESCROW presale starts",
         "date": "1st July 2025"
@@ -59,7 +59,7 @@
         "date": "15th August 2025"
       },
       "exchangeLaunch": {
-        "title": "Token Presale",
+        "title": "Exchange Launch",
         "currency": "Cryptocurrency",
         "description": "$ESCROW exchange launch",
         "date": "1st September 2025"
@@ -84,7 +84,7 @@
         }
       },
       "Gefi": {
-        "title": "Key Benefits of a CEX (GeFi)",
+        "title": "Key Benefits of a CEX (CeFi)",
         "list": {
           "0": "Customer support",
           "1": "Lower fees"
@@ -96,16 +96,16 @@
     "LowerFees": {
       "titleSpan": "25% Lower fees",
       "title": "with our cryptocurrency",
-      "coin": "Escrow",
-      "comingSoon": "Coming soon",
+      "coin": "$Escrow",
+      "comingSoon": "Coming soon!",
       "presale": "Presale starts in",
       "website": "website",
       "whitepaper": "whitepaper",
-      "presaleLaunch": "Coming soon",
+      "presaleLaunch": "Coming soon!",
       "presaleStartsIn": "Presale starts in",
-      "tokenLaunch": "Coming soon",
+      "tokenLaunch": "Coming soon!",
       "tokenStartsIn": "Launch starts in",
-      "exchangeLaunch": "Coming soon",
+      "exchangeLaunch": "Coming soon!",
       "exchangeStartsIn": "Exchange starts in",
       "launched": "Launched",
       "endMessage": "Exchange has been launched 🚀"
@@ -150,17 +150,27 @@
     "Community": {
       "title": "Our Community",
       "person1": {
-        "name": "Franco Colapinto",
+        "name": "FC",
         "description": "Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat"
       },
       "person2": {
-        "name": "Cosme Fulanito",
+        "name": "FC",
         "description": "Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat"
       },
       "person3": {
-        "name": "Nose meocurrenada",
+        "name": "FC",
         "description": "Morbi id nisi ut justo gravida ornare in sed magna. Aliquam commodo dignissim nulla vitae finibus. Pellentesque feugiat"
+      },
+      "cta": {
+        "0": "Got questions?",
+        "1": "Contact us",
+        "2": "or join our",
+        "3": "Telegram"
       }
+    },
+    "Metadata": {
+      "title": "iEscrow | The first Hybrid CEX/DEX P2P Crypto Escrow Exchange",
+      "description": "P2P Crypto Escrow Exchange. Trade safely and securely on P2P Crypto Escrow Exchange."
     }
   }
 }

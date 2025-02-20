@@ -8,7 +8,7 @@ import { Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { keyBenefitSlideVariants } from '@animations/slideVariants';
 import {
-  fadeInRightToLeft,
+  mediumFadeInRightToLeft,
   fadeInLeftToRight,
 } from '@animations/fadeInVariants';
 import { keyBenefitsVariants } from '@animations/itemVariants';
@@ -27,10 +27,10 @@ export default function KeyBenefits({ t, theme }) {
   return (
     <section className={`${styles.keyBenefits} ${styles[theme]}`}>
       <motion.h2
-        variants={fadeInRightToLeft}
+        variants={mediumFadeInRightToLeft}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
         <Trans i18nKey="Home.KeyBenefits.title">
           <GradientTitle></GradientTitle>

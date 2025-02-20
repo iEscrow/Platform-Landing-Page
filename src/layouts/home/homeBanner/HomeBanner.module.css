@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0rem;
 }
 .homeBanner .logo {
   width: 160px;
@@ -29,6 +29,8 @@
   color: var(--dark-text-color);
   text-transform: uppercase;
   font-size: 1rem;
+  transform: translateY(-9px) !important;
+  letter-spacing: 1.3px;
 }
 
 .homeBanner p {
@@ -75,5 +77,10 @@
   }
   .homeBanner.light {
     background-image: url('../../../assets/images/banner/light/banner_desktop.png');
+  }
+}
+@media screen and (min-width: 1280px) {
+  .homeBanner {
+    padding-top: 5rem;
   }
 }

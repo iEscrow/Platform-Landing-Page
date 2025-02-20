@@ -74,44 +74,30 @@ export default function InfoBlock({ t, theme }) {
 
         {/* Bottom block */}
         <div className={styles.bottomBlock}>
-          <motion.div
-            variants={scaleVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+          <InfoCard
+            title={t('Home.InfoBlock.Adaptability.title')}
+            text={t('Home.InfoBlock.Adaptability.description')}
+            lg
           >
-            <InfoCard
-              title={t('Home.InfoBlock.Adaptability.title')}
-              text={t('Home.InfoBlock.Adaptability.description')}
-              lg
-            >
-              <img
-                src={adaptabilityIcon}
-                alt="adaptability icon"
-                loading="lazy"
-                draggable={false}
-              />
-            </InfoCard>
-          </motion.div>
-          <motion.div
-            variants={scaleVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            <img
+              src={adaptabilityIcon}
+              alt="adaptability icon"
+              loading="lazy"
+              draggable={false}
+            />
+          </InfoCard>
+          <InfoCard
+            title={t('Home.InfoBlock.Privacy.title')}
+            text={t('Home.InfoBlock.Privacy.description')}
+            lg
           >
-            <InfoCard
-              title={t('Home.InfoBlock.Privacy.title')}
-              text={t('Home.InfoBlock.Privacy.description')}
-              lg
-            >
-              <img
-                src={privacyIcon}
-                alt="privacy icon"
-                loading="lazy"
-                draggable={false}
-              />
-            </InfoCard>
-          </motion.div>
+            <img
+              src={privacyIcon}
+              alt="privacy icon"
+              loading="lazy"
+              draggable={false}
+            />
+          </InfoCard>
         </div>
       </div>
     </section>

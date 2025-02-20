@@ -10,6 +10,10 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--dark-text-color);
+  transition: 0.45s ease-in-out;
+}
+.languageChange button:hover {
+  color: var(--primary-color);
 }
 .dropdown {
   position: absolute;
@@ -31,6 +35,7 @@
   visibility: visible;
 }
 
-.dropdown li.active {
+.dropdown li.active,
+.dropdown li:hover {
   color: var(--primary-color);
 }

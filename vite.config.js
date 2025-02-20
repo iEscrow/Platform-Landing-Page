@@ -11,7 +11,7 @@ export default defineConfig({
       ),
       '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
       '@features': fileURLToPath(new URL('./src/features', import.meta.url)),
-      '@context': fileURLToPath(new URL('./src/lib/context', import.meta.url)),
+      '@context': fileURLToPath(new URL('./src/context', import.meta.url)),
       '@hooks': fileURLToPath(new URL('./src/lib/hooks', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
       '@data': fileURLToPath(new URL('./src/lib/data', import.meta.url)),

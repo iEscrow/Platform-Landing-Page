@@ -92,7 +92,7 @@ export default function LowerFees({ t }) {
         <div className={styles.counterdown}>
           {activeEvent ? (
             <>
-              <p>{activeEvent.startsIn}</p>
+              <p className={styles.startsIn}>{activeEvent.startsIn}</p>
               <CountdownTimer
                 timeLeft={activeEvent.countdown}
                 variant="lg"
@@ -100,7 +100,9 @@ export default function LowerFees({ t }) {
               />
             </>
           ) : (
-            <p>{t('Home.LowerFees.endMessage')}</p>
+            <p className={styles.endMessage}>
+              {t('Home.LowerFees.endMessage')}
+            </p>
           )}
 
           <div className={styles.buttons}>

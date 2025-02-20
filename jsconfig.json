@@ -5,7 +5,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@features/*": ["src/features/*"],
-      "@context/*": ["src/lib/context/*"],
+      "@context/*": ["src/context/*"],
       "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
       "@data/*": ["src/lib/data/*"]
