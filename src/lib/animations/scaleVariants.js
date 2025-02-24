@@ -3,6 +3,6 @@ export const scaleVariant = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: 'linear' },
+    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
   },
 };

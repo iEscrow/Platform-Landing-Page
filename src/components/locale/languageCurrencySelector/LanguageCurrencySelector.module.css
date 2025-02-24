@@ -16,7 +16,7 @@
 .dropdown {
   position: absolute;
   top: calc(100% + 2rem);
-  min-width: 400px;
+  min-width: 280px;
   z-index: 1;
   border-radius: 6px;
   padding: 1rem 1rem;
@@ -54,16 +54,27 @@
   width: 40%;
 }
 .currencyCont {
-  width: 60%;
-  padding-left: 3rem;
+  width: 39%;
 }
 .currencyCont ul {
   max-height: 100px;
   overflow-y: scroll;
   padding-right: 1rem;
-  scrollbar-width: thin;
-  scrollbar-gutter: stable;
-  scrollbar-color: var(--primary-color) var(--scrollbar-bg);
+}
+.currencyCont ul::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
+}
+.currencyCont ul::-webkit-scrollbar-track {
+  background: #464646;
+  border-radius: 10px;
+}
+.currencyCont ul::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 10px;
+}
+.currencyCont ul::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 .title {

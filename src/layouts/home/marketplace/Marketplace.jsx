@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import { scaleVariant } from '@animations/scaleVariants';
 import {
   slowFadeInLeftToRight,
+  slowFadeInRightToLeft,
   mediumFadeInBottomToTop,
 } from '@animations/fadeInVariants';
 
@@ -34,7 +35,7 @@ export default function Marketplace({ t, theme }) {
         </motion.h2>
         <div className={styles.content}>
           <motion.picture
-            variants={scaleVariant}
+            variants={slowFadeInRightToLeft}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

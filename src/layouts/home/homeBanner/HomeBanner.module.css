@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0rem;
+  gap: 1rem;
 }
 .homeBanner .logo {
   width: 160px;
@@ -40,10 +40,10 @@
   margin: 20px 0;
 }
 .homeBanner.dark {
-  background-image: url('../../../assets/images/banner/dark/banner_mobile.png');
+  background-image: url('../../../assets/images/banner/dark/banner_desktop.png');
 }
 .homeBanner.light {
-  background-image: url('../../../assets/images/banner/light/banner_mobile.png');
+  background-image: url('../../../assets/images/banner/light/banner_desktop.png');
 }
 .buttonsCont {
   display: flex;
@@ -56,27 +56,17 @@
   .homeBanner .logo {
     width: 220px;
   }
-  .content,
+  .content {
+    gap: 0.5rem;
+  }
   .buttonsCont {
     gap: 1.5rem;
-  }
-  .homeBanner.dark {
-    background-image: url('../../../assets/images/banner/dark/banner_tablet.png');
-  }
-  .homeBanner.light {
-    background-image: url('../../../assets/images/banner/light/banner_tablet.png');
   }
 }
 
 @media screen and (min-width: 1024px) {
   .buttonsCont {
     flex-direction: row;
-  }
-  .homeBanner.dark {
-    background-image: url('../../../assets/images/banner/dark/banner_desktop.png');
-  }
-  .homeBanner.light {
-    background-image: url('../../../assets/images/banner/light/banner_desktop.png');
   }
 }
 @media screen and (min-width: 1280px) {

@@ -2,7 +2,7 @@ export const fadeIn = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 1.5, ease: 'easeIn' },
+    transition: { duration: 1.5, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -11,7 +11,7 @@ export const fadeInLeftToRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.3, ease: 'linear' },
+    transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -20,7 +20,7 @@ export const fadeInRightToLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.3, ease: 'linear' },
+    transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -29,7 +29,7 @@ export const fadeInTopToBottom = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.3, ease: 'linear' },
+    transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -38,7 +38,7 @@ export const fadeInBottomToTop = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.3, ease: 'linear' },
+    transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -49,7 +49,7 @@ export const mediumFadeInLeftToRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.45, ease: 'linear' },
+    transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 export const slowFadeInLeftToRight = {
@@ -57,7 +57,7 @@ export const slowFadeInLeftToRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: 'linear' },
+    transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -66,16 +66,16 @@ export const mediumFadeInRightToLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: 'linear' },
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
 export const slowFadeInRightToLeft = {
-  hidden: { opacity: 0, x: 260 },
+  hidden: { opacity: 0, x: 200 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: 'linear' },
+    transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -84,7 +84,7 @@ export const mediumFadeInBottomToTop = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: 'linear' },
+    transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -93,6 +93,6 @@ export const slowFadeInBottomToTop = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'linear' },
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
