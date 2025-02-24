@@ -60,7 +60,7 @@ export default function InfoBlock({ t, theme }) {
             variants={scaleVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.6 }}
           >
             <InfoCard
               title={t('Home.InfoBlock.Reputation.title')}

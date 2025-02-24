@@ -33,9 +33,6 @@
   visibility: hidden;
   height: 200px;
   overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-gutter: stable;
-  scrollbar-color: var(--primary-color) var(--scrollbar-bg);
 }
 .dropdown.show {
   opacity: 1;
@@ -49,4 +46,20 @@
 }
 .dropdown li:hover {
   color: var(--primary-color);
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
+}
+.dropdown::-webkit-scrollbar-track {
+  background: #464646;
+  border-radius: 10px;
+}
+.dropdown::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 10px;
+}
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }

@@ -8,8 +8,7 @@ import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
 import CustomButton from '@components/buttons/customButton/CustomButton';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
 import VideoIcon from '@components/icons/videoIcon/VideoIcon';
-import { fadeInBottomToTop } from '@animations/fadeInVariants';
-import { slideVariants } from '@animations/slideVariants';
+import { slowFadeInBottomToTop } from '@animations/fadeInVariants';
 
 HomeBanner.propTypes = {
   t: PropTypes.func.isRequired,
@@ -26,31 +25,26 @@ export default function HomeBanner({ t, theme }) {
     <section className={`${styles.homeBanner} ${styles[theme]}`}>
       <motion.div
         className={styles.content}
-        variants={slideVariants}
+        variants={slowFadeInBottomToTop}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
-        <motion.img
-          variants={fadeInBottomToTop}
+        <img
           className={styles.logo}
           src={theme === 'dark' ? logoDark : logoLight}
           alt="iEscrow logo"
           draggable={false}
-          loading="lazy"
+          loading="eager"
         />
-        <motion.span variants={fadeInBottomToTop} className={styles.motto}>
-          {t('Home.Banner.motto')}
-        </motion.span>
-        <motion.h1 variants={fadeInBottomToTop}>
+        <span className={styles.motto}>{t('Home.Banner.motto')}</span>
+        <h1>
           <Trans i18nKey="Home.Banner.title">
             <GradientTitle></GradientTitle>
           </Trans>
-        </motion.h1>
-        <motion.p variants={fadeInBottomToTop}>
-          {t('Home.Banner.description')}
-        </motion.p>
-        <motion.div variants={fadeInBottomToTop} className={styles.buttonsCont}>
+        </h1>
+        <p>{t('Home.Banner.description')}</p>
+        <div className={styles.buttonsCont}>
           <CustomButton to="#" variant="secondary" aria-label="Watch video">
             <VideoIcon theme={theme} />
             {t('Home.Banner.watchVideo')}
@@ -59,7 +53,7 @@ export default function HomeBanner({ t, theme }) {
             <img src={halfArrowIcon} alt="half arrow icon" />
             {t('Home.Banner.createEscrow')}
           </CustomButton>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );

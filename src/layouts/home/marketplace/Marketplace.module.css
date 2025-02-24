@@ -82,6 +82,11 @@
   .marketplace h2 {
     margin: 6rem auto;
   }
+  .marketplaceImage {
+    max-width: 520px;
+    margin-top: 11px;
+    margin-left: 20px;
+  }
   .content {
     margin-top: 2rem;
     display: flex;

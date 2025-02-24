@@ -9,7 +9,7 @@ import CountdownTimer from '@features/countdown/components/CountdownTimer';
 import { useCountdown } from '@features/countdown/hooks/useCountdown';
 
 //assets
-import timeLine from '@assets/images/roadmap/line_desktop.svg';
+import timeLine from '@assets/images/roadmap/timeline.png';
 import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
 import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
 import { mediumFadeInLeftToRight } from '@animations/fadeInVariants';
@@ -67,7 +67,7 @@ export default function Roadmap({ t, theme }) {
           variants={mediumFadeInLeftToRight}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0 }}
+          viewport={{ once: true, amount: 0.2, margin: '-50px' }}
         >
           <GradientTitle>Roadmap</GradientTitle>
         </motion.h2>
@@ -86,7 +86,7 @@ export default function Roadmap({ t, theme }) {
         variants={roadmapSlideVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.5, margin: '-50px' }}
         className={styles.list}
       >
         {roadmapEvents.map(

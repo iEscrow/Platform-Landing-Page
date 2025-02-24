@@ -66,11 +66,13 @@ export default function Navbar() {
       role="banner"
     >
       <nav ref={navRef} role="navigation" aria-label="Main navigation">
-        <Link to="/" aria-label="Go to homepage">
+        <Link className={styles.logoCont} to="/" aria-label="Go to homepage">
           <img
             className={styles.logo}
             src={theme === 'dark' ? logoDark : logoLight}
             alt="iEscrow logo"
+            draggable={false}
+            loading="eager"
           />
         </Link>
 
