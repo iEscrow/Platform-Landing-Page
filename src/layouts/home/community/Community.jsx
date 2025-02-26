@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from './Community.module.css';
-import { useContext, useMemo } from 'react';
+import { useContext, useMemo, Suspense, lazy } from 'react';
 import { ThemeContext } from '@context/ThemeContext';
 import GradientTitle from '@components/gradientTitle/GradientTitle';
-import CommunitySlider from '@components/sliders/communitySlider/CommunitySlider';
+const CommunitySlider = lazy(
+  () => import('@components/sliders/communitySlider/CommunitySlider')
+);
 import { motion } from 'framer-motion';
 import { slowFadeInBottomToTop } from '@animations/fadeInVariants';
 
@@ -55,7 +57,9 @@ export default function Community({ t }) {
         <h2>
           <GradientTitle>{t('Home.Community.title')}</GradientTitle>
         </h2>
-        <CommunitySlider list={list} />
+        <Suspense fallback={null}>
+          <CommunitySlider list={list} />
+        </Suspense>
       </motion.div>
       <p className={styles.cta}>
         {t('Home.Community.cta.0')} <a href="#">{t('Home.Community.cta.1')}</a>{' '}
