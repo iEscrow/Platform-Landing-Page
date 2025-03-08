@@ -1,9 +1,9 @@
 import styles from './AuthDropdown.module.css';
 import { Link } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
-import useClickOutside from '@hooks/useClickOutside';
-import AuthIcon from '@components/icons/authIcon/AuthIcon';
+import { ThemeContext } from '../../context/ThemeContext';
+import useClickOutside from '../../lib/hooks/useClickOutside';
+import AuthIcon from '../icons/authIcon/AuthIcon';
 
 export default function AuthDropdown() {
   const [active, setActive] = useState(false);

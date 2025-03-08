@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './InfoCard.module.css';
 import PropTypes from 'prop-types';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
+import GradientTitle from '../../gradientTitle/GradientTitle';
 
 /**
  * Reusable card for displaying info icon, title and text

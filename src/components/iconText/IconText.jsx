@@ -1,5 +1,5 @@
 import styles from './IconText.module.css';
-import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
+import halfArrowIcon from '../../assets/icons/halfArrowIcon.png';
 
 import PropsType from 'prop-types';
 

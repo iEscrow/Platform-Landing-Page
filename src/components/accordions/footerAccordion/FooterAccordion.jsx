@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './FooterAccordion.module.css';
 import { useTranslation } from 'react-i18next';
-import chevronDark from '@assets/icons/chevron_dark.png';
+import chevronDark from '../../../assets/icons/chevron_dark.png';
 import { Link } from 'react-router-dom';
 
 export default function FooterAccordion() {

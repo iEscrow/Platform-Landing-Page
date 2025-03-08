@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://profileupmm.com.ar/sitemap.xml
+Sitemap: https://iescrow.com/sitemap.xml

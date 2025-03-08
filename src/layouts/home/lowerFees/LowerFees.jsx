@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import styles from './LowerFees.module.css';
 
-import CountdownTimer from '@features/countdown/components/CountdownTimer';
-import { useCountdown } from '@features/countdown/hooks/useCountdown';
+import CountdownTimer from '../../../features/countdown/components/CountdownTimer';
+import { useCountdown } from '../../../features/countdown/hooks/useCountdown';
 import {
   exchangeLaunchDate,
   tokenLaunchDate,
   tokenPresaleDate,
-} from '@constants/coundown';
+} from '../../../lib/constants/coundown';
 
 // assets
-import halfArrow from '@assets/icons/halfArrowIcon.png';
-import lowerFeesVideo from '@assets/videos/lower_fees_bg.mp4';
-import escrowCoin from '@assets/images/lowerfees/escrow_coin.png';
+import halfArrow from '../../../assets/icons/halfArrowIcon.png';
+import lowerFeesVideo from '../../../assets/videos/lower_fees_bg.mp4';
+import escrowCoin from '../../../assets/images/lowerfees/escrow_coin.png';
 
 // animations
 import { motion } from 'framer-motion';
-import { fadeIn } from '@animations/fadeInVariants';
+import { fadeIn } from '../../../lib/animations/fadeInVariants';
 
 LowerFees.propTypes = {
   t: PropTypes.func.isRequired,

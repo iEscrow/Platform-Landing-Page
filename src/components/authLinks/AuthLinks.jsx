@@ -2,7 +2,7 @@ import styles from './AuthLinks.module.css';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import AuthDropdown from '@components/authDropdown/AuthDropdown';
+import AuthDropdown from '../authDropdown/AuthDropdown';
 
 export default function AuthLinks({ isAuthenticated, onClose }) {
   const { t } = useTranslation();

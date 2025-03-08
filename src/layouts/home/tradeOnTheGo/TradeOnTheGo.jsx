@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import styles from './TradeOnTheGo.module.css';
-import phone from '@assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
-import qr from '@assets/images/qr.png';
+import phone from '../../../assets/images/tradeOnTheGo/trade_on_the_go_desktop.png';
+import qr from '../../../assets/images/qr.png';
 import { Trans } from 'react-i18next';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
-import AppStoreIcon from '@components/icons/appStore/AppStoreIcon';
-import GooglePlayIcon from '@components/icons/googlePlayIcon/GooglePlayIcon';
-import StoreButton from '@components/buttons/storeButton/StoreButton';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
+import AppStoreIcon from '../../../components/icons/appStore/AppStoreIcon';
+import GooglePlayIcon from '../../../components/icons/googlePlayIcon/GooglePlayIcon';
+import StoreButton from '../../../components/buttons/storeButton/StoreButton';
 import { motion } from 'framer-motion';
-import { scaleVariant } from '@animations/scaleVariants';
-import { fadeInRightToLeft } from '@animations/fadeInVariants';
-import { slideVariants } from '@animations/slideVariants';
+import { scaleVariant } from '../../../lib/animations/scaleVariants';
+import { fadeInRightToLeft } from '../../../lib/animations/fadeInVariants';
+import { slideVariants } from '../../../lib/animations/slideVariants';
 
 TradeOnTheGo.propTypes = {
   t: PropTypes.func.isRequired,

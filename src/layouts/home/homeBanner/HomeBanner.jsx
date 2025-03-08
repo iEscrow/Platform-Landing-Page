@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import styles from './HomeBanner.module.css';
 import { motion } from 'framer-motion';
 import { Trans } from 'react-i18next';
-import logoDark from '@assets/images/logo_dark.png';
-import logoLight from '@assets/images/logo_light.png';
-import halfArrowIcon from '@assets/icons/halfArrowIcon.png';
-import CustomButton from '@components/buttons/customButton/CustomButton';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
-import VideoIcon from '@components/icons/videoIcon/VideoIcon';
-import { slowFadeInBottomToTop } from '@animations/fadeInVariants';
+import logoDark from '../../../assets/images/logo_dark.png';
+import logoLight from '../../../assets/images/logo_light.png';
+import halfArrowIcon from '../../../assets/icons/halfArrowIcon.png';
+import CustomButton from '../../../components/buttons/customButton/CustomButton';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
+import VideoIcon from '../../../components/icons/videoIcon/VideoIcon';
+import { slowFadeInBottomToTop } from '../../../lib/animations/fadeInVariants';
 
 HomeBanner.propTypes = {
   t: PropTypes.func.isRequired,

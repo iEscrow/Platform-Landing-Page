@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from './Marketplace.module.css';
-import marketplaceMobileDark from '@assets/images/marketplace/dark/marketplace_mobile.png';
-import marketplaceDesktopDark from '@assets/images/marketplace/dark/marketplace_desktop.png';
-import CustomButton from '@components/buttons/customButton/CustomButton';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
-import halfArrow from '@assets/icons/halfArrowIcon.png';
+import marketplaceMobileDark from '../../../assets/images/marketplace/dark/marketplace_mobile.png';
+import marketplaceDesktopDark from '../../../assets/images/marketplace/dark/marketplace_desktop.png';
+import CustomButton from '../../../components/buttons/customButton/CustomButton';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
+import halfArrow from '../../../assets/icons/halfArrowIcon.png';
 import { Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { scaleVariant } from '@animations/scaleVariants';
 import {
   slowFadeInLeftToRight,
   slowFadeInRightToLeft,
   mediumFadeInBottomToTop,
-} from '@animations/fadeInVariants';
+} from '../../../lib/animations/fadeInVariants';
 
 Marketplace.propTypes = {
   t: PropTypes.func.isRequired,

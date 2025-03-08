@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import styles from './Community.module.css';
 import { useContext, useMemo, Suspense, lazy } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
+import { ThemeContext } from '../../../context/ThemeContext';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
 const CommunitySlider = lazy(
-  () => import('@components/sliders/communitySlider/CommunitySlider')
+  () => import('../../../components/sliders/communitySlider/CommunitySlider')
 );
 import { motion } from 'framer-motion';
-import { slowFadeInBottomToTop } from '@animations/fadeInVariants';
+import { slowFadeInBottomToTop } from '../../../lib/animations/fadeInVariants';
 
 Community.propTypes = {
   t: PropTypes.func.isRequired,

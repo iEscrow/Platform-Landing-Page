@@ -1,5 +1,5 @@
 import styles from './NavbarThemeToggle.module.css';
-import { ThemeContext } from '@context/ThemeContext';
+import { ThemeContext } from '../../../context/ThemeContext';
 import { useContext } from 'react';
 import ThemeIcon from '../icon/ThemeIcon';
 

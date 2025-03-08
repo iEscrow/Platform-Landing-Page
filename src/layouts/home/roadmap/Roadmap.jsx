@@ -1,23 +1,23 @@
 import PropTypes from 'prop-types';
 import styles from './Roadmap.module.css';
 import { motion } from 'framer-motion';
-import { roadmapSlideVariants } from '@animations/slideVariants';
-import { roadmapItemVariants } from '@animations/itemVariants';
+import { roadmapSlideVariants } from '../../../lib/animations/slideVariants';
+import { roadmapItemVariants } from '../../../lib/animations/itemVariants';
 
-import GradientTitle from '@components/gradientTitle/GradientTitle';
-import CountdownTimer from '@features/countdown/components/CountdownTimer';
-import { useCountdown } from '@features/countdown/hooks/useCountdown';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
+import CountdownTimer from '../../../features/countdown/components/CountdownTimer';
+import { useCountdown } from '../../../features/countdown/hooks/useCountdown';
 
 //assets
-import timeLine from '@assets/images/roadmap/timeline.png';
-import mobileLine1 from '@assets/images/roadmap/line_1_mobile.svg';
-import mobileLine2 from '@assets/images/roadmap/line_2_mobile.svg';
-import { mediumFadeInLeftToRight } from '@animations/fadeInVariants';
+import timeLine from '../../../assets/images/roadmap/timeline.png';
+import mobileLine1 from '../../../assets/images/roadmap/line_1_mobile.svg';
+import mobileLine2 from '../../../assets/images/roadmap/line_2_mobile.svg';
+import { mediumFadeInLeftToRight } from '../../../lib/animations/fadeInVariants';
 import {
   exchangeLaunchDate,
   tokenLaunchDate,
   tokenPresaleDate,
-} from '@constants/coundown';
+} from '../../../lib/constants/coundown';
 
 Roadmap.propTypes = {
   t: PropTypes.func.isRequired,

@@ -1,13 +1,13 @@
 import styles from './LanguageCurrencySelector.module.css';
 import PropTypes from 'prop-types';
 import { useContext, useRef, useState } from 'react';
-import { ThemeContext } from '@context/ThemeContext';
-import { currencyList } from '@data/currency';
-import { languageList } from '@data/languages';
+import { ThemeContext } from '../../../context/ThemeContext';
+import { currencyList } from '../../../lib/data/currency';
+import { languageList } from '../../../lib/data/languages';
 import { useTranslation } from 'react-i18next';
-import useClickOutside from '@hooks/useClickOutside';
+import useClickOutside from '../../../lib/hooks/useClickOutside';
 import LanguageIcon from '../../icons/language/LanguageIcon';
-import { useCurrency } from '@context/CurrencyContext';
+import { useCurrency } from '../../../context/CurrencyContext';
 
 export default function LanguageCurrencySelector({ closeNavbar }) {
   const [show, setShow] = useState(false);

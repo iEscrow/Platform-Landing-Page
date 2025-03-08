@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import styles from './InfoBlock.module.css';
-import InfoCard from '@components/cards/infoCard/InfoCard';
-import adaptabilityIcon from '@assets/images/iconsSection/dark/adaptabilityIcon.png';
-import privacyIcon from '@assets/images/iconsSection/dark/privacyIcon.png';
+import InfoCard from '../../../components/cards/infoCard/InfoCard';
+import adaptabilityIcon from '../../../assets/images/iconsSection/dark/adaptabilityIcon.png';
+import privacyIcon from '../../../assets/images/iconsSection/dark/privacyIcon.png';
 import { motion } from 'framer-motion';
-import { scaleVariant } from '@animations/scaleVariants';
+import { scaleVariant } from '../../../lib/animations/scaleVariants';
 
-import SecurityIcon from '@components/icons/icons-section/SecurityIcon';
-import MissionIcon from '@components/icons/icons-section/MissionIcon';
-import ReputationIcon from '@components/icons/icons-section/ReputationIcon';
+import SecurityIcon from '../../../components/icons/icons-section/SecurityIcon';
+import MissionIcon from '../../../components/icons/icons-section/MissionIcon';
+import ReputationIcon from '../../../components/icons/icons-section/ReputationIcon';
 
 InfoBlock.propTypes = {
   t: PropTypes.func.isRequired,

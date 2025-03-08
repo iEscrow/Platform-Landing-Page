@@ -1,10 +1,10 @@
 import LanguageIcon from '../../icons/language/LanguageIcon';
 import styles from './LanguageChange.module.css';
 import { useTranslation } from 'react-i18next';
-import { languageList } from '@data/languages';
+import { languageList } from '../../../lib/data/languages';
 import { useContext, useRef, useState } from 'react';
-import useClickOutside from '@hooks/useClickOutside';
-import { ThemeContext } from '@context/ThemeContext';
+import useClickOutside from '../../../lib/hooks/useClickOutside';
+import { ThemeContext } from '../../../context/ThemeContext';
 /**
  * Reusable button for language switching
  * @returns {JSX.Element}

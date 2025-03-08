@@ -2,14 +2,14 @@ import styles from './Navbar.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import useScrolled from '@hooks/useScrolled';
-import logoDark from '@assets/images/logo_dark.png';
-import logoLight from '@assets/images/logo_light.png';
-import AuthLinks from '@components/authLinks/AuthLinks';
-import Hamburger from '@components/buttons/hamburger/Hamburger';
-import LanguageCurrencySelector from '@components/locale/languageCurrencySelector/LanguageCurrencySelector';
-import NavbarThemeToggle from '@components/theme/navbarThemeToggle/NavbarThemeToggle';
-import { ThemeContext } from '@context/ThemeContext';
+import useScrolled from '../../lib/hooks/useScrolled';
+import logoDark from '../../assets/images/logo_dark.png';
+import logoLight from '../../assets/images/logo_light.png';
+import AuthLinks from '../../components/authLinks/AuthLinks';
+import Hamburger from '../../components/buttons/hamburger/Hamburger';
+import LanguageCurrencySelector from '../../components/locale/languageCurrencySelector/LanguageCurrencySelector';
+import NavbarThemeToggle from '../../components/theme/navbarThemeToggle/NavbarThemeToggle';
+import { ThemeContext } from '../../context/ThemeContext';
 
 /**
  * Main responsive navbar component

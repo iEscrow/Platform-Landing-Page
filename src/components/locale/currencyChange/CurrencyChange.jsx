@@ -1,10 +1,10 @@
 import { useContext, useRef, useState } from 'react';
-import { useCurrency } from '@context/CurrencyContext';
+import { useCurrency } from '../../../context/CurrencyContext';
 import styles from './CurrencyChange.module.css';
-import CurrencyIcon from '@components/icons/currency/CurrencyIcon';
-import { currencyList } from '@data/currency';
-import useClickOutside from '@hooks/useClickOutside';
-import { ThemeContext } from '@context/ThemeContext';
+import CurrencyIcon from '../../icons/currency/CurrencyIcon';
+import { currencyList } from '../../../lib/data/currency';
+import useClickOutside from '../../../lib/hooks/useClickOutside';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 export default function CurrencyChange() {
   const { theme } = useContext(ThemeContext);

@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from './KeyBenefits.module.css';
-import phoneMobile from '@assets/images/keyBenefits/keybenefits_mobile.png';
-import phoneDesktop from '@assets/images/keyBenefits/keybenefits_desktop.png';
-import IconText from '@components/iconText/IconText';
-import GradientTitle from '@components/gradientTitle/GradientTitle';
+import phoneMobile from '../../../assets/images/keyBenefits/keybenefits_mobile.png';
+import phoneDesktop from '../../../assets/images/keyBenefits/keybenefits_desktop.png';
+import IconText from '../../../components/iconText/IconText';
+import GradientTitle from '../../../components/gradientTitle/GradientTitle';
 import { Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { keyBenefitSlideVariants } from '@animations/slideVariants';
+import { keyBenefitSlideVariants } from '../../../lib/animations/slideVariants';
 import {
   mediumFadeInRightToLeft,
   fadeInLeftToRight,
-} from '@animations/fadeInVariants';
-import { keyBenefitsVariants } from '@animations/itemVariants';
+} from '../../../lib/animations/fadeInVariants';
+import { keyBenefitsVariants } from '../../../lib/animations/itemVariants';
 
 KeyBenefits.propTypes = {
   t: PropTypes.func.isRequired,
