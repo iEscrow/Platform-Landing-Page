@@ -4,21 +4,21 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
 // components
-import FooterAccordion from '../../components/accordions/footerAccordion/FooterAccordion';
-import SocialIcon from '../../components/socialIcon/SocialIcon';
-import LanguageChange from '../../components/locale/languageChange/LanguageChange';
-import CurrencyChange from '../../components/locale/currencyChange/CurrencyChange';
-import FooterThemeSelector from '../../components/theme/footerThemeSelector/FooterThemeSelector';
+import FooterAccordion from '../../components/ui/accordions/footerAccordion/FooterAccordion';
+import SocialIcon from '../../components/ui/socialIcon/SocialIcon';
+import LanguageChange from '../../components/ui/locale/languageChange/LanguageChange';
+import CurrencyChange from '../../components/ui/locale/currencyChange/CurrencyChange';
+import FooterThemeSelector from '../../components/ui/theme/footerThemeSelector/FooterThemeSelector';
 
 import logoDark from '../../assets/images/logo_dark.png';
 import logoLight from '../../assets/images/logo_light.png';
 // icons
-import FacebookIcon from '../../components/icons/socials/FacebookIcon';
-import InstagramIcon from '../../components/icons/socials/InstagramIcon';
-import TelegramIcon from '../../components/icons/socials/TelegramIcon';
-import TikTokIcon from '../../components/icons/socials/TikTokIcon';
-import TwitterIcon from '../../components/icons/socials/TwitterIcon';
-import YoutubeIcon from '../../components/icons/socials/YoutubeIcon';
+import FacebookIcon from '../../components/ui/icons/socials/FacebookIcon';
+import InstagramIcon from '../../components/ui/icons/socials/InstagramIcon';
+import TelegramIcon from '../../components/ui/icons/socials/TelegramIcon';
+import TikTokIcon from '../../components/ui/icons/socials/TikTokIcon';
+import TwitterIcon from '../../components/ui/icons/socials/TwitterIcon';
+import YoutubeIcon from '../../components/ui/icons/socials/YoutubeIcon';
 
 /**
  * Footer component that contains the footer accordion and the community social links

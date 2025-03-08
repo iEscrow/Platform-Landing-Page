@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next';
 import useScrolled from '../../lib/hooks/useScrolled';
 import logoDark from '../../assets/images/logo_dark.png';
 import logoLight from '../../assets/images/logo_light.png';
-import AuthLinks from '../../components/authLinks/AuthLinks';
-import Hamburger from '../../components/buttons/hamburger/Hamburger';
-import LanguageCurrencySelector from '../../components/locale/languageCurrencySelector/LanguageCurrencySelector';
-import NavbarThemeToggle from '../../components/theme/navbarThemeToggle/NavbarThemeToggle';
+import AuthLinks from '../../components/ui/authLinks/AuthLinks';
+import Hamburger from '../../components/ui/buttons/hamburger/Hamburger';
+import LanguageCurrencySelector from '../../components/ui/locale/languageCurrencySelector/LanguageCurrencySelector';
+import NavbarThemeToggle from '../../components/ui/theme/navbarThemeToggle/NavbarThemeToggle';
 import { ThemeContext } from '../../context/ThemeContext';
 
 /**
